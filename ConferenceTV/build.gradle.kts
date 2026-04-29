@@ -4,4 +4,5 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     // THÊM DÒNG NÀY cho Compose Compiler
     alias(libs.plugins.kotlin.compose) apply false
+    alias(libs.plugins.android.library) apply false
 }
