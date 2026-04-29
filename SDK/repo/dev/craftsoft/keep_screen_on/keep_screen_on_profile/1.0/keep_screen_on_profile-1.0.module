@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.craftsoft.keep_screen_on",
+    "module": "keep_screen_on_profile",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "profileVariantProfileApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "keep_screen_on_profile-1.0.aar",
+          "url": "keep_screen_on_profile-1.0.aar",
+          "size": 4803,
+          "sha512": "e89861e4e8061dbf5b275222ed3c1a1c52c3662fb3668d3549a7dc43df3946a404300fe0a0cbd1f833bfba38e687663ed32ee83686c69ce83600c87b3db4e4cd",
+          "sha256": "f09a5fbae405c1a8c8c6317d61fe72759c6406851db8535542019fa931cdcaec",
+          "sha1": "350660bf0e7e2ffa3c151888f8da3aba51e20478",
+          "md5": "417d7026035d6f97e8820d07abf64295"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "keep_screen_on_profile-1.0.aar",
+          "url": "keep_screen_on_profile-1.0.aar",
+          "size": 4803,
+          "sha512": "e89861e4e8061dbf5b275222ed3c1a1c52c3662fb3668d3549a7dc43df3946a404300fe0a0cbd1f833bfba38e687663ed32ee83686c69ce83600c87b3db4e4cd",
+          "sha256": "f09a5fbae405c1a8c8c6317d61fe72759c6406851db8535542019fa931cdcaec",
+          "sha1": "350660bf0e7e2ffa3c151888f8da3aba51e20478",
+          "md5": "417d7026035d6f97e8820d07abf64295"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "keep_screen_on_profile-1.0-sources.jar",
+          "url": "keep_screen_on_profile-1.0-sources.jar",
+          "size": 1867,
+          "sha512": "0897281de166783f30fcfc76d4cdf93e1e7d764279d407642d535eef2338c7f8369553fd7fc34723b7cd1318c55e9bced777779f3ac4092ca843df57cbfac313",
+          "sha256": "bbc3af03a86f4e48f5669772d9af5905c2b9a82878fff31ec59218dbcf22fda6",
+          "sha1": "5103a67f533df9577f9ef4e41f08a882a584cd2d",
+          "md5": "34fe851b6e42864218970150e908addf"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "keep_screen_on_profile-1.0-javadoc.jar",
+          "url": "keep_screen_on_profile-1.0-javadoc.jar",
+          "size": 267472,
+          "sha512": "069ba3ff322ba0132fde936f936f5640cd098b7ae7285e2440bc48e178ab9c8183fc587f6da4fe8991af41a44740a0bd303da8dd7854a92e92e9857640d98ede",
+          "sha256": "bc368b7367d938f29bd5cd00c63d00191d3d6e9b8b94758be4465cc6b8a40d2d",
+          "sha1": "fc9b7d040af715626c0931ed3a73d381fcf17537",
+          "md5": "c6c06a2f5a413f834594af7fa01683b0"
+        }
+      ]
+    }
+  ]
+}

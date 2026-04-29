@@ -1,0 +1,137 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "uz.flutterwithakmaljon.video_player_pip",
+    "module": "video_player_pip_profile",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "profileVariantProfileApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "video_player_pip_profile-1.0.aar",
+          "url": "video_player_pip_profile-1.0.aar",
+          "size": 12939,
+          "sha512": "30543a92396969ccd38bbff10b6d1693498cf3f27e6d7fb7863b99a65099d247315a46b4644f6a35b48522269de6a71ea3790d81dbab1c96b607d0d2527f9550",
+          "sha256": "0cbc4c3d162605a716d09649aede561b8e9504afebfa448b1d23b5d4cff2ae03",
+          "sha1": "6765b38daa56dfd997958b7e32438c72388333f8",
+          "md5": "b7934029219c23198859f7cf5dc66cf7"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "io.flutter.plugins.videoplayer",
+          "module": "video_player_android_profile",
+          "version": {
+            "requires": "1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "video_player_pip_profile-1.0.aar",
+          "url": "video_player_pip_profile-1.0.aar",
+          "size": 12939,
+          "sha512": "30543a92396969ccd38bbff10b6d1693498cf3f27e6d7fb7863b99a65099d247315a46b4644f6a35b48522269de6a71ea3790d81dbab1c96b607d0d2527f9550",
+          "sha256": "0cbc4c3d162605a716d09649aede561b8e9504afebfa448b1d23b5d4cff2ae03",
+          "sha1": "6765b38daa56dfd997958b7e32438c72388333f8",
+          "md5": "b7934029219c23198859f7cf5dc66cf7"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "video_player_pip_profile-1.0-sources.jar",
+          "url": "video_player_pip_profile-1.0-sources.jar",
+          "size": 5216,
+          "sha512": "7595882974d586b70737aa62c49f577e438ade60e206608f72a393379d5ae22e12c0fc1840e09f9182f838e895f6d9accaaa9f028ffdc2b18bcb396261c24c3a",
+          "sha256": "ad71f8e0d919825d43952991e95255a049755d98920ad79b67d1f51d72fe957f",
+          "sha1": "a1200c541b55504aa406931c0d3bba94cac72f23",
+          "md5": "6061b652ada9f977991cd1008aa9ed45"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "video_player_pip_profile-1.0-javadoc.jar",
+          "url": "video_player_pip_profile-1.0-javadoc.jar",
+          "size": 262881,
+          "sha512": "90e56322417824f42935bd020d8e381bfe895810cdd693f581d1c346a16cec1f850f0917cbfb6393156530c5a67001072383a744b6571f883642213d3f5bfdf2",
+          "sha256": "2dfd81831771d1988e332705ff9d7c67c8d4df2573c435d5a96713d6a7c240bd",
+          "sha1": "2ee73507c31fe1b24f3508cffa6423cf6e05b2d8",
+          "md5": "695f65a1de7b06d78d300276bdce0c6a"
+        }
+      ]
+    }
+  ]
+}

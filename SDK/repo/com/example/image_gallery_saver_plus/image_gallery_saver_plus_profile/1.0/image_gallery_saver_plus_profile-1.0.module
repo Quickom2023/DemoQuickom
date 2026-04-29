@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.example.image_gallery_saver_plus",
+    "module": "image_gallery_saver_plus_profile",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "profileVariantProfileApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_profile-1.0.aar",
+          "url": "image_gallery_saver_plus_profile-1.0.aar",
+          "size": 9087,
+          "sha512": "b955b834fc1655b1cb76061024f6a7d71c62a0e7b6175fb3ca7f17e105f62c1c129a6168c9bc7c4fd3782fb2c79ca58867101694c22360d4cba8daffe615294f",
+          "sha256": "375aac5233d4354a8c1fce793e9591558ec03ee27dc99bf2693718d2bde00cba",
+          "sha1": "01d064eff28e8fb98f711843dc1c997480c7d065",
+          "md5": "9c933d693fb898ac2d7f6b157d75a0c4"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_profile-1.0.aar",
+          "url": "image_gallery_saver_plus_profile-1.0.aar",
+          "size": 9087,
+          "sha512": "b955b834fc1655b1cb76061024f6a7d71c62a0e7b6175fb3ca7f17e105f62c1c129a6168c9bc7c4fd3782fb2c79ca58867101694c22360d4cba8daffe615294f",
+          "sha256": "375aac5233d4354a8c1fce793e9591558ec03ee27dc99bf2693718d2bde00cba",
+          "sha1": "01d064eff28e8fb98f711843dc1c997480c7d065",
+          "md5": "9c933d693fb898ac2d7f6b157d75a0c4"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_profile-1.0-sources.jar",
+          "url": "image_gallery_saver_plus_profile-1.0-sources.jar",
+          "size": 3082,
+          "sha512": "b389e077c18d496f0d4039d7965dfa0a892132646296b8a5b91c17db059fb33379cb04a7130c6f10f768180531f379a25618323e797040de5fb6fe48994b8568",
+          "sha256": "917419896abdd03044f888406c40e0b6ee532fb68d0ed71907f8fb4ae2395928",
+          "sha1": "b2a3b7a1d44ae17cf0bfcaf7f482d3bcdaae4ee4",
+          "md5": "37a1a7ca60bb6ec54d6fe5b01e2f8452"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantProfileJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_profile-1.0-javadoc.jar",
+          "url": "image_gallery_saver_plus_profile-1.0-javadoc.jar",
+          "size": 271611,
+          "sha512": "418a6cb923ae16caa3f69d7881f2bcf119dd712ef195e3f6eba18e4b927adbb17ba637c8e0cbf622a2b989b489d69359a5620e9fb1031ac4ee782ba4c72bad5a",
+          "sha256": "538ff089c7d1f0feb29bdb173ea1a9b232ff9db2caae7b1fd7cfca550d510ad6",
+          "sha1": "b9cd8740f77147c767fac028245be1bbe24ba73b",
+          "md5": "d1d03c3a4c2592b8bd3d431075905f04"
+        }
+      ]
+    }
+  ]
+}

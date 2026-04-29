@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.craftsoft.keep_screen_on",
+    "module": "keep_screen_on_release",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "keep_screen_on_release-1.0.aar",
+          "url": "keep_screen_on_release-1.0.aar",
+          "size": 4646,
+          "sha512": "060c763e45051fb14b3debab73d0ea791cde926707d1061a47a4172d69d3131dc533efa3ee2f602bf34e4a1aa3048e106762220b555a696abdbeaf26cf8f9db6",
+          "sha256": "845907f3c690919c8e3acb5b2251771e81cba60694290c5836da7df63ffd756f",
+          "sha1": "efbb3be4645de5393b1596e6027e19afd6c4e7cb",
+          "md5": "5da002732b916ce2e61b92aef8834020"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "keep_screen_on_release-1.0.aar",
+          "url": "keep_screen_on_release-1.0.aar",
+          "size": 4646,
+          "sha512": "060c763e45051fb14b3debab73d0ea791cde926707d1061a47a4172d69d3131dc533efa3ee2f602bf34e4a1aa3048e106762220b555a696abdbeaf26cf8f9db6",
+          "sha256": "845907f3c690919c8e3acb5b2251771e81cba60694290c5836da7df63ffd756f",
+          "sha1": "efbb3be4645de5393b1596e6027e19afd6c4e7cb",
+          "md5": "5da002732b916ce2e61b92aef8834020"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "keep_screen_on_release-1.0-sources.jar",
+          "url": "keep_screen_on_release-1.0-sources.jar",
+          "size": 1867,
+          "sha512": "0897281de166783f30fcfc76d4cdf93e1e7d764279d407642d535eef2338c7f8369553fd7fc34723b7cd1318c55e9bced777779f3ac4092ca843df57cbfac313",
+          "sha256": "bbc3af03a86f4e48f5669772d9af5905c2b9a82878fff31ec59218dbcf22fda6",
+          "sha1": "5103a67f533df9577f9ef4e41f08a882a584cd2d",
+          "md5": "34fe851b6e42864218970150e908addf"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "keep_screen_on_release-1.0-javadoc.jar",
+          "url": "keep_screen_on_release-1.0-javadoc.jar",
+          "size": 267472,
+          "sha512": "069ba3ff322ba0132fde936f936f5640cd098b7ae7285e2440bc48e178ab9c8183fc587f6da4fe8991af41a44740a0bd303da8dd7854a92e92e9857640d98ede",
+          "sha256": "bc368b7367d938f29bd5cd00c63d00191d3d6e9b8b94758be4465cc6b8a40d2d",
+          "sha1": "fc9b7d040af715626c0931ed3a73d381fcf17537",
+          "md5": "c6c06a2f5a413f834594af7fa01683b0"
+        }
+      ]
+    }
+  ]
+}

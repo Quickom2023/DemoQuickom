@@ -1,16 +1,20 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    // 1. Áp dụng plugin Compose Compiler
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     namespace = "com.beowulfchain.conferencetv.demoapp"
-    compileSdk = 34
+//    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.beowulfchain.conferencetv.demoapp"
-        minSdk = 21
-        targetSdk = 34
+//        minSdk = 21
+        minSdk = 24
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
         vectorDrawables {
@@ -38,9 +42,9 @@ android {
     buildFeatures {
         compose = true
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
+//    composeOptions {
+//        kotlinCompilerExtensionVersion = "1.5.1"
+//    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -68,5 +72,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-
+//    debugImplementation("com.beowulfchain.flutter_sdk_packer")
+    debugImplementation("com.beowulfchain.flutter_sdk_packer:flutter_debug:1.0")
+    releaseImplementation("com.beowulfchain.flutter_sdk_packer:flutter_release:1.0")
 }
