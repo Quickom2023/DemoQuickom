@@ -11,6 +11,7 @@
 
 ### A. Host Conference (Tổ chức cuộc họp)
 **EN:** Used when a user wants to start and manage a room. This requires a `token` for authentication.
+
 **VI:** Sử dụng khi người dùng muốn bắt đầu và quản lý một phòng họp. Chế độ này yêu cầu một mã `token` để xác thực quyền chủ phòng.
 
 **Required Parameters / Tham số bắt buộc:**
@@ -22,6 +23,7 @@
 
 ### B. Join Conference (Tham gia cuộc họp)
 **EN:** Used for participants entering an existing room. No token is required.
+
 **VI:** Sử dụng cho người tham gia vào phòng họp đã có sẵn. Không yêu cầu mã token.
 
 **Required Parameters / Tham số bắt buộc:**
@@ -36,6 +38,7 @@
 
 ### Setup / Cấu hình
 **EN:** The `FlutterEngine` must be pre-warmed and cached with the ID `"quickom_engine_id"`.
+
 **VI:** `FlutterEngine` cần được khởi tạo sẵn và lưu vào cache với ID `"quickom_engine_id"`.
 
 ### Method Channel
