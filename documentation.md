@@ -7,7 +7,43 @@
 
 ---
 
-## 2. Core Functions / Các chức năng chính
+## 2. Installation / Cài đặt
+
+### A. Settings Gradle Configuration
+**EN:** Add the following repositories to your `settings.gradle.kts` file to allow the project to resolve SDK dependencies.
+
+**VI:** Thêm các repository sau vào file `settings.gradle.kts` để project có thể tìm thấy các thư viện cần thiết.
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("[https://storage.googleapis.com/download.flutter.io](https://storage.googleapis.com/download.flutter.io)") }
+        maven { url = uri("[https://jitpack.io](https://jitpack.io)") }
+
+        // Repository for SDK artifacts
+        maven { url = uri("../SDK/repo") }
+    }
+}
+```
+
+---
+
+### B. Build Gradle Configuration
+**EN:** Add the SDK dependencies to your app-level build.gradle.kts. Use debugImplementation for development and releaseImplementation for production builds.
+
+**VI:** Thêm các dependency của SDK vào file build.gradle.kts cấp app. Sử dụng debugImplementation cho bản debug và releaseImplementation cho bản release.
+
+```kotlin
+dependencies {
+    debugImplementation("com.beowulfchain.flutter_sdk_packer:flutter_debug:1.0")
+    releaseImplementation("com.beowulfchain.flutter_sdk_packer:flutter_release:1.0")
+}
+```
+
+## 3. Core Functions / Các chức năng chính
 
 ### A. Host Conference (Tổ chức cuộc họp)
 **EN:** Used when a user wants to start and manage a room. This requires a `token` for authentication.
@@ -34,7 +70,7 @@
 
 ---
 
-## 3. Implementation Example / Ví dụ triển khai (Android/Kotlin)
+## 4. Implementation Example / Ví dụ triển khai (Android/Kotlin)
 
 ### Setup / Cấu hình
 **EN:** The `FlutterEngine` must be pre-warmed and cached with the ID `"quickom_engine_id"`.
@@ -103,3 +139,4 @@ fun onJoinButtonClicked(alias: String, name: String) {
         )
     }
 }
+```
