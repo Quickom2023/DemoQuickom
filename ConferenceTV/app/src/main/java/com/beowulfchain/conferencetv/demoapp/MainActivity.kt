@@ -3,6 +3,7 @@ import android.Manifest
 import com.beowulfchain.conferencetv.demoapp.ui.theme.DemoAppTheme
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
@@ -35,6 +36,7 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.MethodChannel
+import io.flutter.plugins.GeneratedPluginRegistrant
 
 
 class MainActivity : ComponentActivity() {
@@ -54,6 +56,12 @@ class MainActivity : ComponentActivity() {
 
         // 1. Create flutter engine
         val flutterEngine = FlutterEngine(this)
+
+        try {
+            GeneratedPluginRegistrant.registerWith(flutterEngine)
+        } catch (e: Exception) {
+            Log.e("SDK", "Cannot register plugin", e)
+        }
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "quickom/conference")
             .setMethodCallHandler { call, result ->
                 when (call.method) {
@@ -159,6 +167,8 @@ class MainActivity : ComponentActivity() {
         val testAlias = "8ob37";
         val testName = "KinhHost";
         val testToken = "SFMyNTY.ZDRhNGJmNDMtNDZlOS00ZDU4LTgzMmUtNDA1ZjdjMzI3NWU1.Lk4Cm0d87gwD6hsSZ14Ycsv4EwrS1CdzxqzcHsmx7K0";
+        val conferenceDomain = "https://realtime-staging.api.datagram.network";
+        val storageDomain = "https://storage.beowulfchain.com";
 
         // Open FlutterActivity using engine with data
         startActivity(
@@ -175,7 +185,9 @@ class MainActivity : ComponentActivity() {
                 mapOf(
                     "alias" to testAlias,
                     "name" to testName,
-                    "token" to testToken
+                    "token" to testToken,
+                    "conferenceDomain" to conferenceDomain,
+                    "storageDomain" to storageDomain
                 )
             )
         }
@@ -185,6 +197,8 @@ class MainActivity : ComponentActivity() {
         val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
         val testAlias = "088zv";
         val testName = "KinhChen";
+        val conferenceDomain = "https://realtime-staging.api.datagram.network";
+        val storageDomain = "https://storage.beowulfchain.com";
 
         // Open FlutterActivity using engine with data
         startActivity(
@@ -200,11 +214,11 @@ class MainActivity : ComponentActivity() {
                 "openConference",
                 mapOf(
                     "alias" to testAlias,
-                    "name" to testName
+                    "name" to testName,
+                    "conferenceDomain" to conferenceDomain,
+                    "storageDomain" to storageDomain
                 )
             )
         }
-
-
     }
 }

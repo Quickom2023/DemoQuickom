@@ -47,7 +47,14 @@ android {
 //    }
     packaging {
         resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            // Giải pháp quan trọng nhất:
+            // Ép App Demo chỉ lấy bản đầu tiên của WebRTC mà nó tìm thấy trong SDK
+//            pickFirsts.add("org/webrtc/Camera1Helper.class")
+//            pickFirsts.add("org/webrtc/**/*.class")
+
+            // Loại bỏ các file META-INF có thể gây xung đột khác
+//            excludes.add("META-INF/*.kotlin_module")
+//            excludes.add("**/A1/a.class")
         }
     }
 }
@@ -72,7 +79,13 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-//    debugImplementation("com.beowulfchain.flutter_sdk_packer")
+    // Dùng repo từ flutter_sdk_packer
     debugImplementation("com.beowulfchain.flutter_sdk_packer:flutter_debug:1.0")
     releaseImplementation("com.beowulfchain.flutter_sdk_packer:flutter_release:1.0")
+
+    // Dùng quickom_sdk.aar
+//    implementation(files("../../SDK/quickom_sdk.aar"))
+
+    implementation("androidx.window:window:1.2.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
 }
