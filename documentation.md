@@ -10,9 +10,9 @@
 ## 2. Installation / Cài đặt
 
 ### A. Settings Gradle Configuration
-**EN:** Add the following repositories to your `settings.gradle.kts` file to allow the project to resolve SDK dependencies.
+**EN:** Copy SDK/repo/ folder to your project and add the following repositories to your `settings.gradle.kts` file to allow the project to resolve SDK dependencies.
 
-**VI:** Thêm các repository sau vào file `settings.gradle.kts` để project có thể tìm thấy các thư viện cần thiết.
+**VI:** Sao chép thư mục SDK/repo/ vào dự án của bạn, thêm các repository sau vào file `settings.gradle.kts` để project có thể tìm thấy các thư viện cần thiết.
 
 ```kotlin
 dependencyResolutionManagement {
@@ -89,10 +89,13 @@ dependencies {
  */
 fun onHostButtonClicked(alias: String, name: String, token: String) {
     val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+
+    // Configuration Locale
+    val locale = "vi";
     
     // Configuration Domains
-    val conferenceDomain = "[https://realtime-staging.api.datagram.network](https://realtime-staging.api.datagram.network)"
-    val storageDomain = "[https://storage.beowulfchain.com](https://storage.beowulfchain.com)"
+    val conferenceDomain = "https://realtime-staging.api.datagram.network"
+    val storageDomain = "https://storage.beowulfchain.com"
 
     // 1. Launch the Flutter Activity
     startActivity(
@@ -109,6 +112,7 @@ fun onHostButtonClicked(alias: String, name: String, token: String) {
                 "token" to token, // Required for Host
                 "conferenceDomain" to conferenceDomain,
                 "storageDomain" to storageDomain
+                "locale" to locale
             )
         )
     }
@@ -119,9 +123,13 @@ fun onHostButtonClicked(alias: String, name: String, token: String) {
  */
 fun onJoinButtonClicked(alias: String, name: String) {
     val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+
+    // Configuration Locale
+    val locale = "vi";
     
-    val conferenceDomain = "[https://realtime-staging.api.datagram.network](https://realtime-staging.api.datagram.network)"
-    val storageDomain = "[https://storage.beowulfchain.com](https://storage.beowulfchain.com)"
+    // Configuration Domains
+    val conferenceDomain = "https://realtime-staging.api.datagram.network"
+    val storageDomain = "https://storage.beowulfchain.com"
 
     startActivity(
         FlutterActivity.withCachedEngine("quickom_engine_id").build(this)
@@ -135,6 +143,7 @@ fun onJoinButtonClicked(alias: String, name: String) {
                 "name" to name,
                 "conferenceDomain" to conferenceDomain,
                 "storageDomain" to storageDomain
+                "locale" to locale
             )
         )
     }
