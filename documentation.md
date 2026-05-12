@@ -56,6 +56,7 @@ dependencies {
 * `token`: Security token for hosting rights (Mã xác thực chủ phòng).
 * `conferenceDomain`: Conference API endpoint (Server điều phối).
 * `storageDomain`: Asset storage endpoint (Server lưu trữ).
+* `locale`: Set desired language.
 
 ### B. Join Conference (Tham gia cuộc họp)
 **EN:** Used for participants entering an existing room. No token is required.
@@ -67,6 +68,7 @@ dependencies {
 * `name`: Participant display name (Tên hiển thị người tham gia).
 * `conferenceDomain`: Conference API endpoint.
 * `storageDomain`: Asset storage endpoint.
+* `locale`: Set desired language.
 
 ---
 
