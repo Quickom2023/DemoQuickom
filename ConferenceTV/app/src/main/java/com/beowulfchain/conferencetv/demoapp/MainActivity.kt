@@ -1,5 +1,9 @@
 package com.beowulfchain.conferencetv.demoapp
 import android.Manifest
+import android.content.Context
+import android.media.AudioDeviceInfo
+import android.media.AudioManager
+import android.os.Build
 import com.beowulfchain.conferencetv.demoapp.ui.theme.DemoAppTheme
 
 import android.os.Bundle
@@ -279,6 +283,8 @@ class MainActivity : ComponentActivity() {
         MainScope().launch {
             val testToken = tokenService.fetchToken(token)
             if (testToken != null && testAlias.isNotEmpty()) {
+                forceUseUsbMic();
+
                 // Open FlutterActivity using engine with data
                 startActivity(
                     FlutterActivity
@@ -319,6 +325,7 @@ class MainActivity : ComponentActivity() {
         val testName = name;
 
         if (testAlias.isNotEmpty()) {
+            forceUseUsbMic();
             // Open FlutterActivity using engine with data
             startActivity(
                 FlutterActivity
@@ -343,6 +350,43 @@ class MainActivity : ComponentActivity() {
         }
         else {
             Toast.makeText(this@MainActivity, "Alias is required", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private fun forceUseUsbMic() {
+        val audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
+
+        // Ép về MODE_IN_COMMUNICATION là chưa đủ, cần yêu cầu AudioFocus
+        audioManager.mode = AudioManager.MODE_IN_COMMUNICATION
+
+        // Yêu cầu Focus để hệ thống ngắt các tiến trình ảo đang chiếm Mic
+        audioManager.requestAudioFocus(null, AudioManager.STREAM_VOICE_CALL, AudioManager.AUDIOFOCUS_GAIN)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) { // Android 12+
+            val devices = audioManager.availableCommunicationDevices
+
+            // Ưu tiên chọn USB Device, nếu không thấy thì chọn Speaker mặc định của TV
+            val selectedDevice = devices.firstOrNull { it.type == AudioDeviceInfo.TYPE_USB_DEVICE }
+                ?: devices.firstOrNull { it.type == AudioDeviceInfo.TYPE_BUILTIN_SPEAKER }
+
+            if (selectedDevice != null) {
+                val result = audioManager.setCommunicationDevice(selectedDevice)
+                if (result) {
+                    // Log để debug trong SDK của bạn
+                    android.util.Log.d("QUICKOM_SDK", "Đã thiết lập thiết bị giao tiếp: ${selectedDevice.productName}")
+                }
+            }
+        } else {
+            // Với các Box chạy Android cũ hơn (dưới Android 12)
+            @Suppress("DEPRECATION")
+            audioManager.isWiredHeadsetOn = true
+
+            // 3. Đảm bảo loa ngoài (hoặc cổng HDMI) vẫn phát được tiếng
+            @Suppress("DEPRECATION")
+            audioManager.isSpeakerphoneOn = true
+
+            // 4. Mở khóa Mic đề phòng hệ thống tự tắt
+            audioManager.isMicrophoneMute = false
         }
     }
 }

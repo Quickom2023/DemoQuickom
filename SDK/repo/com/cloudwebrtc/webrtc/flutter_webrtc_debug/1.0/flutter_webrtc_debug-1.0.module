@@ -35,11 +35,11 @@
         {
           "name": "flutter_webrtc_debug-1.0.aar",
           "url": "flutter_webrtc_debug-1.0.aar",
-          "size": 222817,
-          "sha512": "2f99000708300d0996a156a2efa89b98e068f52c7bf4c985e446a0cb5379bf853980b40fa983c7d58456e075ab2e2a41c648fe3a93c916cc0888d7f519d8e231",
-          "sha256": "5936737ee4107edbbab5b04153861b35638593aead04208060a143f5da697b31",
-          "sha1": "e583b03dc3e56997aafe248a59f05e7852f7e6b5",
-          "md5": "466843e3700dc924670a90264fb4dbdf"
+          "size": 231937,
+          "sha512": "1c7886a7139586f99105cd81559e0794d4eb423366f11c9b56eed8aec96f1a6c137ddc8858b35df644e8e817842fc381c946c2d061267d801168a9e2d734439b",
+          "sha256": "3f09f3605cfbd98c29b5c676fe5b47f4f2bf6c87c58a9f0ff4c72dbc5298452f",
+          "sha1": "7cfe86839fbbd71c8ffefa474d4fc046ecc41c94",
+          "md5": "edc15ad38b428265f119e429a95e0e15"
         }
       ]
     },
@@ -92,11 +92,11 @@
         {
           "name": "flutter_webrtc_debug-1.0.aar",
           "url": "flutter_webrtc_debug-1.0.aar",
-          "size": 222817,
-          "sha512": "2f99000708300d0996a156a2efa89b98e068f52c7bf4c985e446a0cb5379bf853980b40fa983c7d58456e075ab2e2a41c648fe3a93c916cc0888d7f519d8e231",
-          "sha256": "5936737ee4107edbbab5b04153861b35638593aead04208060a143f5da697b31",
-          "sha1": "e583b03dc3e56997aafe248a59f05e7852f7e6b5",
-          "md5": "466843e3700dc924670a90264fb4dbdf"
+          "size": 231937,
+          "sha512": "1c7886a7139586f99105cd81559e0794d4eb423366f11c9b56eed8aec96f1a6c137ddc8858b35df644e8e817842fc381c946c2d061267d801168a9e2d734439b",
+          "sha256": "3f09f3605cfbd98c29b5c676fe5b47f4f2bf6c87c58a9f0ff4c72dbc5298452f",
+          "sha1": "7cfe86839fbbd71c8ffefa474d4fc046ecc41c94",
+          "md5": "edc15ad38b428265f119e429a95e0e15"
         }
       ]
     },
@@ -112,11 +112,11 @@
         {
           "name": "flutter_webrtc_debug-1.0-sources.jar",
           "url": "flutter_webrtc_debug-1.0-sources.jar",
-          "size": 96940,
-          "sha512": "7ed9650164599a639ff0fc235999b0ad6e776640a2d16c97dfb9398264f1164e5a0cea9388bab65d45df5b10c6ec72906c1ce6020a216dd7dc82119fab94c324",
-          "sha256": "6eeb2e8bd77b58a5938bbd5830c853910b9ec381dc4cf34d73f7a54d55780f27",
-          "sha1": "36d4d936808c09542228f96ae5c42541e7a13869",
-          "md5": "478c78aae33f2b2966e7d31ff82b5a69"
+          "size": 102874,
+          "sha512": "3a0e4f1e1285b1c011b725614e65d4c09c25fb13e3574617874ce174ccb1b12acba9902a4f67b15a6ebf3228379033018c3bfbe4757bdddec831b621a68247cf",
+          "sha256": "0d5241ee134134ff7750a2e8866a9b440081e74766cdf007e8c9c1d35a0eb824",
+          "sha1": "65933ddbb8fb2d8d0b5cb3efe8a92a19ff03a8ed",
+          "md5": "e8540310296bcb7d7748b1a0960ac724"
         }
       ]
     },
@@ -132,11 +132,11 @@
         {
           "name": "flutter_webrtc_debug-1.0-javadoc.jar",
           "url": "flutter_webrtc_debug-1.0-javadoc.jar",
-          "size": 509524,
-          "sha512": "e6ff5dd432fd161f28304a116c5c66a582eb7a34b29a4e1eae84d2a59872c2620f5dba5d65ea0c8904a90cb1135b1239047f00a4bb44b8f68ecb4911c7e971be",
-          "sha256": "b05e0f4d25e9e1a6a1cb72883a9ab411e09d8d8cd04d4547114540ad1cee97b8",
-          "sha1": "82e910fe71c93bf311be860e73d8462cd9ce7eb5",
-          "md5": "c3763c9360d00515f4c2a7955687e878"
+          "size": 509609,
+          "sha512": "32e06c0185e5c0ab98e9ae9eb6ce50f6af44452abfc3a264af833d0be74597d7d225f3675d826481d2b5d63a9aedf9f4c474cbef3a99ed7a7fb45af833102e4a",
+          "sha256": "76483903c4d89477cfd5006ac8a24dfd2fe61b9e3c899947bd7d23e163a73162",
+          "sha1": "32087da4aabc290098514760f331e4e7d439fac7",
+          "md5": "3d721953de341013d7d306758d373a92"
         }
       ]
     }
