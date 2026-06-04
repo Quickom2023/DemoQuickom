@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.example.image_gallery_saver_plus",
+    "module": "image_gallery_saver_plus_debug",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugVariantDebugApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_debug-1.0.aar",
+          "url": "image_gallery_saver_plus_debug-1.0.aar",
+          "size": 9087,
+          "sha512": "5c7ac0c0014aaa1180c10e5ab74b3e494625866d648c082823701841b5597d4961b33b3705c358e99d82e1fd51c8af85d1e0332723c7bee8c60912d6af3d6e6c",
+          "sha256": "21555d81b85032b18a137ae261e46c87b1375ba76f7c2550b852956fd7530809",
+          "sha1": "4d11369fcab33ed62df45321721e7c713a54f5da",
+          "md5": "3835b351a36422c9cf952085620e4131"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_debug-1.0.aar",
+          "url": "image_gallery_saver_plus_debug-1.0.aar",
+          "size": 9087,
+          "sha512": "5c7ac0c0014aaa1180c10e5ab74b3e494625866d648c082823701841b5597d4961b33b3705c358e99d82e1fd51c8af85d1e0332723c7bee8c60912d6af3d6e6c",
+          "sha256": "21555d81b85032b18a137ae261e46c87b1375ba76f7c2550b852956fd7530809",
+          "sha1": "4d11369fcab33ed62df45321721e7c713a54f5da",
+          "md5": "3835b351a36422c9cf952085620e4131"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_debug-1.0-sources.jar",
+          "url": "image_gallery_saver_plus_debug-1.0-sources.jar",
+          "size": 3082,
+          "sha512": "b389e077c18d496f0d4039d7965dfa0a892132646296b8a5b91c17db059fb33379cb04a7130c6f10f768180531f379a25618323e797040de5fb6fe48994b8568",
+          "sha256": "917419896abdd03044f888406c40e0b6ee532fb68d0ed71907f8fb4ae2395928",
+          "sha1": "b2a3b7a1d44ae17cf0bfcaf7f482d3bcdaae4ee4",
+          "md5": "37a1a7ca60bb6ec54d6fe5b01e2f8452"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "image_gallery_saver_plus_debug-1.0-javadoc.jar",
+          "url": "image_gallery_saver_plus_debug-1.0-javadoc.jar",
+          "size": 271611,
+          "sha512": "418a6cb923ae16caa3f69d7881f2bcf119dd712ef195e3f6eba18e4b927adbb17ba637c8e0cbf622a2b989b489d69359a5620e9fb1031ac4ee782ba4c72bad5a",
+          "sha256": "538ff089c7d1f0feb29bdb173ea1a9b232ff9db2caae7b1fd7cfca550d510ad6",
+          "sha1": "b9cd8740f77147c767fac028245be1bbe24ba73b",
+          "md5": "d1d03c3a4c2592b8bd3d431075905f04"
+        }
+      ]
+    }
+  ]
+}

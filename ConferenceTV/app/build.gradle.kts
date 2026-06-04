@@ -93,6 +93,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
+    implementation("androidx.compose.material:material-icons-extended")
+
     // Explicitly add the sidecar to satisfy the class loader
 //    compileOnly("androidx.window:window-sidecar:1.0.0-rc01")
 }

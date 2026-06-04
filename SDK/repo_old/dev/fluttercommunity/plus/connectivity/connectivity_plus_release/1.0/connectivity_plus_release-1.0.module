@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.fluttercommunity.plus.connectivity",
+    "module": "connectivity_plus_release",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "connectivity_plus_release-1.0.aar",
+          "url": "connectivity_plus_release-1.0.aar",
+          "size": 7820,
+          "sha512": "e6cd11b81b056dac10a4963f4c0810f71d605972eef9b82b763b39a5b22e93ed446eb782d77360b68751299995e66a12b5af0ff454ce06a736c3d134011f8052",
+          "sha256": "6e6af08b1e1320c8683ebac9283d85bf8e604b6e26dc370aa551f90216bf9917",
+          "sha1": "95bbd0ce353b57d61d3a5e2d62516b7ab2d52013",
+          "md5": "f243d3529701d0086c7baae820bc0008"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core",
+          "version": {
+            "requires": "1.18.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "connectivity_plus_release-1.0.aar",
+          "url": "connectivity_plus_release-1.0.aar",
+          "size": 7820,
+          "sha512": "e6cd11b81b056dac10a4963f4c0810f71d605972eef9b82b763b39a5b22e93ed446eb782d77360b68751299995e66a12b5af0ff454ce06a736c3d134011f8052",
+          "sha256": "6e6af08b1e1320c8683ebac9283d85bf8e604b6e26dc370aa551f90216bf9917",
+          "sha1": "95bbd0ce353b57d61d3a5e2d62516b7ab2d52013",
+          "md5": "f243d3529701d0086c7baae820bc0008"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "connectivity_plus_release-1.0-sources.jar",
+          "url": "connectivity_plus_release-1.0-sources.jar",
+          "size": 5583,
+          "sha512": "ea7c1fb2692a22a70bd3199f4d2dcfe0d452458aa41b333f5749eb8c96284527c85da8146ed21fc565480af5b6dba728c4c6da19a6f31ff54942f0a14fc0d4ce",
+          "sha256": "50142b07be114a09ae3abf065ed608d043f1d3c50f0a015155b12015aa62b0ea",
+          "sha1": "dccfbbd3a6b4442e31b677bc44e3b37cd7ded7c7",
+          "md5": "b1f4c0c52c00f4f5922d3c216318e866"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "connectivity_plus_release-1.0-javadoc.jar",
+          "url": "connectivity_plus_release-1.0-javadoc.jar",
+          "size": 278349,
+          "sha512": "31c0f423ce12394f66312619bf8b4b91eeb234a54ec0f8987b73db75a175a68f7d5f897f17a5fbbfb6a028b87724ef17ce4fe9de2847317b569302f64da49300",
+          "sha256": "5a998ecaee95a6aafe4ea93ab62af4e2b0510258a69da9b3680910855a13e8ed",
+          "sha1": "ea8ca489b9d4c3e8a2da6c596bf8f071e9c0938a",
+          "md5": "999edbcbf7ecc310724a141e49a753ca"
+        }
+      ]
+    }
+  ]
+}

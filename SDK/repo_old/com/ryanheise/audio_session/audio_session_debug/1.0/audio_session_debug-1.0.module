@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.ryanheise.audio_session",
+    "module": "audio_session_debug",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugVariantDebugApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "audio_session_debug-1.0.aar",
+          "url": "audio_session_debug-1.0.aar",
+          "size": 19430,
+          "sha512": "78caa7c73378b8e11eee3ec5243ad2b57a23bd8d2190ed963a9d92e894a8b27e37d0ac373bffbbea5ba8faf5f7e97ad077967458b472ae050683600f9400c915",
+          "sha256": "acd4b6296ce35c558ec928d9bf9cc8a1b6c44b8a36eac516de9bab2e02116e93",
+          "sha1": "b2a94bcfcd26ed23a9c07e66772271ea9750dba2",
+          "md5": "20ffc6de4e1becc1f430171641768c58"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "androidx.media",
+          "module": "media",
+          "version": {
+            "requires": "1.7.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "audio_session_debug-1.0.aar",
+          "url": "audio_session_debug-1.0.aar",
+          "size": 19430,
+          "sha512": "78caa7c73378b8e11eee3ec5243ad2b57a23bd8d2190ed963a9d92e894a8b27e37d0ac373bffbbea5ba8faf5f7e97ad077967458b472ae050683600f9400c915",
+          "sha256": "acd4b6296ce35c558ec928d9bf9cc8a1b6c44b8a36eac516de9bab2e02116e93",
+          "sha1": "b2a94bcfcd26ed23a9c07e66772271ea9750dba2",
+          "md5": "20ffc6de4e1becc1f430171641768c58"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "audio_session_debug-1.0-sources.jar",
+          "url": "audio_session_debug-1.0-sources.jar",
+          "size": 6372,
+          "sha512": "f375a647631d296c00d4365b5b3585ba95f2601eecff9344cf8d7d51bb747867cda6b6def15391d00e548438fb2231563c1760668738d5ed534f1f8d0e5c0b15",
+          "sha256": "eb8e3dcd66b070a3a4ff021c3c8da1c5429bdd2291b0fa42a06e39b61135dd4a",
+          "sha1": "f75b393ae0803abfc42672210bf5bf3a50cb5c7f",
+          "md5": "cff576aa612042e93736cf945093bb70"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "audio_session_debug-1.0-javadoc.jar",
+          "url": "audio_session_debug-1.0-javadoc.jar",
+          "size": 269066,
+          "sha512": "a4a211cf9c3e5a5fe1b2d54f8c9835bf95f50714fd5ba8cabed761ff0ea961cefc5478661159c02a2eefef6ad4994f9d2f648f62f0404b015af455ae39863356",
+          "sha256": "e2f777620f4684fd8bc35ba020df6e903eae1fd60bc4db719285365dd2149eb6",
+          "sha1": "0cd9b872daba4d7ae076a847ca53689e07410012",
+          "md5": "73f1daf72cf3b10aa80e0db912b6b051"
+        }
+      ]
+    }
+  ]
+}

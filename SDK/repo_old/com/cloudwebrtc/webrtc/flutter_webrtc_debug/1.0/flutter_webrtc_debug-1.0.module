@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.cloudwebrtc.webrtc",
+    "module": "flutter_webrtc_debug",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugVariantDebugApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "flutter_webrtc_debug-1.0.aar",
+          "url": "flutter_webrtc_debug-1.0.aar",
+          "size": 231937,
+          "sha512": "1c7886a7139586f99105cd81559e0794d4eb423366f11c9b56eed8aec96f1a6c137ddc8858b35df644e8e817842fc381c946c2d061267d801168a9e2d734439b",
+          "sha256": "3f09f3605cfbd98c29b5c676fe5b47f4f2bf6c87c58a9f0ff4c72dbc5298452f",
+          "sha1": "7cfe86839fbbd71c8ffefa474d4fc046ecc41c94",
+          "md5": "edc15ad38b428265f119e429a95e0e15"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-b5990e5ccc5e325fd24f0746e7d6689bbebc7c65"
+          }
+        },
+        {
+          "group": "io.github.webrtc-sdk",
+          "module": "android",
+          "version": {
+            "requires": "137.7151.04"
+          }
+        },
+        {
+          "group": "com.github.davidliu",
+          "module": "audioswitch",
+          "version": {
+            "requires": "89582c47c9a04c62f90aa5e57251af4800a62c9a"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.8.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "flutter_webrtc_debug-1.0.aar",
+          "url": "flutter_webrtc_debug-1.0.aar",
+          "size": 231937,
+          "sha512": "1c7886a7139586f99105cd81559e0794d4eb423366f11c9b56eed8aec96f1a6c137ddc8858b35df644e8e817842fc381c946c2d061267d801168a9e2d734439b",
+          "sha256": "3f09f3605cfbd98c29b5c676fe5b47f4f2bf6c87c58a9f0ff4c72dbc5298452f",
+          "sha1": "7cfe86839fbbd71c8ffefa474d4fc046ecc41c94",
+          "md5": "edc15ad38b428265f119e429a95e0e15"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "flutter_webrtc_debug-1.0-sources.jar",
+          "url": "flutter_webrtc_debug-1.0-sources.jar",
+          "size": 102874,
+          "sha512": "3a0e4f1e1285b1c011b725614e65d4c09c25fb13e3574617874ce174ccb1b12acba9902a4f67b15a6ebf3228379033018c3bfbe4757bdddec831b621a68247cf",
+          "sha256": "0d5241ee134134ff7750a2e8866a9b440081e74766cdf007e8c9c1d35a0eb824",
+          "sha1": "65933ddbb8fb2d8d0b5cb3efe8a92a19ff03a8ed",
+          "md5": "e8540310296bcb7d7748b1a0960ac724"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantDebugJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "flutter_webrtc_debug-1.0-javadoc.jar",
+          "url": "flutter_webrtc_debug-1.0-javadoc.jar",
+          "size": 509609,
+          "sha512": "32e06c0185e5c0ab98e9ae9eb6ce50f6af44452abfc3a264af833d0be74597d7d225f3675d826481d2b5d63a9aedf9f4c474cbef3a99ed7a7fb45af833102e4a",
+          "sha256": "76483903c4d89477cfd5006ac8a24dfd2fe61b9e3c899947bd7d23e163a73162",
+          "sha1": "32087da4aabc290098514760f331e4e7d439fac7",
+          "md5": "3d721953de341013d7d306758d373a92"
+        }
+      ]
+    }
+  ]
+}
