@@ -57,7 +57,8 @@ class ConferenceActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         // 1. Khởi tạo và gán trực tiếp vào biến toàn cục của Class để tránh leak memory
-        val engine = FlutterEngine(this)
+//        val engine = FlutterEngine(this)
+        val engine = FlutterEngineCache.getInstance().get(ENGINE_ID) ?: FlutterEngine(this)
         mFlutterEngine = engine
 
         // --- GIẢI PHÁP SỬA LỖI MATCH TYPE ---
@@ -76,7 +77,11 @@ class ConferenceActivity : ComponentActivity() {
         MethodChannel(engine.dartExecutor.binaryMessenger, "quickom/conference")
             .setMethodCallHandler { call, result ->
                 when (call.method) {
-                    "onConferenceStarted" -> {
+                    "onConferenceConnecting" -> {
+                        uiState.value = uiState.value.copy(conferenceConnected = false)
+                        result.success(null)
+                    }
+                    "onConferenceConnected" -> {
                         uiState.value = uiState.value.copy(conferenceConnected = true)
                         result.success(null)
                     }
@@ -84,6 +89,10 @@ class ConferenceActivity : ComponentActivity() {
                         val reason = call.argument<Boolean>("reason") ?: ""
                         Log.d("ConferenceScreen", "onEndConference with reason = $reason")
                         finishActivityFromFlutter()
+                        result.success(null)
+                    }
+                    "onShowConference" -> {
+                        uiState.value = uiState.value.copy(videoCallOn = true)
                         result.success(null)
                     }
                     "onHideConference" -> {
@@ -104,23 +113,22 @@ class ConferenceActivity : ComponentActivity() {
                         uiState.value = uiState.value.copy(speakerStatus = isSpeakerOn)
                         result.success(null)
                     }
-                    "onUpdateDuration" -> {
-                        val progress = call.argument<Int>("duration") ?: 0
-                        uiState.value = uiState.value.copy(duration = progress)
-                        result.success(null)
-                    }
                     "onUpdateParticipant" -> {
                         val participantList = call.argument<List<Map<String,Any>>>("participants");
-
+                        Log.d("ConferenceScreen", "onUpdateParticipant = $participantList")
                         result.success(null)
                     }
                     "onChatReceived" -> {
-                        var chatInfo = call.argument<Map<String,Any>>("chat");
-
+                        val chatInfo = call.argument<Map<String,Any>>("chat");
+                        Log.d("ConferenceScreen", "onChatReceived = $chatInfo")
+                        result.success(null)
+                    }
+                    "onChatDeleted" -> {
+                        val chatInfo = call.argument<Map<String,Any>>("chat");
+                        Log.d("ConferenceScreen", "onChatDeleted = $chatInfo")
                         result.success(null)
                     }
                     "onAddParticipantRequest" -> {
-
                         result.success(null)
                     }
                     else -> {
@@ -128,14 +136,6 @@ class ConferenceActivity : ComponentActivity() {
                     }
                 }
             }
-
-//        val customEntrypoint = DartExecutor.DartEntrypoint(
-//            this.packageCodePath,   // Trả về đường dẫn APK chứa asset dưới dạng String
-//            "",                     // Chuỗi rỗng để làm hài lòng tham số dartLibraryPath không được null
-//            "quickomSDKEntryPoint"  // Tên hàm Entrypoint của bạn
-//        )
-//        engine.dartExecutor.executeDartEntrypoint(customEntrypoint)
-
         engine.dartExecutor.executeDartEntrypoint(
             DartExecutor.DartEntrypoint.createDefault()
         )
@@ -215,7 +215,7 @@ fun ConferenceScreen(
 
     // Tự động kích hoạt khi vào màn hình
     LaunchedEffect(Unit) {
-        delay(1000)
+        delay(2000)
         Log.d("ConferenceScreen", "Màn hình Native hiện lên -> Kích hoạt startConference ngầm")
         methodChannel?.invokeMethod("startConference", callArgs, object : MethodChannel.Result {
             override fun success(result: Any?) {
@@ -286,7 +286,8 @@ fun ConferenceScreen(
                 label = if (uiState.microStatus) "TẮT MIC" else "BẬT MIC",
                 iconColor = if (uiState.microStatus) Color(0xFF1A73E8) else Color.Gray,
                 onClick = {
-                    methodChannel?.invokeMethod("toggleMute", null, null)
+                    val mapArgs = mapOf("enabled" to uiState.microStatus)
+                    methodChannel?.invokeMethod("setMicrophoneStatus", mapArgs, null)
                 }
             )
 
@@ -296,7 +297,8 @@ fun ConferenceScreen(
                 label = if (uiState.speakerStatus) "LOA NGOÀI" else "LOA TRONG",
                 iconColor = if (uiState.speakerStatus) Color(0xFF1A73E8) else Color.Gray,
                 onClick = {
-                    methodChannel?.invokeMethod("toggleSpeaker", null, null)
+                    val mapArgs = mapOf("enabled" to uiState.speakerStatus)
+                    methodChannel?.invokeMethod("setSpeakerStatus", mapArgs, null)
                 }
             )
 
@@ -307,25 +309,28 @@ fun ConferenceScreen(
                 label = "VIDEO CALL",
                 iconColor = if (uiState.videoCallOn) Color(0xFF1A73E8) else Color.Gray,
                 onClick = {
-                    Log.d("ConferenceScreen", "Người dùng click nút Video Call -> Gọi openConference")
-                    val intent = FlutterActivity.withCachedEngine(ENGINE_ID)
-                        .destroyEngineWithActivity(false) // Giữ engine sống ngầm để bấm lần 2 không lỗi
-                        .build(context)
-                    context.startActivity(intent)
+                    // Chỉ cho bật video khi đã kết nối thành công.
+                    if (uiState.conferenceConnected == true) {
+                        Log.d("ConferenceScreen", "Người dùng click nút Video Call -> Gọi openConference")
+                        val intent = FlutterActivity.withCachedEngine(ENGINE_ID)
+                            .destroyEngineWithActivity(false)
+                            .build(context)
+                        context.startActivity(intent)
 
-                    methodChannel?.invokeMethod("openConference", callArgs, object : MethodChannel.Result {
-                        override fun success(result: Any?) {
-                            Log.d("ConferenceScreen", "Mở openConference thành công")
-                        }
+                        methodChannel?.invokeMethod("openConference", callArgs, object : MethodChannel.Result {
+                            override fun success(result: Any?) {
+                                Log.d("ConferenceScreen", "Mở openConference thành công")
+                            }
 
-                        override fun error(errorCode: String, errorMessage: String?, errorDetails: Any?) {
-                            Log.e("ConferenceScreen", "Lỗi khi gọi openConference: $errorMessage")
-                        }
+                            override fun error(errorCode: String, errorMessage: String?, errorDetails: Any?) {
+                                Log.e("ConferenceScreen", "Lỗi khi gọi openConference: $errorMessage")
+                            }
 
-                        override fun notImplemented() {
-                            Log.e("ConferenceScreen", "Hàm openConference chưa định nghĩa bên Flutter")
-                        }
-                    })
+                            override fun notImplemented() {
+                                Log.e("ConferenceScreen", "Hàm openConference chưa định nghĩa bên Flutter")
+                            }
+                        })
+                    }
                 }
             )
 
