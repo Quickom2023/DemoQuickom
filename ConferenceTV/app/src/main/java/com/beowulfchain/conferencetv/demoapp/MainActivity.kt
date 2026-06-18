@@ -1,5 +1,9 @@
 package com.beowulfchain.conferencetv.demoapp
 import android.Manifest
+import android.content.Context
+import android.media.AudioDeviceInfo
+import android.media.AudioManager
+import android.os.Build
 import com.beowulfchain.conferencetv.demoapp.ui.theme.DemoAppTheme
 
 import android.os.Bundle
@@ -9,11 +13,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsFocusedAsState
-
-import android.content.Intent
 
 import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.fillMaxSize
@@ -46,9 +49,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.input.ImeAction
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
+import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
+import io.flutter.plugin.common.MethodChannel
+import io.flutter.plugins.GeneratedPluginRegistrant
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
@@ -57,21 +65,11 @@ import okhttp3.Request
 import org.json.JSONObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import kotlin.text.ifEmpty
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalTvMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val ENGINE_ID = "quickom_engine_id"
-        val flutterEngine = FlutterEngine(this)
-        flutterEngine.dartExecutor.executeDartEntrypoint(
-            DartExecutor.DartEntrypoint.createDefault()
-        )
-        // Lưu vào bộ nhớ Cache
-        FlutterEngineCache.getInstance().put(ENGINE_ID, flutterEngine)
-
         setContent {
             DemoAppTheme {
                 Surface(
@@ -82,15 +80,97 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
+        // 1. Create flutter engine
+        val flutterEngine = FlutterEngine(this)
+
+        try {
+            GeneratedPluginRegistrant.registerWith(flutterEngine)
+        } catch (e: Exception) {
+            Log.e("SDK", "Cannot register plugin", e)
+        }
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "quickom/conference")
+            .setMethodCallHandler { call, result ->
+                when (call.method) {
+                    "onConferenceConnecting" -> {
+                        Log.d("ConferenceScreen", "onConferenceConnecting")
+                        result.success(null)
+                    }
+                    "onConferenceConnected" -> {
+                        Log.d("ConferenceScreen", "onConferenceConnected")
+                        result.success(null)
+                    }
+                    "onEndConference" -> {
+                        val reason = call.argument<String>("reason") ?: ""
+                        Log.d("ConferenceScreen", "onEndConference with reason = $reason")
+                        finishActivityFromFlutter()
+                        result.success(true)
+                    }
+                    "onShowConference" -> {
+                        Log.d("ConferenceScreen", "onShowConference")
+                        result.success(null)
+                    }
+                    "onHideConference" -> {
+                        Log.d("ConferenceScreen", "onHideConference")
+                        result.success(null)
+                    }
+                    "onUpdateParticipant" -> {
+                        val participantList = call.argument<List<Map<String,Any>>>("participants");
+                        Log.d("ConferenceScreen", "onUpdateParticipant = $participantList")
+                        result.success(null)
+                    }
+                    "onChatReceived" -> {
+                        val chatInfo = call.argument<Map<String,Any>>("chat");
+                        Log.d("ConferenceScreen", "onChatReceived = $chatInfo")
+                        result.success(null)
+                    }
+                    "onRequestFriendList" -> {
+                        Log.d("ConferenceScreen", "onRequestFriendList")
+                        result.success(null)
+
+                        // Giả lập sau khi xử lý xong hoặc lấy data từ Server về:
+                        val friendList = listOf(
+                            mapOf("name" to "Jenny", "avatar" to "https://i.pravatar.cc/400?img=65", "id" to "123"),
+                            mapOf("name" to "Võ Nam", "avatar" to "https://i.pravatar.cc/400?img=47", "id" to "124"),
+                            mapOf("name" to "Ngọc Lan", "avatar" to "https://i.pravatar.cc/400?img=34", "id" to "125")
+                        )
+
+                        val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+                        engine?.let {
+                            MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+                                "onResponseFriendList",
+                                friendList
+                            )
+                        }
+                    }
+                    "onAddParticipant" -> {
+                        val friendId = call.argument<Map<String,Any>>("friend")
+                        Log.d("ConferenceScreen", "onAddParticipant friendId = $friendId")
+                        result.success(null)
+                    }
+                    else -> result.notImplemented()
+                }
+            }
+        flutterEngine.dartExecutor.executeDartEntrypoint(
+            DartExecutor.DartEntrypoint.createDefault()
+        )
+
+        // 2. Cache flutterEngine with quickom_engine_id
+        FlutterEngineCache.getInstance().put("quickom_engine_id", flutterEngine)
+    }
+
+    private fun finishActivityFromFlutter() {
+        val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+        engine?.navigationChannel?.setInitialRoute("/")
     }
 
     @Composable
     fun TVDemoScreen() {
         val focusManager = LocalFocusManager.current
 
-        var alias by remember { mutableStateOf("") }
-        var name by remember { mutableStateOf("") }
-        var token by remember { mutableStateOf("") }
+        var alias by remember { mutableStateOf("NtSYP") }
+        var name by remember { mutableStateOf("Kim Yến") }
+        var token by remember { mutableStateOf("0004") }
 
         val interactionHost = remember { MutableInteractionSource() }
         val isHostFocused by interactionHost.collectIsFocusedAsState()
@@ -119,9 +199,8 @@ class MainActivity : ComponentActivity() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(scrollState)
-                .padding(32.dp),
-
+                .padding(32.dp)
+                .verticalScroll(scrollState),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -264,22 +343,52 @@ class MainActivity : ComponentActivity() {
     }
 
     fun onHostButtonClicked(alias: String, name: String, token: String) {
-        val testAlias = alias.ifEmpty { "8ob37" };
-        val testName = name.ifEmpty { "Test Host" };
-        val testRoomName = "Demo Room";
+        val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+//        val testAlias = "8ob37";
+//        val testName = "KinhHost";
+//        val testToken = "SFMyNTY.ZDRhNGJmNDMtNDZlOS00ZDU4LTgzMmUtNDA1ZjdjMzI3NWU1.Lk4Cm0d87gwD6hsSZ14Ycsv4EwrS1CdzxqzcHsmx7K0";
+        val conferenceDomain = "https://realtime-staging.api.datagram.network";
+        val storageDomain = "https://storage.beowulfchain.com";
+//        val conferenceDomain = "https://signal-mytv.quickom.com";
+//        val storageDomain = "https://storage.beowulfchain.com";
+
+        val locale = "vi";
+
+        // For testing purpose, we use jsonbin (https://jsonbin.io/) to fetch token from code
+        val testAlias = alias;
+        val testName = name;
 
         val tokenService = JsonBinService()
+
         MainScope().launch {
-            val testToken = tokenService.fetchToken(token.ifEmpty { "0001" })
+            val testToken = tokenService.fetchToken(token)
+//            val testToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IjM1dzVoIiwidXNlcl9pZCI6ImY2ZDYxMmIzLWZhYzctNDViMC04MGU2LTFiMTZlY2I3MTI1NCIsImhvc3QiOnRydWUsImV4cGlyZXNfaW4iOjYwfQ.hxqQfACEKTXeuNgGCsXlSUUqToQcIBZ5J2ACD267AyM"
             if (testToken != null && testAlias.isNotEmpty()) {
-                val intent = Intent(this@MainActivity, ConferenceActivity::class.java).apply {
-                    putExtra("ALIAS", testAlias.ifEmpty { "" })
-                    putExtra("NAME", testName.ifEmpty { "Host name" })
-                    putExtra("TOKEN", testToken.ifEmpty { "" })
-                    putExtra("ROOM_NAME", testRoomName.ifEmpty { "Default Room Name" })
-                    putExtra("ROLE", "host")
+                engine?.let {
+                    // Send data to Flutter before hand
+                    // "quickom/conference" must match with channel in Flutter side
+                    MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+                        "openConference",
+                        mapOf(
+                            "alias" to testAlias,
+                            "name" to testName,
+                            "token" to testToken,
+                            "conferenceDomain" to conferenceDomain,
+                            "storageDomain" to storageDomain,
+                            "locale" to locale,
+                            "avatar" to "https://i.pravatar.cc/400?img=36",
+                            "remoteName" to "Hoàng Hà",
+                            "remoteAvatar" to "https://i.pravatar.cc/400?img=14"
+                        )
+                    )
                 }
-                startActivity(intent)
+
+                // Open FlutterActivity using engine with data
+                startActivity(
+                    FlutterActivity
+                        .withCachedEngine("quickom_engine_id")
+                        .build(this@MainActivity)
+                )
             } else {
                 Toast.makeText(this@MainActivity, "Token and alias is required", Toast.LENGTH_SHORT).show()
             }
@@ -287,26 +396,48 @@ class MainActivity : ComponentActivity() {
     }
 
     fun onJoinButtonClicked(alias: String, name: String) {
-        val testAlias = alias.ifEmpty { "8ob37" };
-        val testName = name.ifEmpty { "Test Participant" };
-        val testRoomName = "Demo Room";
-        val testToken = "";
+        val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+//        val testAlias = "088zv";
+//        val testName = "KinhChen";
+        val conferenceDomain = "https://realtime-staging.api.datagram.network";
+        val storageDomain = "https://storage.beowulfchain.com";
+        val locale = "vi";
+
+        val testAlias = alias;
+        val testName = name;
 
         if (testAlias.isNotEmpty()) {
-            val intent = Intent(this@MainActivity, ConferenceActivity::class.java).apply {
-                putExtra("ALIAS", testAlias.ifEmpty { "" })
-                putExtra("NAME", testName.ifEmpty { "Member" })
-                putExtra("TOKEN", testToken.ifEmpty { "" })
-                putExtra("ROOM_NAME", testRoomName.ifEmpty { "Default Room Name" })
-                putExtra("ROLE", "participant")
+            engine?.let {
+                // Send data to Flutter before hand
+                // "quickom/conference" must match with channel in Flutter side
+                MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+                    "openConference",
+                    mapOf(
+                        "alias" to testAlias,
+                        "name" to testName,
+                        "conferenceDomain" to conferenceDomain,
+                        "storageDomain" to storageDomain,
+                        "locale" to locale,
+                        "avatar" to "https://i.pravatar.cc/400?img=14",
+                        "remoteName" to "Kim Yến",
+                        "remoteAvatar" to "https://i.pravatar.cc/400?img=36"
+                    )
+                )
             }
-            startActivity(intent)
+
+            // Open FlutterActivity using engine with data
+            startActivity(
+                FlutterActivity
+                    .withCachedEngine("quickom_engine_id")
+                    .build(this)
+            )
         }
         else {
             Toast.makeText(this@MainActivity, "Alias is required", Toast.LENGTH_SHORT).show();
         }
     }
 }
+
 
 class JsonBinService {
     private val client = OkHttpClient()

@@ -1,18 +1,16 @@
 # Quickom Conference SDK Documentation
 
-## 1. Introduction / Giới thiệu
-**EN:** The Quickom Conference SDK allows developers to integrate high-quality video conferencing into Android applications using a Flutter-based engine. It supports two primary roles: **Host** and **Joiner**.
+## 1. Introduction
 
-**VI:** Quickom Conference SDK cho phép nhà phát triển tích hợp tính năng hội nghị truyền hình chất lượng cao vào ứng dụng Android thông qua nền tảng Flutter. SDK hỗ trợ hai vai trò chính: **Chủ phòng (Host)** và **Người tham gia (Joiner)**.
+The Quickom Conference SDK allows developers to integrate high-quality video conferencing into Android applications using a Flutter-based engine. It supports two primary roles: **Host** and **Joiner**.
 
 ---
 
-## 2. Installation / Cài đặt
+## 2. Installation
 
 ### A. Settings Gradle Configuration
-**EN:** Copy SDK/repo/ folder to your project and add the following repositories to your `settings.gradle.kts` file to allow the project to resolve SDK dependencies.
 
-**VI:** Sao chép thư mục SDK/repo/ vào dự án của bạn, thêm các repository sau vào file `settings.gradle.kts` để project có thể tìm thấy các thư viện cần thiết.
+Copy SDK/repo/ folder to your project and add the following repositories to your `settings.gradle.kts` file to allow the project to resolve SDK dependencies.
 
 ```kotlin
 dependencyResolutionManagement {
@@ -27,75 +25,82 @@ dependencyResolutionManagement {
         maven { url = uri("../SDK/repo") }
     }
 }
+
 ```
 
 ---
 
 ### B. Build Gradle Configuration
-**EN:** Add the SDK dependencies to your app-level build.gradle.kts. Use debugImplementation for development and releaseImplementation for production builds.
 
-**VI:** Thêm các dependency của SDK vào file build.gradle.kts cấp app. Sử dụng debugImplementation cho bản debug và releaseImplementation cho bản release.
+Add the SDK dependencies to your app-level build.gradle.kts. Use debugImplementation for development and releaseImplementation for production builds.
 
 ```kotlin
 dependencies {
     debugImplementation("com.beowulfchain.flutter_sdk_packer:flutter_debug:1.0")
     releaseImplementation("com.beowulfchain.flutter_sdk_packer:flutter_release:1.0")
 }
+
 ```
-
-## 3. Core Functions / Các chức năng chính
-
-### A. Host Conference (Tổ chức cuộc họp)
-**EN:** Used when a user wants to start and manage a room. This requires a `token` for authentication.
-
-**VI:** Sử dụng khi người dùng muốn bắt đầu và quản lý một phòng họp. Chế độ này yêu cầu một mã `token` để xác thực quyền chủ phòng.
-
-**Required Parameters / Tham số bắt buộc:**
-* `alias`: Room unique identifier (ID phòng).
-* `name`: Host display name (Tên hiển thị chủ phòng).
-* `token`: Security token for hosting rights (Mã xác thực chủ phòng).
-* `conferenceDomain`: Conference API endpoint (Server điều phối).
-* `storageDomain`: Asset storage endpoint (Server lưu trữ).
-* `locale`: Set desired language.
-
-### B. Join Conference (Tham gia cuộc họp)
-**EN:** Used for participants entering an existing room. No token is required.
-
-**VI:** Sử dụng cho người tham gia vào phòng họp đã có sẵn. Không yêu cầu mã token.
-
-**Required Parameters / Tham số bắt buộc:**
-* `alias`: Existing room identifier (ID phòng hiện có).
-* `name`: Participant display name (Tên hiển thị người tham gia).
-* `conferenceDomain`: Conference API endpoint.
-* `storageDomain`: Asset storage endpoint.
-* `locale`: Set desired language.
 
 ---
 
-## 4. Implementation Example / Ví dụ triển khai (Android/Kotlin)
+## 3. Core Functions
 
-### Setup / Cấu hình
-**EN:** The `FlutterEngine` must be pre-warmed and cached with the ID `"quickom_engine_id"`.
+### A. Host Conference
 
-**VI:** `FlutterEngine` cần được khởi tạo sẵn và lưu vào cache với ID `"quickom_engine_id"`.
+Used when a user wants to start and manage a room. This requires a `token` for authentication.
+
+**Parameters:**
+
+* `alias`: Room unique identifier.
+* `name`: Host display name.
+* `token`: Security token for hosting rights.
+* `conferenceDomain`: Conference API endpoint.
+* `storageDomain`: Asset storage endpoint.
+* `locale`: Set desired language.
+* `avatar`: URL to user avatar image.
+* `remoteName`: Name of participant to call.
+* `remoteAvatar`: URL to participant's avatar.
+
+### B. Join Conference
+
+Used for participants entering an existing room. No token is required.
+
+**Parameters:**
+
+* `alias`: Existing room identifier.
+* `name`: Participant display name.
+* `conferenceDomain`: Conference API endpoint.
+* `storageDomain`: Asset storage endpoint.
+* `locale`: Set desired language.
+* `avatar`: URL to user avatar image.
+* `remoteName`: Name of participant to call.
+* `remoteAvatar`: URL to participant's avatar.
+
+---
+
+## 4. Implementation Example (Android/Kotlin)
+
+### Setup
+
+The `FlutterEngine` must be pre-warmed and cached with the ID `"quickom_engine_id"`.
 
 ### Method Channel
-* **Channel Name:** `quickom/conference`
-* **Method Name:** `openConference`
 
-#### Code Snippet (Kotlin):
+* **Channel Name:** `quickom/conference`
+
+---
+
+### Methods (Native to Flutter)
+
+#### 1. openConference
+
+Joins the conference and simultaneously opens the conference user interface.
 
 ```kotlin
-/**
- * Host a conference room
- */
-fun onHostButtonClicked(alias: String, name: String, token: String) {
+fun onHostButtonClicked(alias: String, name: String, token: String, avatar: String, remoteName: String, remoteAvatar: String) {
     val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
-
-    // Configuration Locale
-    val locale = "vi";
-    
-    // Configuration Domains
+    val locale = "en"
     val conferenceDomain = "https://realtime-staging.api.datagram.network"
     val storageDomain = "https://storage.beowulfchain.com"
 
@@ -111,43 +116,208 @@ fun onHostButtonClicked(alias: String, name: String, token: String) {
             mapOf(
                 "alias" to alias,
                 "name" to name,
-                "token" to token, // Required for Host
+                "token" to token,
                 "conferenceDomain" to conferenceDomain,
-                "storageDomain" to storageDomain
-                "locale" to locale
+                "storageDomain" to storageDomain,
+                "locale" to locale,
+                "avatar" to avatar,
+                "remoteName" to remoteName,
+                "remoteAvatar" to remoteAvatar
             )
         )
     }
 }
 
-/**
- * Join an existing conference room
- */
-fun onJoinButtonClicked(alias: String, name: String) {
-    val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+```
 
-    // Configuration Locale
-    val locale = "vi";
-    
-    // Configuration Domains
+#### 2. startConference
+
+Starts the conference in the background without opening the conference user interface immediately.
+
+```kotlin
+fun startConferenceInBackground(alias: String, name: String, token: String, avatar: String, remoteName: String, remoteAvatar: String) {
+    val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+    val locale = "en"
     val conferenceDomain = "https://realtime-staging.api.datagram.network"
     val storageDomain = "https://storage.beowulfchain.com"
 
-    startActivity(
-        FlutterActivity.withCachedEngine("quickom_engine_id").build(this)
-    )
-
     engine?.let {
         MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
-            "openConference",
+            "startConference",
             mapOf(
                 "alias" to alias,
                 "name" to name,
+                "token" to token,
                 "conferenceDomain" to conferenceDomain,
-                "storageDomain" to storageDomain
-                "locale" to locale
+                "storageDomain" to storageDomain,
+                "locale" to locale,
+                "avatar" to avatar,
+                "remoteName" to remoteName,
+                "remoteAvatar" to remoteAvatar
             )
         )
     }
 }
+
+```
+
+#### 3. nativeEndConference
+
+Allows the native side to programmatically terminate the conference.
+
+```kotlin
+methodChannel?.invokeMethod("nativeEndConference", null)
+
+```
+
+#### 4. getMicrophoneStatus / getCameraStatus / getSpeakerStatus
+
+Retrieves the current status of the hardware components. Returns a boolean value (`true` for ON, `false` for OFF).
+
+```kotlin
+methodChannel?.invokeMethod("getMicrophoneStatus", null, object : MethodChannel.Result {
+    override fun success(result: Any?) {
+        val isMuted = result as? Boolean ?: false
+        Log.d("Conference", "Microphone enabled: $isMuted")
+    }
+    override fun error(code: String, msg: String?, details: Any?) {}
+    override fun notImplemented() {}
+})
+
+```
+
+#### 5. getConferenceDuration
+
+Retrieves the total elapsed time of the current conference in milliseconds.
+
+```kotlin
+methodChannel?.invokeMethod("getConferenceDuration", null, object : MethodChannel.Result {
+    override fun success(result: Any?) {
+        val durationMs = result as? Long ?: 0L
+        Log.d("Conference", "Duration: $durationMs ms")
+    }
+    override fun error(code: String, msg: String?, details: Any?) {}
+    override fun notImplemented() {}
+})
+
+```
+
+#### 6. setMicrophoneStatus
+
+Sets the microphone status to either on or off.
+
+```kotlin
+val mapArgs = mapOf("enabled" to uiState.microStatus)
+methodChannel?.invokeMethod("setMicrophoneStatus", mapArgs, null)
+
+```
+
+#### 7. setSpeakerStatus
+
+Sets the speaker status to either on or off.
+
+```kotlin
+val mapArgs = mapOf("enabled" to uiState.speakerStatus)
+methodChannel?.invokeMethod("setSpeakerStatus", mapArgs, null)
+
+```
+
+#### 8. onResponseFriendList
+
+Sends a list of friends to the conference to be displayed within the UI.
+
+```kotlin
+val friendList = listOf(
+    mapOf("name" to "Jenny", "avatar" to "https://i.pravatar.cc/400?img=65", "id" to "123"),
+    mapOf("name" to "Võ Nam", "avatar" to "https://i.pravatar.cc/400?img=47", "id" to "124"),
+    mapOf("name" to "Ngọc Lan", "avatar" to "https://i.pravatar.cc/400?img=34", "id" to "125")
+)
+val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+engine?.let {
+    MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+        "onResponseFriendList",
+        friendList
+    )
+}
+
+```
+
+---
+
+### Events (Flutter to Native Listener)
+
+Native code can handle incoming events triggered from the conference engine via `MethodCallHandler`:
+
+```kotlin
+methodChannel.setMethodCallHandler { call, result ->
+    when (call.method) {
+        "onConferenceConnecting" -> {
+            Log.d("ConferenceScreen", "Conference is connecting...")
+            result.success(null)
+        }
+        
+        "onConferenceConnected" -> {
+            Log.d("ConferenceScreen", "Conference connected successfully. At least one other participant has joined.")
+            result.success(null)
+        }
+        
+        "onEndConference" -> {
+            val reason = call.argument<String>("reason") ?: ""
+            Log.d("ConferenceScreen", "onEndConference with reason = $reason")
+            finishActivityFromFlutter()
+            result.success(null)
+        }
+        
+        "onShowConference" -> {
+            Log.d("ConferenceScreen", "Conference screen is now visible.")
+            result.success(null)
+        }
+        
+        "onHideConference" -> {
+            Log.d("ConferenceScreen", "Conference screen hidden. Use 'openConference' to make it visible again.")
+            result.success(null)
+        }
+        
+        "onUpdateParticipant" -> {
+            val participantList = call.argument<List<Map<String, Any>>>("participants")
+            Log.d("ConferenceScreen", "onUpdateParticipant = $participantList")
+            result.success(null)
+        }
+        
+        "onChatReceived" -> {
+            val chatInfo = call.argument<Map<String, Any>>("chat")
+            Log.d("ConferenceScreen", "onChatReceived = $chatInfo")
+            result.success(null)
+        }
+        
+        "onRequestFriendList" -> {
+            Log.d("ConferenceScreen", "onRequestFriendList")
+            result.success(null)
+
+            // Simulating fetching data from Server or local storage:
+            val friendList = listOf(
+                mapOf("name" to "Jenny", "avatar" to "https://i.pravatar.cc/400?img=65", "id" to "123"),
+                mapOf("name" to "Võ Nam", "avatar" to "https://i.pravatar.cc/400?img=47", "id" to "124"),
+                mapOf("name" to "Ngọc Lan", "avatar" to "https://i.pravatar.cc/400?img=34", "id" to "125")
+            )
+
+            val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+            engine?.let {
+                MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+                    "onResponseFriendList",
+                    friendList
+                )
+            }
+        }
+        
+        "onAddParticipant" -> {
+            val friendId = call.argument<Map<String, Any>>("friend")
+            Log.d("ConferenceScreen", "onAddParticipant friendId = $friendId")
+            result.success(null)
+        }
+        
+        else -> result.notImplemented()
+    }
+}
+
 ```
