@@ -181,17 +181,19 @@ class MainActivity : ComponentActivity() {
         val joinLauncher = rememberLauncherForActivityResult(
             ActivityResultContracts.RequestMultiplePermissions()
         ) { permissions ->
-            if (permissions.values.all { it }) {
-                onJoinButtonClicked(alias = alias, name = name);
-            }
+//            if (permissions.values.all { it }) {
+//                onJoinButtonClicked(alias = alias, name = name);
+//            }
+            onJoinButtonClicked(alias = alias, name = name);
         }
 
         val hostLauncher = rememberLauncherForActivityResult(
             ActivityResultContracts.RequestMultiplePermissions()
         ) { permissions ->
-            if (permissions.values.all { it }) {
-                onHostButtonClicked(alias = alias, name = name, token = token);
-            }
+//            if (permissions.values.all { it }) {
+//                onHostButtonClicked(alias = alias, name = name, token = token);
+//            }
+            onHostButtonClicked(alias = alias, name = name, token = token);
         }
 
         val scrollState = rememberScrollState()
