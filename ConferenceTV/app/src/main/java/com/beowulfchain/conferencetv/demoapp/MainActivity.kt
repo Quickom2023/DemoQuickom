@@ -144,7 +144,7 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                     "onAddParticipant" -> {
-                        val friendId = call.argument<Map<String,Any>>("friend")
+                        val friendId = call.argument<String>("friend")
                         Log.d("ConferenceScreen", "onAddParticipant friendId = $friendId")
                         result.success(null)
                     }
