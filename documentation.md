@@ -212,7 +212,17 @@ methodChannel?.invokeMethod("setMicrophoneStatus", mapArgs, null)
 
 ```
 
-#### 7. setSpeakerStatus
+#### 7. setCameraStatus
+
+Sets the camera status to either on or off.
+
+```kotlin
+val mapArgs = mapOf("enabled" to uiState.cameraStatus)
+methodChannel?.invokeMethod("setCameraStatus", mapArgs, null)
+
+```
+
+#### 8. setSpeakerStatus
 
 Sets the speaker status to either on or off.
 
@@ -222,7 +232,7 @@ methodChannel?.invokeMethod("setSpeakerStatus", mapArgs, null)
 
 ```
 
-#### 8. onResponseFriendList
+#### 9. onResponseFriendList
 
 Sends a list of friends to the conference to be displayed within the UI.
 

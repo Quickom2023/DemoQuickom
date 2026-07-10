@@ -130,9 +130,9 @@ class MainActivity : ComponentActivity() {
 
                         // Giả lập sau khi xử lý xong hoặc lấy data từ Server về:
                         val friendList = listOf(
-                            mapOf("name" to "Jenny", "avatar" to "https://i.pravatar.cc/400?img=65", "id" to "123"),
-                            mapOf("name" to "Võ Nam", "avatar" to "https://i.pravatar.cc/400?img=47", "id" to "124"),
-                            mapOf("name" to "Ngọc Lan", "avatar" to "https://i.pravatar.cc/400?img=34", "id" to "125")
+                            mapOf("name" to "Jenny", "avatar" to "https://i.pravatar.cc/400?img=65", "id" to "18fcb3d0-ef4d-4084-853f-1f013ea858ca"),
+                            mapOf("name" to "Võ Nam", "avatar" to "https://i.pravatar.cc/400?img=47", "id" to "f007df73-3715-43ff-bd41-1054cfe20630"),
+                            mapOf("name" to "Ngọc Lan", "avatar" to "https://i.pravatar.cc/400?img=34", "id" to "9590941f-67b4-4d66-a851-2ba25338d47b")
                         )
 
                         val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
