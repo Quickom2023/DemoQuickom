@@ -93,39 +93,39 @@ class MainActivity : ComponentActivity() {
             .setMethodCallHandler { call, result ->
                 when (call.method) {
                     "onConferenceConnecting" -> {
-                        Log.d("ConferenceScreen", "onConferenceConnecting")
+                        Log.d("DemoApp", "onConferenceConnecting")
                         result.success(null)
                     }
                     "onConferenceConnected" -> {
-                        Log.d("ConferenceScreen", "onConferenceConnected")
+                        Log.d("DemoApp", "onConferenceConnected")
                         result.success(null)
                     }
                     "onEndConference" -> {
                         val reason = call.argument<String>("reason") ?: ""
-                        Log.d("ConferenceScreen", "onEndConference with reason = $reason")
+                        Log.d("DemoApp", "onEndConference with reason = $reason")
                         finishActivityFromFlutter()
                         result.success(true)
                     }
                     "onShowConference" -> {
-                        Log.d("ConferenceScreen", "onShowConference")
+                        Log.d("DemoApp", "onShowConference")
                         result.success(null)
                     }
                     "onHideConference" -> {
-                        Log.d("ConferenceScreen", "onHideConference")
+                        Log.d("DemoApp", "onHideConference")
                         result.success(null)
                     }
                     "onUpdateParticipant" -> {
                         val participantList = call.argument<List<Map<String,Any>>>("participants");
-                        Log.d("ConferenceScreen", "onUpdateParticipant = $participantList")
+                        Log.d("DemoApp", "onUpdateParticipant = $participantList")
                         result.success(null)
                     }
                     "onChatReceived" -> {
                         val chatInfo = call.argument<Map<String,Any>>("chat");
-                        Log.d("ConferenceScreen", "onChatReceived = $chatInfo")
+                        Log.d("DemoApp", "onChatReceived = $chatInfo")
                         result.success(null)
                     }
                     "onRequestFriendList" -> {
-                        Log.d("ConferenceScreen", "onRequestFriendList")
+                        Log.d("DemoApp", "onRequestFriendList")
                         result.success(null)
 
                         // Giả lập sau khi xử lý xong hoặc lấy data từ Server về:
@@ -145,7 +145,7 @@ class MainActivity : ComponentActivity() {
                     }
                     "onAddParticipant" -> {
                         val friendId = call.argument<String>("friend")
-                        Log.d("ConferenceScreen", "onAddParticipant friendId = $friendId")
+                        Log.d("DemoApp", "onAddParticipant friendId = $friendId")
                         result.success(null)
                     }
                     else -> result.notImplemented()
@@ -157,6 +157,8 @@ class MainActivity : ComponentActivity() {
 
         // 2. Cache flutterEngine with quickom_engine_id
         FlutterEngineCache.getInstance().put("quickom_engine_id", flutterEngine)
+
+        startupSDK();
     }
 
     private fun finishActivityFromFlutter() {
@@ -344,6 +346,16 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    fun startupSDK() {
+        val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+        engine?.let {
+            MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+                "startupSDK",
+                null
+            )
+        }
+    }
+
     fun onHostButtonClicked(alias: String, name: String, token: String) {
         val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
 //        val testAlias = "8ob37";
@@ -366,6 +378,7 @@ class MainActivity : ComponentActivity() {
             val testToken = tokenService.fetchToken(token)
 //            val testToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IjM1dzVoIiwidXNlcl9pZCI6ImY2ZDYxMmIzLWZhYzctNDViMC04MGU2LTFiMTZlY2I3MTI1NCIsImhvc3QiOnRydWUsImV4cGlyZXNfaW4iOjYwfQ.hxqQfACEKTXeuNgGCsXlSUUqToQcIBZ5J2ACD267AyM"
             if (testToken != null && testAlias.isNotEmpty()) {
+                Log.d("DemoApp", "onHostButtonClicked, testAlias = $testAlias, testName = $testName, testToken = $testToken")
                 engine?.let {
                     // Send data to Flutter before hand
                     // "quickom/conference" must match with channel in Flutter side
@@ -409,6 +422,7 @@ class MainActivity : ComponentActivity() {
         val testName = name;
 
         if (testAlias.isNotEmpty()) {
+            Log.d("DemoApp", "onHostButtonClicked, testAlias = $testAlias, testName = $testName")
             engine?.let {
                 // Send data to Flutter before hand
                 // "quickom/conference" must match with channel in Flutter side
