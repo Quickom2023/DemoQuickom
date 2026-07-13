@@ -44,6 +44,44 @@ dependencies {
 
 ---
 
+### C. Application Manifest
+
+Add following permission to <manifest> in AndroidMainifest.xml
+```xml
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE />
+```
+
+Add following feature to <manifest> in AndroidManifest.xml
+```xml
+<uses-feature android:name="android.hardware.camera"
+    android:required="false" />
+<uses-feature android:name="android.hardware.camera.autofocus"
+    android:required="false" />
+<uses-feature android:name="android.hardware.microphone"
+    android:required="false" />
+<uses-feature
+    android:name="android.hardware.touchscreen"
+    android:required="false" />
+<uses-feature
+    android:name="android.software.leanback"
+    android:required="false" />
+
+<uses-feature android:name="android.hardware.usb.host" />
+```
+
+---
+
 ## 3. Core Functions
 
 ### A. Host Conference
