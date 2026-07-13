@@ -85,6 +85,48 @@ Used for participants entering an existing room. No token is required.
 
 The `FlutterEngine` must be pre-warmed and cached with the ID `"quickom_engine_id"`.
 
+```kotlin
+ // 1. Create flutter engine
+val flutterEngine = FlutterEngine(this)
+
+try {
+    GeneratedPluginRegistrant.registerWith(flutterEngine)
+} catch (e: Exception) {
+    Log.e("SDK", "Cannot register plugin", e)
+}
+ // 2. Handle call from method channel
+MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "quickom/conference")
+    .setMethodCallHandler { call, result ->
+        when (call.method) {
+
+        }
+    }
+ // 3. Execute flutter engine entry point
+flutterEngine.dartExecutor.executeDartEntrypoint(
+        DartExecutor.DartEntrypoint.createDefault()
+    )
+ // 4. Cache flutterEngine with quickom_engine_id
+FlutterEngineCache.getInstance().put("quickom_engine_id", flutterEngine)
+```
+
+Initialize SDK (required), must call after FlutterEngine pre-warmed and cached.
+
+```kotlin
+startupSDK();
+```
+
+```kotlin
+fun startupSDK() {
+    val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+    engine?.let {
+        MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+            "startupSDK",
+            null
+        )
+    }
+}
+```
+
 ### Method Channel
 
 * **Channel Name:** `quickom/conference`
@@ -104,28 +146,31 @@ fun onHostButtonClicked(alias: String, name: String, token: String, avatar: Stri
     val conferenceDomain = "https://realtime-staging.api.datagram.network"
     val storageDomain = "https://storage.beowulfchain.com"
 
-    // 1. Launch the Flutter Activity
-    startActivity(
-        FlutterActivity.withCachedEngine("quickom_engine_id").build(this)
-    )
-
-    // 2. Pass data to Flutter via MethodChannel
+    // 1. Pass data to Flutter via MethodChannel
     engine?.let {
+        // Send data to Flutter before hand
+        // "quickom/conference" must match with channel in Flutter side
         MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
             "openConference",
             mapOf(
-                "alias" to alias,
-                "name" to name,
-                "token" to token,
+                "alias" to testAlias,
+                "name" to testName,
+                "token" to testToken,
                 "conferenceDomain" to conferenceDomain,
                 "storageDomain" to storageDomain,
                 "locale" to locale,
-                "avatar" to avatar,
-                "remoteName" to remoteName,
-                "remoteAvatar" to remoteAvatar
+                "avatar" to "https://i.pravatar.cc/400?img=36",
+                "remoteName" to "Hoàng Hà",
+                "remoteAvatar" to "https://i.pravatar.cc/400?img=14"
             )
         )
     }
+    // 2. Launch the Flutter Activity
+    startActivity(
+        FlutterActivity
+            .withCachedEngine("quickom_engine_id")
+            .build(this@MainActivity)
+    )
 }
 
 ```
