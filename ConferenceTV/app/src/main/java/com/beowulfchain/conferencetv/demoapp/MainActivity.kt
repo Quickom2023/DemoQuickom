@@ -67,6 +67,17 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class MainActivity : ComponentActivity() {
+    private var userIndex = 0
+
+    private val mockRemoteUsers = listOf(
+        mapOf("name" to "Hoàng Hà", "avatar" to "https://i.pravatar.cc/400?img=14"),
+        mapOf("name" to "Jenny Phạm", "avatar" to "https://i.pravatar.cc/400?img=65"),
+        mapOf("name" to "Võ Nam", "avatar" to "https://i.pravatar.cc/400?img=47"),
+        mapOf("name" to "Ngọc Lan", "avatar" to "https://i.pravatar.cc/400?img=34"),
+        mapOf("name" to "Minh Trí", "avatar" to "https://i.pravatar.cc/400?img=12"),
+        mapOf("name" to "Thu Thảo", "avatar" to "https://i.pravatar.cc/400?img=5")
+    )
+
     @OptIn(ExperimentalTvMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -94,6 +105,10 @@ class MainActivity : ComponentActivity() {
                 when (call.method) {
                     "onConferenceConnecting" -> {
                         Log.d("DemoApp", "onConferenceConnecting")
+                        result.success(null)
+                    }
+                    "onConferenceJoined" -> {
+                        Log.d("DemoApp", "onConferenceJoined")
                         result.success(null)
                     }
                     "onConferenceConnected" -> {
@@ -378,6 +393,15 @@ class MainActivity : ComponentActivity() {
             val testToken = tokenService.fetchToken(token)
 //            val testToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IjM1dzVoIiwidXNlcl9pZCI6ImY2ZDYxMmIzLWZhYzctNDViMC04MGU2LTFiMTZlY2I3MTI1NCIsImhvc3QiOnRydWUsImV4cGlyZXNfaW4iOjYwfQ.hxqQfACEKTXeuNgGCsXlSUUqToQcIBZ5J2ACD267AyM"
             if (testToken != null && testAlias.isNotEmpty()) {
+                val remoteUser = mockRemoteUsers[userIndex % mockRemoteUsers.size]
+                userIndex++ // Tăng index lên cho lần bấm sau
+                val remoteName = remoteUser["name"]
+                val remoteAvatar = remoteUser["avatar"]
+
+                val localUser = mockRemoteUsers[(userIndex + 2) % mockRemoteUsers.size]
+                val localName = localUser["name"]
+                val localAvatar = localUser["avatar"]
+
                 Log.d("DemoApp", "onHostButtonClicked, testAlias = $testAlias, testName = $testName, testToken = $testToken")
                 engine?.let {
                     // Send data to Flutter before hand
@@ -386,14 +410,15 @@ class MainActivity : ComponentActivity() {
                         "openConference",
                         mapOf(
                             "alias" to testAlias,
-                            "name" to testName,
+                            "name" to localName,
                             "token" to testToken,
                             "conferenceDomain" to conferenceDomain,
                             "storageDomain" to storageDomain,
                             "locale" to locale,
-                            "avatar" to "https://i.pravatar.cc/400?img=36",
-                            "remoteName" to "Hoàng Hà",
-                            "remoteAvatar" to "https://i.pravatar.cc/400?img=14"
+                            "avatar" to localAvatar,
+                            "remoteName" to remoteName,
+                            "remoteAvatar" to remoteAvatar,
+                            "videoOnStarted" to true
                         )
                     )
                 }
@@ -436,7 +461,8 @@ class MainActivity : ComponentActivity() {
                         "locale" to locale,
                         "avatar" to "https://i.pravatar.cc/400?img=14",
                         "remoteName" to "Kim Yến",
-                        "remoteAvatar" to "https://i.pravatar.cc/400?img=36"
+                        "remoteAvatar" to "https://i.pravatar.cc/400?img=36",
+                        "videoOnStarted" to true
                     )
                 )
             }

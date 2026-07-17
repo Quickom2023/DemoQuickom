@@ -199,7 +199,8 @@ fun onHostButtonClicked(alias: String, name: String, token: String, avatar: Stri
                 "locale" to locale,
                 "avatar" to "https://i.pravatar.cc/400?img=36",
                 "remoteName" to "Hoàng Hà",
-                "remoteAvatar" to "https://i.pravatar.cc/400?img=14"
+                "remoteAvatar" to "https://i.pravatar.cc/400?img=14",
+                "videoOnStarted" to true
             )
         )
     }
@@ -236,7 +237,8 @@ fun startConferenceInBackground(alias: String, name: String, token: String, avat
                 "locale" to locale,
                 "avatar" to avatar,
                 "remoteName" to remoteName,
-                "remoteAvatar" to remoteAvatar
+                "remoteAvatar" to remoteAvatar,
+                "videoOnStarted" to true
             )
         )
     }
@@ -346,6 +348,11 @@ methodChannel.setMethodCallHandler { call, result ->
     when (call.method) {
         "onConferenceConnecting" -> {
             Log.d("ConferenceScreen", "Conference is connecting...")
+            result.success(null)
+        }
+
+        "onConferenceJoined" -> {
+            Log.d("ConferenceScreen", "Conference joined successfully. Everyone in conference can see you now.")
             result.success(null)
         }
         
