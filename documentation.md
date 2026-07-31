@@ -495,7 +495,7 @@ methodChannel.setMethodCallHandler { call, result ->
 
 ```
 
-## 4. Implementation Example (iOS/Swift/SwiftUI)
+## 5. Implementation Example (iOS/Swift/SwiftUI)
 
 ### Setup
 
