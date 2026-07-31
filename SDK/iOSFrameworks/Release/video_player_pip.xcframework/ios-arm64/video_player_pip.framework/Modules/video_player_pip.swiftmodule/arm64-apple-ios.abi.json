@@ -1,0 +1,388 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "video_player_pip",
+    "printedName": "video_player_pip",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Flutter",
+        "printedName": "Flutter",
+        "declKind": "Import",
+        "moduleName": "video_player_pip"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "video_player_pip"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "video_player_pip"
+      },
+      {
+        "kind": "Import",
+        "name": "AVKit",
+        "printedName": "AVKit",
+        "declKind": "Import",
+        "moduleName": "video_player_pip"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VideoPlayerPipPlugin",
+        "printedName": "VideoPlayerPipPlugin",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterPluginRegistrar",
+                "printedName": "any Flutter.FlutterPluginRegistrar",
+                "usr": "c:objc(pl)FlutterPluginRegistrar"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(cm)registerWithRegistrar:",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC8register4withySo07FlutterG9Registrar_p_tFZ",
+            "moduleName": "video_player_pip",
+            "static": true,
+            "objc_name": "registerWithRegistrar:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handle",
+            "printedName": "handle(_:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterMethodCall",
+                "printedName": "Flutter.FlutterMethodCall",
+                "usr": "c:objc(cs)FlutterMethodCall"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(im)handleMethodCall:result:",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF",
+            "moduleName": "video_player_pip",
+            "objc_name": "handleMethodCall:result:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pictureInPictureControllerDidStartPictureInPicture",
+            "printedName": "pictureInPictureControllerDidStartPictureInPicture(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVPictureInPictureController",
+                "printedName": "AVKit.AVPictureInPictureController",
+                "usr": "c:objc(cs)AVPictureInPictureController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(im)pictureInPictureControllerDidStartPictureInPicture:",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC034pictureInPictureControllerDidStartjiJ0yySo09AVPictureijK0CF",
+            "moduleName": "video_player_pip",
+            "objc_name": "pictureInPictureControllerDidStartPictureInPicture:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pictureInPictureControllerDidStopPictureInPicture",
+            "printedName": "pictureInPictureControllerDidStopPictureInPicture(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVPictureInPictureController",
+                "printedName": "AVKit.AVPictureInPictureController",
+                "usr": "c:objc(cs)AVPictureInPictureController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(im)pictureInPictureControllerDidStopPictureInPicture:",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC033pictureInPictureControllerDidStopjiJ0yySo09AVPictureijK0CF",
+            "moduleName": "video_player_pip",
+            "objc_name": "pictureInPictureControllerDidStopPictureInPicture:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pictureInPictureController",
+            "printedName": "pictureInPictureController(_:failedToStartPictureInPictureWithError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVPictureInPictureController",
+                "printedName": "AVKit.AVPictureInPictureController",
+                "usr": "c:objc(cs)AVPictureInPictureController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(im)pictureInPictureController:failedToStartPictureInPictureWithError:",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC26pictureInPictureController_013failedToStartjiJ9WithErrorySo09AVPictureijK0C_s0P0_ptF",
+            "moduleName": "video_player_pip",
+            "objc_name": "pictureInPictureController:failedToStartPictureInPictureWithError:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pictureInPictureControllerWillStartPictureInPicture",
+            "printedName": "pictureInPictureControllerWillStartPictureInPicture(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVPictureInPictureController",
+                "printedName": "AVKit.AVPictureInPictureController",
+                "usr": "c:objc(cs)AVPictureInPictureController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(im)pictureInPictureControllerWillStartPictureInPicture:",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC035pictureInPictureControllerWillStartjiJ0yySo09AVPictureijK0CF",
+            "moduleName": "video_player_pip",
+            "objc_name": "pictureInPictureControllerWillStartPictureInPicture:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pictureInPictureControllerWillStopPictureInPicture",
+            "printedName": "pictureInPictureControllerWillStopPictureInPicture(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVPictureInPictureController",
+                "printedName": "AVKit.AVPictureInPictureController",
+                "usr": "c:objc(cs)AVPictureInPictureController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(im)pictureInPictureControllerWillStopPictureInPicture:",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC034pictureInPictureControllerWillStopjiJ0yySo09AVPictureijK0CF",
+            "moduleName": "video_player_pip",
+            "objc_name": "pictureInPictureControllerWillStopPictureInPicture:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoPlayerPipPlugin",
+                "printedName": "video_player_pip.VideoPlayerPipPlugin",
+                "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin(im)init",
+            "mangledName": "$s16video_player_pip20VideoPlayerPipPluginCACycfc",
+            "moduleName": "video_player_pip",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@video_player_pip@objc(cs)VideoPlayerPipPlugin",
+        "mangledName": "$s16video_player_pip20VideoPlayerPipPluginC",
+        "moduleName": "video_player_pip",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/kinhtran\/.pub-cache\/hosted\/pub.dev\/video_player_pip-0.0.10\/ios\/Classes\/VideoPlayerPipPlugin.swift",
+      "kind": "BooleanLiteral",
+      "offset": 293,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

@@ -8,7 +8,9 @@ The Quickom Conference SDK allows developers to integrate high-quality video con
 
 ## 2. Installation
 
-### A. Settings Gradle Configuration
+### For Android
+
+#### A. Settings Gradle Configuration
 
 Copy SDK/repo/ folder to your project and add the following repositories to your `settings.gradle.kts` file to allow the project to resolve SDK dependencies.
 
@@ -30,7 +32,7 @@ dependencyResolutionManagement {
 
 ---
 
-### B. Build Gradle Configuration
+#### B. Build Gradle Configuration
 
 Add the SDK dependencies to your app-level build.gradle.kts. Use debugImplementation for development and releaseImplementation for production builds.
 
@@ -44,7 +46,7 @@ dependencies {
 
 ---
 
-### C. Application Manifest
+#### C. Application Manifest
 
 Add following permission to <manifest> in AndroidMainifest.xml
 ```xml
@@ -78,6 +80,77 @@ Add following feature to <manifest> in AndroidManifest.xml
     android:required="false" />
 
 <uses-feature android:name="android.hardware.usb.host" />
+```
+
+### For iOS
+
+#### A. Setting Framework Configuration
+- Copy iOSFrameworks folder and add Release folder to your iOS project.
+- Due to Github Large File limitation, download Flutter.xcframework from following url: https://assets.x16z.xyz/Flutter.xcframework.zip, unzip and add to Release folder.
+- In iOS Project General > Frameworks, Libraries, and Embedded Content, change Embed to Embed & Sign for following xcframework
+```
+App.xcframework
+
+audio_session.xcframework
+
+connectivity_plus.xcframework
+
+device_info_plus.xcframework
+
+flutter_inappwebview_ios.xcframework
+
+flutter_webrtc.xcframework
+
+Flutter.xcframework
+
+FlutterPluginRegistrant.xcframework
+
+fluttertoast.xcframework
+
+image_gallery_saver_plus.xcframework
+
+image_picker_ios.xcframework
+
+keep_screen_on.xcframework
+
+livekit_client.xcframework
+
+OrderedSet.xcframework
+
+package_info_plus.xcframework
+
+path_provider_foundation.xcframework
+
+permission_handler_apple.xcframework
+
+share_plus.xcframework
+
+shared_preferences_foundation.xcframework
+
+sqflite_darwin.xcframework
+
+video_player_avfoundation.xcframework
+
+video_player_pip.xcframework
+
+WebRTC.xcframework
+```
+
+- In iOS Build Settings > Other Linker Flags, add -ObjC
+
+- In iOS Build Settings > Framework Search Paths, add path to Release folder, for example: 
+```
+$(SRCROOT)/../SDK/iOSFrameworks/Release
+```
+
+#### B. App Permissions
+
+- Add following permission in app Info.plist
+```
+<key>NSCameraUsageDescription</key>
+<string>To scan QR codes and to let people see you during meetings, QUICKOM needs access to your camera.</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>For people to hear you during meetings, QUICKOM needs access to your microphone.</string>
 ```
 
 ---
@@ -417,6 +490,281 @@ methodChannel.setMethodCallHandler { call, result ->
         }
         
         else -> result.notImplemented()
+    }
+}
+
+```
+
+## 4. Implementation Example (iOS/Swift/SwiftUI)
+
+### Setup
+
+The `FlutterEngine` must be pre-warmed and cached with the ID `"quickom_engine_id"`.
+
+Create FlutterManager class to manage Flutter interaction
+
+```swift
+class FlutterManager {
+    static let shared = FlutterManager()
+    
+    var flutterEngine: FlutterEngine?
+    var channel: FlutterMethodChannel?
+    
+    private init() {}
+    
+    func setupEngine() {
+        let engine = FlutterEngine(name: "quickom_engine_id")
+        engine.run()
+        
+        // Đăng ký các plugin đã cài đặt
+        GeneratedPluginRegistrant.register(with: engine)
+        
+        let binaryMessenger = engine.binaryMessenger
+        let channel = FlutterMethodChannel(name: "quickom/conference", binaryMessenger: binaryMessenger)
+        
+        channel.setMethodCallHandler { [weak self] (call: FlutterMethodCall, result: @escaping FlutterResult) in
+            switch call.method {
+            
+            }
+        }
+        
+        self.flutterEngine = engine
+        self.channel = channel
+        
+        startupSDK()
+    }
+    
+    func startupSDK() {
+        channel?.invokeMethod("startupSDK", arguments: nil)
+    }
+    
+    func finishActivityFromFlutter() {
+        flutterEngine?.navigationChannel.invokeMethod("setInitialRoute", arguments: "/")
+    }
+}
+```
+
+Must call setupEngine in AppDelegate
+```
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    // Override point for customization after application launch.
+    
+    // Warm up Flutter Engine ngay khi app vừa khởi chạy
+    FlutterManager.shared.setupEngine()
+    
+    return true
+}
+```
+
+### Method Channel
+
+* **Channel Name:** `quickom/conference`
+
+---
+
+### Methods (Native to Flutter)
+
+#### 1. openConference
+
+Joins the conference and simultaneously opens the conference user interface.
+
+```swift
+private func onHostButtonClicked(alias: String, name: String, token: String) {
+        let conferenceDomain = "https://realtime-staging.api.datagram.network"
+        let storageDomain = "https://storage.beowulfchain.com"
+        let locale = "vi"
+        
+        let testAlias = alias
+        let testName = name
+        let testToken = token
+        
+        Task {
+            if let testToken = testToken, !testAlias.isEmpty {
+                let remoteUser = mockRemoteUsers[userIndex % mockRemoteUsers.count]
+                userIndex += 1
+                let remoteName = remoteUser["name"] ?? ""
+                let remoteAvatar = remoteUser["avatar"] ?? ""
+                
+                let localUser = mockRemoteUsers[(userIndex + 2) % mockRemoteUsers.count]
+                let localName = localUser["name"] ?? testName
+                let localAvatar = localUser["avatar"] ?? ""
+                
+                print("[DemoApp] onHostButtonClicked, testAlias = \(testAlias), testName = \(testName), testToken = \(testToken)")
+                
+                let arguments: [String: Any] = [
+                    "alias": testAlias,
+                    "name": localName,
+                    "token": testToken,
+                    "conferenceDomain": conferenceDomain,
+                    "storageDomain": storageDomain,
+                    "locale": locale,
+                    "avatar": localAvatar,
+                    "remoteName": remoteName,
+                    "remoteAvatar": remoteAvatar,
+                    "videoOnStarted": true,
+                    "theme": "light"
+                ]
+                
+                FlutterManager.shared.channel?.invokeMethod("openConference", arguments: arguments)
+                
+                presentFlutterViewController()
+            } else {
+                alertMessage = "Token and alias is required"
+                showAlert = true
+            }
+        }
+    }
+
+```
+
+#### 3. nativeEndConference
+
+Allows the native side to programmatically terminate the conference.
+
+```swift
+FlutterManager.shared.channel?.invokeMethod("nativeEndConference", arguments: nil)
+
+```
+
+#### 4. getMicrophoneStatus / getCameraStatus / getSpeakerStatus
+
+Retrieves the current status of the hardware components. Returns a boolean value (`true` for ON, `false` for OFF).
+
+```swift
+FlutterManager.shared.channel?.invokeMethod("getMicrophoneStatus", arguments: nil) { result in
+    if let error = result as? FlutterError {
+        // Tương đương hàm error() trong Kotlin
+        print("Error: \(error.message ?? "")")
+    } else if FlutterMethodNotImplemented.equals(result) {
+        // Tương đương hàm notImplemented() trong Kotlin
+        print("Method not implemented")
+    } else {
+        // Tương đương hàm success() trong Kotlin
+        let isMuted = result as? Bool ?? false
+        print("Conference - Microphone enabled: \(isMuted)")
+    }
+}
+
+```
+
+#### 5. getConferenceDuration
+
+Retrieves the total elapsed time of the current conference in milliseconds.
+
+```swift
+FlutterManager.shared.channel?.invokeMethod("getConferenceDuration", arguments: nil) { result in
+    if let error = result as? FlutterError {
+        print("Error: \(error.message ?? "")")
+    } else if FlutterMethodNotImplemented.equals(result) {
+        print("Method not implemented")
+    } else {
+        // Flutter gửi số nguyên (int/long) sang Swift dưới dạng Int64 hoặc Int
+        let durationMs = (result as? Int64) ?? (result as? Int).map { Int64($0) } ?? 0
+        print("Conference - Duration: \(durationMs) ms")
+    }
+}
+
+```
+
+#### 6. setMicrophoneStatus
+
+Sets the microphone status to either on or off.
+
+```swift
+let mapArgs: [String: Any] = ["enabled": true]
+FlutterManager.shared.channel?.invokeMethod("setMicrophoneStatus", arguments: mapArgs)
+
+```
+
+#### 7. setCameraStatus
+
+Sets the camera status to either on or off.
+
+```swift
+let mapArgs: [String: Any] = ["enabled": true]
+FlutterManager.shared.channel?.invokeMethod("setCameraStatus", arguments: mapArgs)
+
+```
+
+#### 8. setSpeakerStatus
+
+Sets the speaker status to either on or off.
+
+```swift
+let mapArgs: [String: Any] = ["enabled": true]
+FlutterManager.shared.channel?.invokeMethod("setSpeakerStatus", arguments: mapArgs)
+
+```
+
+#### 9. onResponseFriendList
+
+Sends a list of friends to the conference to be displayed within the UI.
+
+```swift
+let friendList: [[String: String]] = [
+    ["name": "Jenny", "avatar": "https://i.pravatar.cc/400?img=65", "id": "123"],
+    ["name": "Võ Nam", "avatar": "https://i.pravatar.cc/400?img=47", "id": "124"],
+    ["name": "Ngọc Lan", "avatar": "https://i.pravatar.cc/400?img=34", "id": "125"]
+]
+
+FlutterManager.shared.channel?.invokeMethod("onResponseFriendList", arguments: friendList)
+```
+
+---
+
+### Events (Flutter to Native Listener)
+
+Native code can handle incoming events triggered from the conference engine via `MethodCallHandler`:
+
+```swift
+channel.setMethodCallHandler { [weak self] (call: FlutterMethodCall, result: @escaping FlutterResult) in
+    switch call.method {
+    case "onConferenceConnecting":
+        print("[DemoApp] onConferenceConnecting")
+        result(nil)
+    case "onConferenceJoined":
+        print("[DemoApp] onConferenceJoined")
+        result(nil)
+    case "onConferenceConnected":
+        print("[DemoApp] onConferenceConnected")
+        result(nil)
+    case "onEndConference":
+        let args = call.arguments as? [String: Any]
+        let reason = args?["reason"] as? String ?? ""
+        print("[DemoApp] onEndConference with reason = \(reason)")
+        self?.finishActivityFromFlutter()
+        result(true)
+    case "onShowConference":
+        print("[DemoApp] onShowConference")
+        result(nil)
+    case "onHideConference":
+        print("[DemoApp] onHideConference")
+        result(nil)
+    case "onUpdateParticipant":
+        let participantList = (call.arguments as? [String: Any])?["participants"] as? [[String: Any]]
+        print("[DemoApp] onUpdateParticipant = \(String(describing: participantList))")
+        result(nil)
+    case "onChatReceived":
+        let chatInfo = (call.arguments as? [String: Any])?["chat"] as? [String: Any]
+        print("[DemoApp] onChatReceived = \(String(describing: chatInfo))")
+        result(nil)
+    case "onRequestFriendList":
+        print("[DemoApp] onRequestFriendList")
+        result(nil)
+        
+        let friendList: [[String: Any]] = [
+            ["name": "Jenny", "avatar": "https://i.pravatar.cc/400?img=65", "id": "18fcb3d0-ef4d-4084-853f-1f013ea858ca"],
+            ["name": "Võ Nam", "avatar": "https://i.pravatar.cc/400?img=47", "id": "f007df73-3715-43ff-bd41-1054cfe20630"],
+            ["name": "Ngọc Lan", "avatar": "https://i.pravatar.cc/400?img=34", "id": "9590941f-67b4-4d66-a851-2ba25338d47b"]
+        ]
+        
+        self?.channel?.invokeMethod("onResponseFriendList", arguments: friendList)
+    case "onAddParticipant":
+        let friendId = (call.arguments as? [String: Any])?["friend"] as? String
+        print("[DemoApp] onAddParticipant friendId = \(friendId ?? "")")
+        result(nil)
+    default:
+        result(FlutterMethodNotImplemented)
     }
 }
 

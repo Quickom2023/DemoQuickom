@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C7859DCA301AEA20009098A0 /* livekit_client.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D75301AE959009098A0 /* livekit_client.xcframework */; };
+		C7859DCB301AEA20009098A0 /* livekit_client.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D75301AE959009098A0 /* livekit_client.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DCC301AEA20009098A0 /* OrderedSet.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D76301AE959009098A0 /* OrderedSet.xcframework */; };
+		C7859DCD301AEA20009098A0 /* OrderedSet.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D76301AE959009098A0 /* OrderedSet.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DD0301AEA20009098A0 /* path_provider_foundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D78301AE959009098A0 /* path_provider_foundation.xcframework */; };
+		C7859DD1301AEA20009098A0 /* path_provider_foundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D78301AE959009098A0 /* path_provider_foundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DD2301AEA20009098A0 /* permission_handler_apple.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D79301AE959009098A0 /* permission_handler_apple.xcframework */; };
+		C7859DD3301AEA20009098A0 /* permission_handler_apple.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D79301AE959009098A0 /* permission_handler_apple.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DD4301AEA20009098A0 /* share_plus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7A301AE959009098A0 /* share_plus.xcframework */; };
+		C7859DD5301AEA20009098A0 /* share_plus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7A301AE959009098A0 /* share_plus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DD6301AEA20009098A0 /* shared_preferences_foundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7B301AE959009098A0 /* shared_preferences_foundation.xcframework */; };
+		C7859DD7301AEA20009098A0 /* shared_preferences_foundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7B301AE959009098A0 /* shared_preferences_foundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DDC301AEA20009098A0 /* video_player_pip.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7E301AE959009098A0 /* video_player_pip.xcframework */; };
+		C7859DDD301AEA20009098A0 /* video_player_pip.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7E301AE959009098A0 /* video_player_pip.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DDE301AECD9009098A0 /* App.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D69301AE959009098A0 /* App.xcframework */; };
+		C7859DDF301AECD9009098A0 /* App.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D69301AE959009098A0 /* App.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DE0301AECD9009098A0 /* audio_session.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6A301AE959009098A0 /* audio_session.xcframework */; };
+		C7859DE1301AECD9009098A0 /* audio_session.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6A301AE959009098A0 /* audio_session.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DE2301AECD9009098A0 /* connectivity_plus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6B301AE959009098A0 /* connectivity_plus.xcframework */; };
+		C7859DE3301AECD9009098A0 /* connectivity_plus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6B301AE959009098A0 /* connectivity_plus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DE4301AECD9009098A0 /* device_info_plus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6C301AE959009098A0 /* device_info_plus.xcframework */; };
+		C7859DE5301AECD9009098A0 /* device_info_plus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6C301AE959009098A0 /* device_info_plus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DE6301AECD9009098A0 /* flutter_inappwebview_ios.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6E301AE959009098A0 /* flutter_inappwebview_ios.xcframework */; };
+		C7859DE7301AECD9009098A0 /* flutter_inappwebview_ios.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6E301AE959009098A0 /* flutter_inappwebview_ios.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DE8301AECD9009098A0 /* flutter_webrtc.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6F301AE959009098A0 /* flutter_webrtc.xcframework */; };
+		C7859DE9301AECD9009098A0 /* flutter_webrtc.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6F301AE959009098A0 /* flutter_webrtc.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DEA301AECD9009098A0 /* Flutter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6D301AE959009098A0 /* Flutter.xcframework */; };
+		C7859DEB301AECD9009098A0 /* Flutter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D6D301AE959009098A0 /* Flutter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DEC301AECD9009098A0 /* FlutterPluginRegistrant.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D70301AE959009098A0 /* FlutterPluginRegistrant.xcframework */; };
+		C7859DED301AECD9009098A0 /* FlutterPluginRegistrant.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D70301AE959009098A0 /* FlutterPluginRegistrant.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DEE301AECD9009098A0 /* fluttertoast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D71301AE959009098A0 /* fluttertoast.xcframework */; };
+		C7859DEF301AECD9009098A0 /* fluttertoast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D71301AE959009098A0 /* fluttertoast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DF0301AECDA009098A0 /* image_gallery_saver_plus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D72301AE959009098A0 /* image_gallery_saver_plus.xcframework */; };
+		C7859DF1301AECDA009098A0 /* image_gallery_saver_plus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D72301AE959009098A0 /* image_gallery_saver_plus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DF2301AECDA009098A0 /* image_picker_ios.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D73301AE959009098A0 /* image_picker_ios.xcframework */; };
+		C7859DF3301AECDA009098A0 /* image_picker_ios.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D73301AE959009098A0 /* image_picker_ios.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DF4301AECDA009098A0 /* keep_screen_on.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D74301AE959009098A0 /* keep_screen_on.xcframework */; };
+		C7859DF5301AECDA009098A0 /* keep_screen_on.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D74301AE959009098A0 /* keep_screen_on.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DF6301AECDA009098A0 /* package_info_plus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D77301AE959009098A0 /* package_info_plus.xcframework */; };
+		C7859DF7301AECDA009098A0 /* package_info_plus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D77301AE959009098A0 /* package_info_plus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DF8301AECDA009098A0 /* sqflite_darwin.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7C301AE959009098A0 /* sqflite_darwin.xcframework */; };
+		C7859DF9301AECDA009098A0 /* sqflite_darwin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7C301AE959009098A0 /* sqflite_darwin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DFA301AECDA009098A0 /* video_player_avfoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7D301AE959009098A0 /* video_player_avfoundation.xcframework */; };
+		C7859DFB301AECDA009098A0 /* video_player_avfoundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859D7D301AE959009098A0 /* video_player_avfoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C7859DFE301AEF82009098A0 /* WebRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7859DFC301AEF7A009098A0 /* WebRTC.xcframework */; };
+		C7859DFF301AEF82009098A0 /* WebRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C7859DFC301AEF7A009098A0 /* WebRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C7859DB3301AEA16009098A0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C7859DEF301AECD9009098A0 /* fluttertoast.xcframework in Embed Frameworks */,
+				C7859DD5301AEA20009098A0 /* share_plus.xcframework in Embed Frameworks */,
+				C7859DF5301AECDA009098A0 /* keep_screen_on.xcframework in Embed Frameworks */,
+				C7859DE5301AECD9009098A0 /* device_info_plus.xcframework in Embed Frameworks */,
+				C7859DD7301AEA20009098A0 /* shared_preferences_foundation.xcframework in Embed Frameworks */,
+				C7859DD1301AEA20009098A0 /* path_provider_foundation.xcframework in Embed Frameworks */,
+				C7859DEB301AECD9009098A0 /* Flutter.xcframework in Embed Frameworks */,
+				C7859DCD301AEA20009098A0 /* OrderedSet.xcframework in Embed Frameworks */,
+				C7859DE3301AECD9009098A0 /* connectivity_plus.xcframework in Embed Frameworks */,
+				C7859DCB301AEA20009098A0 /* livekit_client.xcframework in Embed Frameworks */,
+				C7859DFB301AECDA009098A0 /* video_player_avfoundation.xcframework in Embed Frameworks */,
+				C7859DFF301AEF82009098A0 /* WebRTC.xcframework in Embed Frameworks */,
+				C7859DDD301AEA20009098A0 /* video_player_pip.xcframework in Embed Frameworks */,
+				C7859DE9301AECD9009098A0 /* flutter_webrtc.xcframework in Embed Frameworks */,
+				C7859DE1301AECD9009098A0 /* audio_session.xcframework in Embed Frameworks */,
+				C7859DD3301AEA20009098A0 /* permission_handler_apple.xcframework in Embed Frameworks */,
+				C7859DF7301AECDA009098A0 /* package_info_plus.xcframework in Embed Frameworks */,
+				C7859DDF301AECD9009098A0 /* App.xcframework in Embed Frameworks */,
+				C7859DED301AECD9009098A0 /* FlutterPluginRegistrant.xcframework in Embed Frameworks */,
+				C7859DF3301AECDA009098A0 /* image_picker_ios.xcframework in Embed Frameworks */,
+				C7859DF9301AECDA009098A0 /* sqflite_darwin.xcframework in Embed Frameworks */,
+				C7859DE7301AECD9009098A0 /* flutter_inappwebview_ios.xcframework in Embed Frameworks */,
+				C7859DF1301AECDA009098A0 /* image_gallery_saver_plus.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C7859D3A301AE039009098A0 /* Conference_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Conference_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7859D69301AE959009098A0 /* App.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = App.xcframework; sourceTree = "<group>"; };
+		C7859D6A301AE959009098A0 /* audio_session.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = audio_session.xcframework; sourceTree = "<group>"; };
+		C7859D6B301AE959009098A0 /* connectivity_plus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = connectivity_plus.xcframework; sourceTree = "<group>"; };
+		C7859D6C301AE959009098A0 /* device_info_plus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = device_info_plus.xcframework; sourceTree = "<group>"; };
+		C7859D6D301AE959009098A0 /* Flutter.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:S8QB4VV633:FLUTTER.IO LLC"; lastKnownFileType = wrapper.xcframework; path = Flutter.xcframework; sourceTree = "<group>"; };
+		C7859D6E301AE959009098A0 /* flutter_inappwebview_ios.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = flutter_inappwebview_ios.xcframework; sourceTree = "<group>"; };
+		C7859D6F301AE959009098A0 /* flutter_webrtc.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = flutter_webrtc.xcframework; sourceTree = "<group>"; };
+		C7859D70301AE959009098A0 /* FlutterPluginRegistrant.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FlutterPluginRegistrant.xcframework; sourceTree = "<group>"; };
+		C7859D71301AE959009098A0 /* fluttertoast.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = fluttertoast.xcframework; sourceTree = "<group>"; };
+		C7859D72301AE959009098A0 /* image_gallery_saver_plus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = image_gallery_saver_plus.xcframework; sourceTree = "<group>"; };
+		C7859D73301AE959009098A0 /* image_picker_ios.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = image_picker_ios.xcframework; sourceTree = "<group>"; };
+		C7859D74301AE959009098A0 /* keep_screen_on.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = keep_screen_on.xcframework; sourceTree = "<group>"; };
+		C7859D75301AE959009098A0 /* livekit_client.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = livekit_client.xcframework; sourceTree = "<group>"; };
+		C7859D76301AE959009098A0 /* OrderedSet.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = OrderedSet.xcframework; sourceTree = "<group>"; };
+		C7859D77301AE959009098A0 /* package_info_plus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = package_info_plus.xcframework; sourceTree = "<group>"; };
+		C7859D78301AE959009098A0 /* path_provider_foundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = path_provider_foundation.xcframework; sourceTree = "<group>"; };
+		C7859D79301AE959009098A0 /* permission_handler_apple.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = permission_handler_apple.xcframework; sourceTree = "<group>"; };
+		C7859D7A301AE959009098A0 /* share_plus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = share_plus.xcframework; sourceTree = "<group>"; };
+		C7859D7B301AE959009098A0 /* shared_preferences_foundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = shared_preferences_foundation.xcframework; sourceTree = "<group>"; };
+		C7859D7C301AE959009098A0 /* sqflite_darwin.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = sqflite_darwin.xcframework; sourceTree = "<group>"; };
+		C7859D7D301AE959009098A0 /* video_player_avfoundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = video_player_avfoundation.xcframework; sourceTree = "<group>"; };
+		C7859D7E301AE959009098A0 /* video_player_pip.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = video_player_pip.xcframework; sourceTree = "<group>"; };
+		C7859DFC301AEF7A009098A0 /* WebRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WebRTC.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C7859D4C301AE03C009098A0 /* Exceptions for "Conference_iOS" folder in "Conference_iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C7859D39301AE039009098A0 /* Conference_iOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C7859D3C301AE039009098A0 /* Conference_iOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C7859D4C301AE03C009098A0 /* Exceptions for "Conference_iOS" folder in "Conference_iOS" target */,
+			);
+			path = Conference_iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C7859D37301AE039009098A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7859DE4301AECD9009098A0 /* device_info_plus.xcframework in Frameworks */,
+				C7859DF0301AECDA009098A0 /* image_gallery_saver_plus.xcframework in Frameworks */,
+				C7859DDE301AECD9009098A0 /* App.xcframework in Frameworks */,
+				C7859DE2301AECD9009098A0 /* connectivity_plus.xcframework in Frameworks */,
+				C7859DCA301AEA20009098A0 /* livekit_client.xcframework in Frameworks */,
+				C7859DD0301AEA20009098A0 /* path_provider_foundation.xcframework in Frameworks */,
+				C7859DD6301AEA20009098A0 /* shared_preferences_foundation.xcframework in Frameworks */,
+				C7859DEC301AECD9009098A0 /* FlutterPluginRegistrant.xcframework in Frameworks */,
+				C7859DEE301AECD9009098A0 /* fluttertoast.xcframework in Frameworks */,
+				C7859DEA301AECD9009098A0 /* Flutter.xcframework in Frameworks */,
+				C7859DFA301AECDA009098A0 /* video_player_avfoundation.xcframework in Frameworks */,
+				C7859DFE301AEF82009098A0 /* WebRTC.xcframework in Frameworks */,
+				C7859DF4301AECDA009098A0 /* keep_screen_on.xcframework in Frameworks */,
+				C7859DE8301AECD9009098A0 /* flutter_webrtc.xcframework in Frameworks */,
+				C7859DD4301AEA20009098A0 /* share_plus.xcframework in Frameworks */,
+				C7859DF6301AECDA009098A0 /* package_info_plus.xcframework in Frameworks */,
+				C7859DF8301AECDA009098A0 /* sqflite_darwin.xcframework in Frameworks */,
+				C7859DCC301AEA20009098A0 /* OrderedSet.xcframework in Frameworks */,
+				C7859DE0301AECD9009098A0 /* audio_session.xcframework in Frameworks */,
+				C7859DD2301AEA20009098A0 /* permission_handler_apple.xcframework in Frameworks */,
+				C7859DE6301AECD9009098A0 /* flutter_inappwebview_ios.xcframework in Frameworks */,
+				C7859DDC301AEA20009098A0 /* video_player_pip.xcframework in Frameworks */,
+				C7859DF2301AECDA009098A0 /* image_picker_ios.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C7859D31301AE039009098A0 = {
+			isa = PBXGroup;
+			children = (
+				C7859D82301AE959009098A0 /* iOSFrameworks */,
+				C7859D3C301AE039009098A0 /* Conference_iOS */,
+				C7859D3B301AE039009098A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C7859D3B301AE039009098A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7859D3A301AE039009098A0 /* Conference_iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7859D7F301AE959009098A0 /* Release */ = {
+			isa = PBXGroup;
+			children = (
+				C7859DFC301AEF7A009098A0 /* WebRTC.xcframework */,
+				C7859D69301AE959009098A0 /* App.xcframework */,
+				C7859D6A301AE959009098A0 /* audio_session.xcframework */,
+				C7859D6B301AE959009098A0 /* connectivity_plus.xcframework */,
+				C7859D6C301AE959009098A0 /* device_info_plus.xcframework */,
+				C7859D6D301AE959009098A0 /* Flutter.xcframework */,
+				C7859D6E301AE959009098A0 /* flutter_inappwebview_ios.xcframework */,
+				C7859D6F301AE959009098A0 /* flutter_webrtc.xcframework */,
+				C7859D70301AE959009098A0 /* FlutterPluginRegistrant.xcframework */,
+				C7859D71301AE959009098A0 /* fluttertoast.xcframework */,
+				C7859D72301AE959009098A0 /* image_gallery_saver_plus.xcframework */,
+				C7859D73301AE959009098A0 /* image_picker_ios.xcframework */,
+				C7859D74301AE959009098A0 /* keep_screen_on.xcframework */,
+				C7859D75301AE959009098A0 /* livekit_client.xcframework */,
+				C7859D76301AE959009098A0 /* OrderedSet.xcframework */,
+				C7859D77301AE959009098A0 /* package_info_plus.xcframework */,
+				C7859D78301AE959009098A0 /* path_provider_foundation.xcframework */,
+				C7859D79301AE959009098A0 /* permission_handler_apple.xcframework */,
+				C7859D7A301AE959009098A0 /* share_plus.xcframework */,
+				C7859D7B301AE959009098A0 /* shared_preferences_foundation.xcframework */,
+				C7859D7C301AE959009098A0 /* sqflite_darwin.xcframework */,
+				C7859D7D301AE959009098A0 /* video_player_avfoundation.xcframework */,
+				C7859D7E301AE959009098A0 /* video_player_pip.xcframework */,
+			);
+			path = Release;
+			sourceTree = "<group>";
+		};
+		C7859D82301AE959009098A0 /* iOSFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7859D7F301AE959009098A0 /* Release */,
+			);
+			name = iOSFrameworks;
+			path = ../SDK/iOSFrameworks;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C7859D39301AE039009098A0 /* Conference_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7859D4D301AE03C009098A0 /* Build configuration list for PBXNativeTarget "Conference_iOS" */;
+			buildPhases = (
+				C7859D36301AE039009098A0 /* Sources */,
+				C7859D37301AE039009098A0 /* Frameworks */,
+				C7859D38301AE039009098A0 /* Resources */,
+				C7859DB3301AEA16009098A0 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C7859D3C301AE039009098A0 /* Conference_iOS */,
+			);
+			name = Conference_iOS;
+			packageProductDependencies = (
+			);
+			productName = Conference_iOS;
+			productReference = C7859D3A301AE039009098A0 /* Conference_iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C7859D32301AE039009098A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					C7859D39301AE039009098A0 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = C7859D35301AE039009098A0 /* Build configuration list for PBXProject "Conference_iOS" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C7859D31301AE039009098A0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C7859D3B301AE039009098A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7859D39301AE039009098A0 /* Conference_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C7859D38301AE039009098A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C7859D36301AE039009098A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C7859D4E301AE03C009098A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P5P5FZ9K4G;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SDK/iOSFrameworks/Release";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Conference_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beowulfchain.conferenceiosdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7859D4F301AE03C009098A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P5P5FZ9K4G;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SDK/iOSFrameworks/Release";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Conference_iOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.beowulfchain.conferenceiosdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C7859D50301AE03C009098A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = P5P5FZ9K4G;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C7859D51301AE03C009098A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = P5P5FZ9K4G;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C7859D35301AE039009098A0 /* Build configuration list for PBXProject "Conference_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7859D50301AE03C009098A0 /* Debug */,
+				C7859D51301AE03C009098A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7859D4D301AE03C009098A0 /* Build configuration list for PBXNativeTarget "Conference_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7859D4E301AE03C009098A0 /* Debug */,
+				C7859D4F301AE03C009098A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C7859D32301AE039009098A0 /* Project object */;
+}

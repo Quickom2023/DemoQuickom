@@ -1,0 +1,3892 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "livekit_client",
+    "printedName": "livekit_client",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "AVFAudio",
+        "printedName": "AVFAudio",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "Preconcurrency",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AudioLevel",
+        "printedName": "AudioLevel",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "average",
+            "printedName": "average",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client10AudioLevelV7averageSfvp",
+            "mangledName": "$s14livekit_client10AudioLevelV7averageSfvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10AudioLevelV7averageSfvg",
+                "mangledName": "$s14livekit_client10AudioLevelV7averageSfvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "peak",
+            "printedName": "peak",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client10AudioLevelV4peakSfvp",
+            "mangledName": "$s14livekit_client10AudioLevelV4peakSfvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10AudioLevelV4peakSfvg",
+                "mangledName": "$s14livekit_client10AudioLevelV4peakSfvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:14livekit_client10AudioLevelV",
+        "mangledName": "$s14livekit_client10AudioLevelV",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AudioVisualizeProcessor",
+        "printedName": "AudioVisualizeProcessor",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "minFrequency",
+            "printedName": "minFrequency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client23AudioVisualizeProcessorC12minFrequencySfvp",
+            "mangledName": "$s14livekit_client23AudioVisualizeProcessorC12minFrequencySfvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client23AudioVisualizeProcessorC12minFrequencySfvg",
+                "mangledName": "$s14livekit_client23AudioVisualizeProcessorC12minFrequencySfvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxFrequency",
+            "printedName": "maxFrequency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client23AudioVisualizeProcessorC12maxFrequencySfvp",
+            "mangledName": "$s14livekit_client23AudioVisualizeProcessorC12maxFrequencySfvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client23AudioVisualizeProcessorC12maxFrequencySfvg",
+                "mangledName": "$s14livekit_client23AudioVisualizeProcessorC12maxFrequencySfvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minDB",
+            "printedName": "minDB",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client23AudioVisualizeProcessorC5minDBSfvp",
+            "mangledName": "$s14livekit_client23AudioVisualizeProcessorC5minDBSfvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client23AudioVisualizeProcessorC5minDBSfvg",
+                "mangledName": "$s14livekit_client23AudioVisualizeProcessorC5minDBSfvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "maxDB",
+            "printedName": "maxDB",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client23AudioVisualizeProcessorC5maxDBSfvp",
+            "mangledName": "$s14livekit_client23AudioVisualizeProcessorC5maxDBSfvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client23AudioVisualizeProcessorC5maxDBSfvg",
+                "mangledName": "$s14livekit_client23AudioVisualizeProcessorC5maxDBSfvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bandsCount",
+            "printedName": "bandsCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client23AudioVisualizeProcessorC10bandsCountSivp",
+            "mangledName": "$s14livekit_client23AudioVisualizeProcessorC10bandsCountSivp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client23AudioVisualizeProcessorC10bandsCountSivg",
+                "mangledName": "$s14livekit_client23AudioVisualizeProcessorC10bandsCountSivg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(minFrequency:maxFrequency:minDB:maxDB:bandsCount:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AudioVisualizeProcessor",
+                "printedName": "livekit_client.AudioVisualizeProcessor",
+                "usr": "s:14livekit_client23AudioVisualizeProcessorC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14livekit_client23AudioVisualizeProcessorC12minFrequency03maxG00F2DB0hI010bandsCountACSf_S3fSitcfc",
+            "mangledName": "$s14livekit_client23AudioVisualizeProcessorC12minFrequency03maxG00F2DB0hI010bandsCountACSf_S3fSitcfc",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "process",
+            "printedName": "process(pcmBuffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.Float]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioPCMBuffer",
+                "printedName": "AVFAudio.AVAudioPCMBuffer",
+                "usr": "c:objc(cs)AVAudioPCMBuffer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client23AudioVisualizeProcessorC7process9pcmBufferSaySfGSgSo16AVAudioPCMBufferC_tF",
+            "mangledName": "$s14livekit_client23AudioVisualizeProcessorC7process9pcmBufferSaySfGSgSo16AVAudioPCMBufferC_tF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14livekit_client23AudioVisualizeProcessorC",
+        "mangledName": "$s14livekit_client23AudioVisualizeProcessorC",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Flutter",
+        "printedName": "Flutter",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AudioRenderer",
+        "printedName": "AudioRenderer",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "rendererId",
+            "printedName": "rendererId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client13AudioRendererC10rendererIdSSvp",
+            "mangledName": "$s14livekit_client13AudioRendererC10rendererIdSSvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client13AudioRendererC10rendererIdSSvg",
+                "mangledName": "$s14livekit_client13AudioRendererC10rendererIdSSvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "format",
+            "printedName": "format",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioFormat",
+                "printedName": "AVFAudio.AVAudioFormat",
+                "usr": "c:objc(cs)AVAudioFormat"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client13AudioRendererC6formatSo13AVAudioFormatCvp",
+            "mangledName": "$s14livekit_client13AudioRendererC6formatSo13AVAudioFormatCvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioFormat",
+                    "printedName": "AVFAudio.AVAudioFormat",
+                    "usr": "c:objc(cs)AVAudioFormat"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client13AudioRendererC6formatSo13AVAudioFormatCvg",
+                "mangledName": "$s14livekit_client13AudioRendererC6formatSo13AVAudioFormatCvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(track:binaryMessenger:rendererId:format:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AudioRenderer",
+                "printedName": "livekit_client.AudioRenderer",
+                "usr": "c:@M@livekit_client@objc(cs)AudioRenderer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AudioTrack",
+                "printedName": "any livekit_client.AudioTrack",
+                "usr": "c:@M@livekit_client@objc(pl)AudioTrack"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterBinaryMessenger",
+                "printedName": "any Flutter.FlutterBinaryMessenger",
+                "usr": "c:objc(pl)FlutterBinaryMessenger"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioFormat",
+                "printedName": "AVFAudio.AVAudioFormat",
+                "usr": "c:objc(cs)AVAudioFormat"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14livekit_client13AudioRendererC5track15binaryMessenger10rendererId6formatAcA0C5Track_p_So013FlutterBinaryG0_pSSSo13AVAudioFormatCtcfc",
+            "mangledName": "$s14livekit_client13AudioRendererC5track15binaryMessenger10rendererId6formatAcA0C5Track_p_So013FlutterBinaryG0_pSSSo13AVAudioFormatCtcfc",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AudioRenderer",
+                "printedName": "livekit_client.AudioRenderer",
+                "usr": "c:@M@livekit_client@objc(cs)AudioRenderer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@livekit_client@objc(cs)AudioRenderer(im)init",
+            "mangledName": "$s14livekit_client13AudioRendererCACycfc",
+            "moduleName": "livekit_client",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onListen",
+            "printedName": "onListen(withArguments:eventSink:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Flutter.FlutterError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlutterError",
+                    "printedName": "Flutter.FlutterError",
+                    "usr": "c:objc(cs)FlutterError"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@objc(cs)AudioRenderer(im)onListenWithArguments:eventSink:",
+            "mangledName": "$s14livekit_client13AudioRendererC8onListen13withArguments9eventSinkSo12FlutterErrorCSgypSg_yAJctF",
+            "moduleName": "livekit_client",
+            "objc_name": "onListenWithArguments:eventSink:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onCancel",
+            "printedName": "onCancel(withArguments:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Flutter.FlutterError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlutterError",
+                    "printedName": "Flutter.FlutterError",
+                    "usr": "c:objc(cs)FlutterError"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@objc(cs)AudioRenderer(im)onCancelWithArguments:",
+            "mangledName": "$s14livekit_client13AudioRendererC8onCancel13withArgumentsSo12FlutterErrorCSgypSg_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "onCancelWithArguments:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "render",
+            "printedName": "render(pcmBuffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioPCMBuffer",
+                "printedName": "AVFAudio.AVAudioPCMBuffer",
+                "usr": "c:objc(cs)AVAudioPCMBuffer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@objc(cs)AudioRenderer(im)renderPCMBuffer:",
+            "mangledName": "$s14livekit_client13AudioRendererC6render9pcmBufferySo16AVAudioPCMBufferC_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "renderPCMBuffer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@livekit_client@objc(cs)AudioRenderer",
+        "mangledName": "$s14livekit_client13AudioRendererC",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AudioTrack",
+        "printedName": "AudioTrack",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(audioRenderer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTCAudioRenderer",
+                "printedName": "any WebRTC.RTCAudioRenderer",
+                "usr": "c:objc(pl)RTCAudioRenderer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@livekit_client@objc(pl)AudioTrack(im)addAudioRenderer:",
+            "mangledName": "$s14livekit_client10AudioTrackP3add13audioRendererySo08RTCAudioG0_p_tF",
+            "moduleName": "livekit_client",
+            "genericSig": "<τ_0_0 where τ_0_0 : livekit_client.AudioTrack>",
+            "sugared_genericSig": "<Self where Self : livekit_client.AudioTrack>",
+            "protocolReq": true,
+            "objc_name": "addAudioRenderer:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(audioRenderer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTCAudioRenderer",
+                "printedName": "any WebRTC.RTCAudioRenderer",
+                "usr": "c:objc(pl)RTCAudioRenderer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@livekit_client@objc(pl)AudioTrack(im)removeAudioRenderer:",
+            "mangledName": "$s14livekit_client10AudioTrackP6remove13audioRendererySo08RTCAudioG0_p_tF",
+            "moduleName": "livekit_client",
+            "genericSig": "<τ_0_0 where τ_0_0 : livekit_client.AudioTrack>",
+            "sugared_genericSig": "<Self where Self : livekit_client.AudioTrack>",
+            "protocolReq": true,
+            "objc_name": "removeAudioRenderer:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@livekit_client@objc(pl)AudioTrack",
+        "mangledName": "$s14livekit_client10AudioTrackP",
+        "moduleName": "livekit_client",
+        "genericSig": "<τ_0_0 : livekit_client.Track>",
+        "sugared_genericSig": "<Self : livekit_client.Track>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ReplayKit",
+        "printedName": "ReplayKit",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Accelerate",
+        "printedName": "Accelerate",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FFTComputeBandsResult",
+        "printedName": "FFTComputeBandsResult",
+        "declKind": "Struct",
+        "usr": "s:14livekit_client21FFTComputeBandsResultV",
+        "mangledName": "$s14livekit_client21FFTComputeBandsResultV",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FFTResult",
+        "printedName": "FFTResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "magnitudes",
+            "printedName": "magnitudes",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client9FFTResultC10magnitudesSaySfGvp",
+            "mangledName": "$s14livekit_client9FFTResultC10magnitudesSaySfGvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client9FFTResultC10magnitudesSaySfGvg",
+                "mangledName": "$s14livekit_client9FFTResultC10magnitudesSaySfGvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14livekit_client9FFTResultC",
+        "mangledName": "$s14livekit_client9FFTResultC",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "flutter_webrtc",
+        "printedName": "flutter_webrtc",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Flutter",
+        "printedName": "Flutter",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LiveKitPlugin",
+        "printedName": "LiveKitPlugin",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "register",
+            "printedName": "register(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterPluginRegistrar",
+                "printedName": "any Flutter.FlutterPluginRegistrar",
+                "usr": "c:objc(pl)FlutterPluginRegistrar"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@livekit_client@objc(cs)LiveKitPlugin(cm)registerWithRegistrar:",
+            "mangledName": "$s14livekit_client13LiveKitPluginC8register4withySo07FlutterE9Registrar_p_tFZ",
+            "moduleName": "livekit_client",
+            "static": true,
+            "objc_name": "registerWithRegistrar:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleStartAudioVisualizer",
+            "printedName": "handleStartAudioVisualizer(args:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client13LiveKitPluginC26handleStartAudioVisualizer4args6resultySDySSypSgG_yAGctF",
+            "mangledName": "$s14livekit_client13LiveKitPluginC26handleStartAudioVisualizer4args6resultySDySSypSgG_yAGctF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleStopAudioVisualizer",
+            "printedName": "handleStopAudioVisualizer(args:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client13LiveKitPluginC25handleStopAudioVisualizer4args6resultySDySSypSgG_yAGctF",
+            "mangledName": "$s14livekit_client13LiveKitPluginC25handleStopAudioVisualizer4args6resultySDySSypSgG_yAGctF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "parseAudioFormat",
+            "printedName": "parseAudioFormat(args:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFAudio.AVAudioFormat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioFormat",
+                    "printedName": "AVFAudio.AVAudioFormat",
+                    "usr": "c:objc(cs)AVAudioFormat"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client13LiveKitPluginC16parseAudioFormat4argsSo07AVAudioH0CSgSDySSypSgG_tF",
+            "mangledName": "$s14livekit_client13LiveKitPluginC16parseAudioFormat4argsSo07AVAudioH0CSgSDySSypSgG_tF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleStartAudioRenderer",
+            "printedName": "handleStartAudioRenderer(args:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client13LiveKitPluginC24handleStartAudioRenderer4args6resultySDySSypSgG_yAGctF",
+            "mangledName": "$s14livekit_client13LiveKitPluginC24handleStartAudioRenderer4args6resultySDySSypSgG_yAGctF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleStopAudioRenderer",
+            "printedName": "handleStopAudioRenderer(args:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client13LiveKitPluginC23handleStopAudioRenderer4args6resultySDySSypSgG_yAGctF",
+            "mangledName": "$s14livekit_client13LiveKitPluginC23handleStopAudioRenderer4args6resultySDySSypSgG_yAGctF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleConfigureNativeAudio",
+            "printedName": "handleConfigureNativeAudio(args:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client13LiveKitPluginC26handleConfigureNativeAudio4args6resultySDySSypSgG_yAGctF",
+            "mangledName": "$s14livekit_client13LiveKitPluginC26handleConfigureNativeAudio4args6resultySDySSypSgG_yAGctF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handle",
+            "printedName": "handle(_:result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterMethodCall",
+                "printedName": "Flutter.FlutterMethodCall",
+                "usr": "c:objc(cs)FlutterMethodCall"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@livekit_client@objc(cs)LiveKitPlugin(im)handleMethodCall:result:",
+            "mangledName": "$s14livekit_client13LiveKitPluginC6handle_6resultySo17FlutterMethodCallC_yypSgctF",
+            "moduleName": "livekit_client",
+            "objc_name": "handleMethodCall:result:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LiveKitPlugin",
+                "printedName": "livekit_client.LiveKitPlugin",
+                "usr": "c:@M@livekit_client@objc(cs)LiveKitPlugin"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@livekit_client@objc(cs)LiveKitPlugin(im)init",
+            "mangledName": "$s14livekit_client13LiveKitPluginCACycfc",
+            "moduleName": "livekit_client",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@livekit_client@objc(cs)LiveKitPlugin",
+        "mangledName": "$s14livekit_client13LiveKitPluginC",
+        "moduleName": "livekit_client",
+        "intro_iOS": "13.0",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "flutter_webrtc",
+        "printedName": "flutter_webrtc",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LKLocalAudioTrack",
+        "printedName": "LKLocalAudioTrack",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(audioRenderer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTCAudioRenderer",
+                "printedName": "any WebRTC.RTCAudioRenderer",
+                "usr": "c:objc(pl)RTCAudioRenderer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@objc(cs)LKLocalAudioTrack(im)addAudioRenderer:",
+            "mangledName": "$s14livekit_client17LKLocalAudioTrackC3add13audioRendererySo08RTCAudioH0_p_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "addAudioRenderer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(audioRenderer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTCAudioRenderer",
+                "printedName": "any WebRTC.RTCAudioRenderer",
+                "usr": "c:objc(pl)RTCAudioRenderer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@objc(cs)LKLocalAudioTrack(im)removeAudioRenderer:",
+            "mangledName": "$s14livekit_client17LKLocalAudioTrackC6remove13audioRendererySo08RTCAudioH0_p_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "removeAudioRenderer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@livekit_client@objc(cs)LKLocalAudioTrack",
+        "mangledName": "$s14livekit_client17LKLocalAudioTrackC",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@livekit_client@objc(cs)Track",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "livekit_client.Track",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AudioTrack",
+            "printedName": "AudioTrack",
+            "usr": "c:@M@livekit_client@objc(pl)AudioTrack",
+            "mangledName": "$s14livekit_client10AudioTrackP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "flutter_webrtc",
+        "printedName": "flutter_webrtc",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LKRemoteAudioTrack",
+        "printedName": "LKRemoteAudioTrack",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "add",
+            "printedName": "add(audioRenderer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTCAudioRenderer",
+                "printedName": "any WebRTC.RTCAudioRenderer",
+                "usr": "c:objc(pl)RTCAudioRenderer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@objc(cs)LKRemoteAudioTrack(im)addAudioRenderer:",
+            "mangledName": "$s14livekit_client18LKRemoteAudioTrackC3add13audioRendererySo08RTCAudioH0_p_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "addAudioRenderer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "remove",
+            "printedName": "remove(audioRenderer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTCAudioRenderer",
+                "printedName": "any WebRTC.RTCAudioRenderer",
+                "usr": "c:objc(pl)RTCAudioRenderer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@objc(cs)LKRemoteAudioTrack(im)removeAudioRenderer:",
+            "mangledName": "$s14livekit_client18LKRemoteAudioTrackC6remove13audioRendererySo08RTCAudioH0_p_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "removeAudioRenderer:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@livekit_client@objc(cs)LKRemoteAudioTrack",
+        "mangledName": "$s14livekit_client18LKRemoteAudioTrackC",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@livekit_client@objc(cs)Track",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "livekit_client.Track",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "AudioTrack",
+            "printedName": "AudioTrack",
+            "usr": "c:@M@livekit_client@objc(pl)AudioTrack",
+            "mangledName": "$s14livekit_client10AudioTrackP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Track",
+        "printedName": "Track",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Track",
+                "printedName": "livekit_client.Track",
+                "usr": "c:@M@livekit_client@objc(cs)Track"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@livekit_client@objc(cs)Track(im)init",
+            "mangledName": "$s14livekit_client5TrackCACycfc",
+            "moduleName": "livekit_client",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@livekit_client@objc(cs)Track",
+        "mangledName": "$s14livekit_client5TrackC",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebRTC",
+        "printedName": "WebRTC",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "Flutter",
+        "printedName": "Flutter",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "livekit_client"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Visualizer",
+        "printedName": "Visualizer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onListen",
+            "printedName": "onListen(withArguments:eventSink:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Flutter.FlutterError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlutterError",
+                    "printedName": "Flutter.FlutterError",
+                    "usr": "c:objc(cs)FlutterError"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@livekit_client@objc(cs)Visualizer(im)onListenWithArguments:eventSink:",
+            "mangledName": "$s14livekit_client10VisualizerC8onListen13withArguments9eventSinkSo12FlutterErrorCSgypSg_yAJctF",
+            "moduleName": "livekit_client",
+            "objc_name": "onListenWithArguments:eventSink:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onCancel",
+            "printedName": "onCancel(withArguments:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Flutter.FlutterError?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FlutterError",
+                    "printedName": "Flutter.FlutterError",
+                    "usr": "c:objc(cs)FlutterError"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@livekit_client@objc(cs)Visualizer(im)onCancelWithArguments:",
+            "mangledName": "$s14livekit_client10VisualizerC8onCancel13withArgumentsSo12FlutterErrorCSgypSg_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "onCancelWithArguments:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "isCentered",
+            "printedName": "isCentered",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client10VisualizerC10isCenteredSbvp",
+            "mangledName": "$s14livekit_client10VisualizerC10isCenteredSbvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10VisualizerC10isCenteredSbvg",
+                "mangledName": "$s14livekit_client10VisualizerC10isCenteredSbvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "smoothingFactor",
+            "printedName": "smoothingFactor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client10VisualizerC15smoothingFactorSfvp",
+            "mangledName": "$s14livekit_client10VisualizerC15smoothingFactorSfvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10VisualizerC15smoothingFactorSfvg",
+                "mangledName": "$s14livekit_client10VisualizerC15smoothingFactorSfvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "smoothTransition",
+            "printedName": "smoothTransition",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client10VisualizerC16smoothTransitionSbvp",
+            "mangledName": "$s14livekit_client10VisualizerC16smoothTransitionSbvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10VisualizerC16smoothTransitionSbvg",
+                "mangledName": "$s14livekit_client10VisualizerC16smoothTransitionSbvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bands",
+            "printedName": "bands",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Float]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14livekit_client10VisualizerC5bandsSaySfGvp",
+            "mangledName": "$s14livekit_client10VisualizerC5bandsSaySfGvp",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10VisualizerC5bandsSaySfGvg",
+                "mangledName": "$s14livekit_client10VisualizerC5bandsSaySfGvg",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Float]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Float",
+                        "printedName": "Swift.Float",
+                        "usr": "s:Sf"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10VisualizerC5bandsSaySfGvs",
+                "mangledName": "$s14livekit_client10VisualizerC5bandsSaySfGvs",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14livekit_client10VisualizerC5bandsSaySfGvM",
+                "mangledName": "$s14livekit_client10VisualizerC5bandsSaySfGvM",
+                "moduleName": "livekit_client",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(track:binaryMessenger:bandCount:isCentered:smoothTransition:smoothingFactor:visualizerId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Visualizer",
+                "printedName": "livekit_client.Visualizer",
+                "usr": "c:@M@livekit_client@objc(cs)Visualizer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any livekit_client.AudioTrack)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AudioTrack",
+                    "printedName": "any livekit_client.AudioTrack",
+                    "usr": "c:@M@livekit_client@objc(pl)AudioTrack"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FlutterBinaryMessenger",
+                "printedName": "any Flutter.FlutterBinaryMessenger",
+                "usr": "c:objc(pl)FlutterBinaryMessenger"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "hasDefaultArg": true,
+                "usr": "s:Sf"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14livekit_client10VisualizerC5track15binaryMessenger9bandCount10isCentered16smoothTransition15smoothingFactor12visualizerIdAcA10AudioTrack_pSg_So013FlutterBinaryF0_pSiS2bSfSStcfc",
+            "mangledName": "$s14livekit_client10VisualizerC5track15binaryMessenger9bandCount10isCentered16smoothTransition15smoothingFactor12visualizerIdAcA10AudioTrack_pSg_So013FlutterBinaryF0_pSiS2bSfSStcfc",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14livekit_client10VisualizerC4stopyyF",
+            "mangledName": "$s14livekit_client10VisualizerC4stopyyF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "render",
+            "printedName": "render(pcmBuffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioPCMBuffer",
+                "printedName": "AVFAudio.AVAudioPCMBuffer",
+                "usr": "c:objc(cs)AVAudioPCMBuffer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@livekit_client@objc(cs)Visualizer(im)renderPCMBuffer:",
+            "mangledName": "$s14livekit_client10VisualizerC6render9pcmBufferySo16AVAudioPCMBufferC_tF",
+            "moduleName": "livekit_client",
+            "objc_name": "renderPCMBuffer:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Visualizer",
+                "printedName": "livekit_client.Visualizer",
+                "usr": "c:@M@livekit_client@objc(cs)Visualizer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@livekit_client@objc(cs)Visualizer(im)init",
+            "mangledName": "$s14livekit_client10VisualizerCACycfc",
+            "moduleName": "livekit_client",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@livekit_client@objc(cs)Visualizer",
+        "mangledName": "$s14livekit_client10VisualizerC",
+        "moduleName": "livekit_client",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTCAudioBuffer",
+        "printedName": "RTCAudioBuffer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "toAVAudioPCMBuffer",
+            "printedName": "toAVAudioPCMBuffer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFAudio.AVAudioPCMBuffer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioPCMBuffer",
+                    "printedName": "AVFAudio.AVAudioPCMBuffer",
+                    "usr": "c:objc(cs)AVAudioPCMBuffer"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@livekit_client@@objc(cs)RTCAudioBuffer(im)toAVAudioPCMBuffer",
+            "mangledName": "$sSo14RTCAudioBufferC14livekit_clientE18toAVAudioPCMBufferSo0fG0CSgyF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)RTCAudioBuffer",
+        "moduleName": "WebRTC",
+        "isOpen": true,
+        "objc_name": "RTCAudioBuffer",
+        "declAttributes": [
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AVAudioPCMBuffer",
+        "printedName": "AVAudioPCMBuffer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "audioLevels",
+            "printedName": "audioLevels()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[livekit_client.AudioLevel]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AudioLevel",
+                    "printedName": "livekit_client.AudioLevel",
+                    "usr": "s:14livekit_client10AudioLevelV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So16AVAudioPCMBufferC14livekit_clientE11audioLevelsSayAC10AudioLevelVGyF",
+            "mangledName": "$sSo16AVAudioPCMBufferC14livekit_clientE11audioLevelsSayAC10AudioLevelVGyF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "serializeAsBytes",
+            "printedName": "serializeAsBytes()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So16AVAudioPCMBufferC14livekit_clientE16serializeAsBytesSDySSypGyF",
+            "mangledName": "$sSo16AVAudioPCMBufferC14livekit_clientE16serializeAsBytesSDySSypGyF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "copySegment",
+            "printedName": "copySegment(from:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioPCMBuffer",
+                "printedName": "AVFAudio.AVAudioPCMBuffer",
+                "usr": "c:objc(cs)AVAudioPCMBuffer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So16AVAudioPCMBufferC14livekit_clientE11copySegment4from2toABs5Int64V_AHtF",
+            "mangledName": "$sSo16AVAudioPCMBufferC14livekit_clientE11copySegment4from2toABs5Int64V_AHtF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "copySegment",
+            "printedName": "copySegment()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioPCMBuffer",
+                "printedName": "AVFAudio.AVAudioPCMBuffer",
+                "usr": "c:objc(cs)AVAudioPCMBuffer"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So16AVAudioPCMBufferC14livekit_clientE11copySegmentAByF",
+            "mangledName": "$sSo16AVAudioPCMBufferC14livekit_clientE11copySegmentAByF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resample",
+            "printedName": "resample(toSampleRate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFAudio.AVAudioPCMBuffer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioPCMBuffer",
+                    "printedName": "AVFAudio.AVAudioPCMBuffer",
+                    "usr": "c:objc(cs)AVAudioPCMBuffer"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So16AVAudioPCMBufferC14livekit_clientE8resample12toSampleRateABSgSd_tF",
+            "mangledName": "$sSo16AVAudioPCMBufferC14livekit_clientE8resample12toSampleRateABSgSd_tF",
+            "moduleName": "livekit_client",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "convert",
+            "printedName": "convert(toCommonFormat:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFAudio.AVAudioPCMBuffer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAudioPCMBuffer",
+                    "printedName": "AVFAudio.AVAudioPCMBuffer",
+                    "usr": "c:objc(cs)AVAudioPCMBuffer"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAudioCommonFormat",
+                "printedName": "AVFAudio.AVAudioCommonFormat",
+                "usr": "c:@E@AVAudioCommonFormat"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:So16AVAudioPCMBufferC14livekit_clientE7convert14toCommonFormatABSgSo0agH0V_tF",
+            "mangledName": "$sSo16AVAudioPCMBufferC14livekit_clientE7convert14toCommonFormatABSgSo0agH0V_tF",
+            "moduleName": "livekit_client",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)AVAudioPCMBuffer",
+        "moduleName": "AVFAudio",
+        "isOpen": true,
+        "intro_iOS": "8.0",
+        "objc_name": "AVAudioPCMBuffer",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)AVAudioBuffer",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "AVFAudio.AVAudioBuffer",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Sequence",
+        "printedName": "Sequence",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "combine",
+            "printedName": "combine()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "livekit_client.AudioLevel?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AudioLevel",
+                    "printedName": "livekit_client.AudioLevel",
+                    "usr": "s:14livekit_client10AudioLevelV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:ST14livekit_clientAA10AudioLevelV7ElementRtzrlE7combineACSgyF",
+            "mangledName": "$sST14livekit_clientAA10AudioLevelV7ElementRtzrlE7combineACSgyF",
+            "moduleName": "livekit_client",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Sequence, τ_0_0.Element == livekit_client.AudioLevel>",
+            "sugared_genericSig": "<Self where Self : Swift.Sequence, Self.Element == livekit_client.AudioLevel>",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:ST",
+        "mangledName": "$sST",
+        "moduleName": "Swift",
+        "genericSig": "<τ_0_0.Element == τ_0_0.Iterator.Element, τ_0_0.Iterator : Swift.IteratorProtocol>",
+        "sugared_genericSig": "<Self.Element == Self.Iterator.Element, Self.Iterator : Swift.IteratorProtocol>",
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/AudioConverter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1443,
+      "length": 4,
+      "value": "9600"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/AudioProcessing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3760,
+      "length": 4,
+      "value": "1024"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/AudioProcessing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4172,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/AudioProcessing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4214,
+      "length": 4,
+      "value": "8000"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/AudioProcessing.swift",
+      "kind": "FloatLiteral",
+      "offset": 4251,
+      "length": 5,
+      "value": "-32.0"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/AudioProcessing.swift",
+      "kind": "FloatLiteral",
+      "offset": 4289,
+      "length": 4,
+      "value": "32.0"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/AudioProcessing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4329,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/BroadcastBundleInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 742,
+      "length": 27,
+      "value": "\"RTCScreenSharingExtension\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/BroadcastManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 901,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/BroadcastManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 998,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/DarwinNotificationCenter.swift",
+      "kind": "StringLiteral",
+      "offset": 688,
+      "length": 22,
+      "value": "\"iOS_BroadcastStarted\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/DarwinNotificationCenter.swift",
+      "kind": "StringLiteral",
+      "offset": 739,
+      "length": 22,
+      "value": "\"iOS_BroadcastStopped\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/DarwinNotificationCenter.swift",
+      "kind": "StringLiteral",
+      "offset": 794,
+      "length": 26,
+      "value": "\"iOS_BroadcastRequestStop\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/FFTProcessor.swift",
+      "kind": "FloatLiteral",
+      "offset": 690,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/FFTProcessor.swift",
+      "kind": "Array",
+      "offset": 3133,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/FFTProcessor.swift",
+      "kind": "FloatLiteral",
+      "offset": 3289,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 750,
+      "length": 9,
+      "value": "\"trackId\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 782,
+      "length": 14,
+      "value": "\"visualizerId\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 817,
+      "length": 12,
+      "value": "\"rendererId\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 846,
+      "length": 8,
+      "value": "\"format\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 878,
+      "length": 14,
+      "value": "\"commonFormat\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 913,
+      "length": 12,
+      "value": "\"sampleRate\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 944,
+      "length": 10,
+      "value": "\"channels\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "Dictionary",
+      "offset": 1050,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "Dictionary",
+      "offset": 1099,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "Dictionary",
+      "offset": 1333,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2377,
+      "length": 9,
+      "value": "\"ambient\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2406,
+      "length": 12,
+      "value": "\"multiRoute\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2441,
+      "length": 15,
+      "value": "\"playAndRecord\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2482,
+      "length": 10,
+      "value": "\"playback\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2513,
+      "length": 8,
+      "value": "\"record\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2540,
+      "length": 13,
+      "value": "\"soloAmbient\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2746,
+      "length": 15,
+      "value": "\"mixWithOthers\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2787,
+      "length": 12,
+      "value": "\"duckOthers\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2822,
+      "length": 38,
+      "value": "\"interruptSpokenAudioAndMixWithOthers\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2909,
+      "length": 16,
+      "value": "\"allowBluetooth\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 2952,
+      "length": 20,
+      "value": "\"allowBluetoothA2DP\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3003,
+      "length": 14,
+      "value": "\"allowAirPlay\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3042,
+      "length": 18,
+      "value": "\"defaultToSpeaker\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3362,
+      "length": 9,
+      "value": "\"default\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3391,
+      "length": 10,
+      "value": "\"gameChat\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3422,
+      "length": 13,
+      "value": "\"measurement\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3459,
+      "length": 15,
+      "value": "\"moviePlayback\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3500,
+      "length": 13,
+      "value": "\"spokenAudio\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3537,
+      "length": 11,
+      "value": "\"videoChat\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3570,
+      "length": 16,
+      "value": "\"videoRecording\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3613,
+      "length": 11,
+      "value": "\"voiceChat\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/LiveKitPlugin.swift",
+      "kind": "StringLiteral",
+      "offset": 3646,
+      "length": 13,
+      "value": "\"voicePrompt\""
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/RingBuffer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 743,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/RingBuffer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 807,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/Visualizer.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1527,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/Visualizer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1565,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/Visualizer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1612,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/kinhtran\/Documents\/Coding\/Company\/QuickomLiveKitSDK\/livekit_client\/ios\/Classes\/Visualizer.swift",
+      "kind": "FloatLiteral",
+      "offset": 1659,
+      "length": 3,
+      "value": "0.3"
+    }
+  ]
+}

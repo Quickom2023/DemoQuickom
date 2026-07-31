@@ -1,0 +1,148 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name livekit_client
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+import AVFAudio
+import AVFoundation
+import Accelerate
+import Combine
+import Flutter
+import Foundation
+import ReplayKit
+import Swift
+import UIKit
+import WebRTC
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import flutter_webrtc
+@_exported import livekit_client
+public struct AudioLevel {
+  public let average: Swift.Float
+  public let peak: Swift.Float
+}
+extension WebRTC.RTCAudioBuffer {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func toAVAudioPCMBuffer() -> AVFAudio.AVAudioPCMBuffer?
+  #endif
+}
+extension AVFAudio.AVAudioPCMBuffer {
+  public func audioLevels() -> [livekit_client.AudioLevel]
+}
+extension Swift.Sequence where Self.Element == livekit_client.AudioLevel {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func combine() -> livekit_client.AudioLevel?
+  #endif
+}
+public class AudioVisualizeProcessor {
+  final public let minFrequency: Swift.Float
+  final public let maxFrequency: Swift.Float
+  final public let minDB: Swift.Float
+  final public let maxDB: Swift.Float
+  final public let bandsCount: Swift.Int
+  public init(minFrequency: Swift.Float = 10, maxFrequency: Swift.Float = 8000, minDB: Swift.Float = -32.0, maxDB: Swift.Float = 32.0, bandsCount: Swift.Int = 100)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func process(pcmBuffer: AVFAudio.AVAudioPCMBuffer) -> [Swift.Float]?
+  #endif
+  @objc deinit
+}
+@objc public class AudioRenderer : ObjectiveC.NSObject {
+  final public let rendererId: Swift.String
+  final public let format: AVFAudio.AVAudioFormat
+  public init(track: any livekit_client.AudioTrack, binaryMessenger: any Flutter.FlutterBinaryMessenger, rendererId: Swift.String, format: AVFAudio.AVAudioFormat)
+  @objc deinit
+}
+extension livekit_client.AudioRenderer : Flutter.FlutterStreamHandler {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func onListen(withArguments _: Any?, eventSink events: @escaping Flutter.FlutterEventSink) -> Flutter.FlutterError?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc dynamic public func onCancel(withArguments _: Any?) -> Flutter.FlutterError?
+  #endif
+}
+extension AVFAudio.AVAudioPCMBuffer {
+  public func serializeAsBytes() -> [Swift.String : Any]
+}
+extension livekit_client.AudioRenderer : WebRTC.RTCAudioRenderer {
+  @objc dynamic public func render(pcmBuffer: AVFAudio.AVAudioPCMBuffer)
+}
+@objc public protocol AudioTrack : livekit_client.Track {
+  @objc(addAudioRenderer:) func add(audioRenderer: any WebRTC.RTCAudioRenderer)
+  @objc(removeAudioRenderer:) func remove(audioRenderer: any WebRTC.RTCAudioRenderer)
+}
+extension AVFAudio.AVAudioPCMBuffer {
+  public func copySegment(from startFrame: AVFAudio.AVAudioFramePosition, to endFrame: AVFAudio.AVAudioFramePosition) -> AVFAudio.AVAudioPCMBuffer
+  public func copySegment() -> AVFAudio.AVAudioPCMBuffer
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func resample(toSampleRate targetSampleRate: Swift.Double) -> AVFAudio.AVAudioPCMBuffer?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func convert(toCommonFormat commonFormat: AVFAudio.AVAudioCommonFormat) -> AVFAudio.AVAudioPCMBuffer?
+  #endif
+}
+public struct FFTComputeBandsResult {
+}
+@_hasMissingDesignatedInitializers public class FFTResult {
+  final public let magnitudes: [Swift.Float]
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @available(iOS 13.0, *)
+public class LiveKitPlugin : ObjectiveC.NSObject, Flutter.FlutterPlugin {
+  @objc public static func register(with registrar: any Flutter.FlutterPluginRegistrar)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func handleStartAudioVisualizer(args: [Swift.String : Any?], result: @escaping Flutter.FlutterResult)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func handleStopAudioVisualizer(args: [Swift.String : Any?], result: @escaping Flutter.FlutterResult)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func parseAudioFormat(args: [Swift.String : Any?]) -> AVFAudio.AVAudioFormat?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func handleStartAudioRenderer(args: [Swift.String : Any?], result: @escaping Flutter.FlutterResult)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func handleStopAudioRenderer(args: [Swift.String : Any?], result: @escaping Flutter.FlutterResult)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func handleConfigureNativeAudio(args: [Swift.String : Any?], result: @escaping Flutter.FlutterResult)
+  #endif
+  @objc public func handle(_ call: Flutter.FlutterMethodCall, result: @escaping Flutter.FlutterResult)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class LKLocalAudioTrack : livekit_client.Track, livekit_client.AudioTrack {
+  @objc deinit
+}
+extension livekit_client.LKLocalAudioTrack {
+  @objc dynamic public func add(audioRenderer: any WebRTC.RTCAudioRenderer)
+  @objc dynamic public func remove(audioRenderer: any WebRTC.RTCAudioRenderer)
+}
+@objc @_hasMissingDesignatedInitializers public class LKRemoteAudioTrack : livekit_client.Track, livekit_client.AudioTrack {
+  @objc deinit
+}
+extension livekit_client.LKRemoteAudioTrack {
+  @objc dynamic public func add(audioRenderer: any WebRTC.RTCAudioRenderer)
+  @objc dynamic public func remove(audioRenderer: any WebRTC.RTCAudioRenderer)
+}
+@_hasMissingDesignatedInitializers @objc public class Track : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc public class Visualizer : ObjectiveC.NSObject, WebRTC.RTCAudioRenderer, Flutter.FlutterStreamHandler {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func onListen(withArguments _: Any?, eventSink events: @escaping Flutter.FlutterEventSink) -> Flutter.FlutterError?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public func onCancel(withArguments _: Any?) -> Flutter.FlutterError?
+  #endif
+  final public let isCentered: Swift.Bool
+  final public let smoothingFactor: Swift.Float
+  final public let smoothTransition: Swift.Bool
+  public var bands: [Swift.Float]
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(track: (any livekit_client.AudioTrack)?, binaryMessenger: any Flutter.FlutterBinaryMessenger, bandCount: Swift.Int = 7, isCentered: Swift.Bool = true, smoothTransition: Swift.Bool = true, smoothingFactor: Swift.Float = 0.3, visualizerId: Swift.String)
+  #endif
+  public func stop()
+  @objc deinit
+  @objc public func render(pcmBuffer: AVFAudio.AVAudioPCMBuffer)
+}

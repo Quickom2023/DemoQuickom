@@ -418,7 +418,9 @@ class MainActivity : ComponentActivity() {
                             "avatar" to localAvatar,
                             "remoteName" to remoteName,
                             "remoteAvatar" to remoteAvatar,
-                            "videoOnStarted" to true
+                            "videoOnStarted" to true,
+                            "theme" to "light"
+
                         )
                     )
                 }
@@ -462,7 +464,8 @@ class MainActivity : ComponentActivity() {
                         "avatar" to "https://i.pravatar.cc/400?img=14",
                         "remoteName" to "Kim Yến",
                         "remoteAvatar" to "https://i.pravatar.cc/400?img=36",
-                        "videoOnStarted" to true
+                        "videoOnStarted" to true,
+                        "theme" to "light"
                     )
                 )
             }
