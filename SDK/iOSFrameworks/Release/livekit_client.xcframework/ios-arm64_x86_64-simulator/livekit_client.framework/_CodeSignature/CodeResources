@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/livekit_client.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		O0ObPz2rFaVsZlKuaWLOLAeobDk=
+		RTgEOYeKgCrQLfLuHzsTd6fkll4=
 		</data>
 		<key>Modules/livekit_client.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		8qdOQT7SUrbSPYaWYUrZFx2T0nk=
+		CLvo/0O3+22Hd34SvzVYi13bH9c=
 		</data>
 		<key>Modules/livekit_client.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -97,22 +97,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			O0ObPz2rFaVsZlKuaWLOLAeobDk=
+			RTgEOYeKgCrQLfLuHzsTd6fkll4=
 			</data>
 			<key>hash2</key>
 			<data>
-			/OEAf+HbG4Kcor2vrfPCEj8Xb0GCAtKXm/cIu+cl/6A=
+			p9uIQ5867z5FlH9UIF/7Rhk8jfFnbmzC/m8CvzP+JHA=
 			</data>
 		</dict>
 		<key>Modules/livekit_client.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8qdOQT7SUrbSPYaWYUrZFx2T0nk=
+			CLvo/0O3+22Hd34SvzVYi13bH9c=
 			</data>
 			<key>hash2</key>
 			<data>
-			noFFUmfVBqK7UgMDdzITSh5X6bWUxy8XzyR0X4HXM2w=
+			y0TlZeExzDOuec/InJzlI1S3AZ7LHLHgaKe7oaQ1S2E=
 			</data>
 		</dict>
 		<key>Modules/livekit_client.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
