@@ -7,5 +7,4 @@ framework module video_player_pip {
 
 module video_player_pip.Swift {
   header "video_player_pip-Swift.h"
-  requires objc
 }

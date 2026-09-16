@@ -1148,13 +1148,13 @@
           },
           {
             "kind": "Conformance",
-            "name": "ExpressibleByArrayLiteral",
-            "printedName": "ExpressibleByArrayLiteral",
+            "name": "Sequence",
+            "printedName": "Sequence",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "ArrayLiteralElement",
-                "printedName": "ArrayLiteralElement",
+                "name": "Element",
+                "printedName": "Element",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1162,24 +1162,38 @@
                     "printedName": "τ_0_0"
                   }
                 ]
+              },
+              {
+                "kind": "TypeWitness",
+                "name": "Iterator",
+                "printedName": "Iterator",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IndexingIterator",
+                    "printedName": "Swift.IndexingIterator<OrderedSet.OrderedSet<τ_0_0>>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OrderedSet",
+                        "printedName": "OrderedSet.OrderedSet<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:10OrderedSetAAV"
+                      }
+                    ],
+                    "usr": "s:s16IndexingIteratorV"
+                  }
+                ]
               }
             ],
-            "usr": "s:s25ExpressibleByArrayLiteralP",
-            "mangledName": "$ss25ExpressibleByArrayLiteralP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "usr": "s:ST",
+            "mangledName": "$sST"
           },
           {
             "kind": "Conformance",
@@ -1460,13 +1474,27 @@
           },
           {
             "kind": "Conformance",
-            "name": "Sequence",
-            "printedName": "Sequence",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ExpressibleByArrayLiteral",
+            "printedName": "ExpressibleByArrayLiteral",
             "children": [
               {
                 "kind": "TypeWitness",
-                "name": "Element",
-                "printedName": "Element",
+                "name": "ArrayLiteralElement",
+                "printedName": "ArrayLiteralElement",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -1474,38 +1502,10 @@
                     "printedName": "τ_0_0"
                   }
                 ]
-              },
-              {
-                "kind": "TypeWitness",
-                "name": "Iterator",
-                "printedName": "Iterator",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "IndexingIterator",
-                    "printedName": "Swift.IndexingIterator<OrderedSet.OrderedSet<τ_0_0>>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "OrderedSet",
-                        "printedName": "OrderedSet.OrderedSet<τ_0_0>",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "GenericTypeParam",
-                            "printedName": "τ_0_0"
-                          }
-                        ],
-                        "usr": "s:10OrderedSetAAV"
-                      }
-                    ],
-                    "usr": "s:s16IndexingIteratorV"
-                  }
-                ]
               }
             ],
-            "usr": "s:ST",
-            "mangledName": "$sST"
+            "usr": "s:s25ExpressibleByArrayLiteralP",
+            "mangledName": "$ss25ExpressibleByArrayLiteralP"
           }
         ]
       },

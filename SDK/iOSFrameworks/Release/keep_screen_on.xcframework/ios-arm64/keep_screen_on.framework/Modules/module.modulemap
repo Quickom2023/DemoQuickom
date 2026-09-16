@@ -7,5 +7,4 @@ framework module keep_screen_on {
 
 module keep_screen_on.Swift {
   header "keep_screen_on-Swift.h"
-  requires objc
 }

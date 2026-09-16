@@ -376,7 +376,7 @@ class MainActivity : ComponentActivity() {
 //        val testAlias = "8ob37";
 //        val testName = "KinhHost";
 //        val testToken = "SFMyNTY.ZDRhNGJmNDMtNDZlOS00ZDU4LTgzMmUtNDA1ZjdjMzI3NWU1.Lk4Cm0d87gwD6hsSZ14Ycsv4EwrS1CdzxqzcHsmx7K0";
-        val conferenceDomain = "https://realtime-staging.api.datagram.network";
+        val conferenceDomain = "https://signal.quickom.com";
         val storageDomain = "https://storage.beowulfchain.com";
 //        val conferenceDomain = "https://signal-mytv.quickom.com";
 //        val storageDomain = "https://storage.beowulfchain.com";
@@ -384,14 +384,16 @@ class MainActivity : ComponentActivity() {
         val locale = "vi";
 
         // For testing purpose, we use jsonbin (https://jsonbin.io/) to fetch token from code
-        val testAlias = alias;
+//        val testAlias = alias;
+        val testAlias = "U9Qb1";
         val testName = name;
 
         val tokenService = JsonBinService()
 
         MainScope().launch {
-            val testToken = tokenService.fetchToken(token)
+//            val testToken = tokenService.fetchToken(token)
 //            val testToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhbGlhcyI6IjM1dzVoIiwidXNlcl9pZCI6ImY2ZDYxMmIzLWZhYzctNDViMC04MGU2LTFiMTZlY2I3MTI1NCIsImhvc3QiOnRydWUsImV4cGlyZXNfaW4iOjYwfQ.hxqQfACEKTXeuNgGCsXlSUUqToQcIBZ5J2ACD267AyM"
+            val testToken = "SFMyNTY.NTEyMmE5ZTMtMzFhZC00MTZkLWE3OTgtN2U2OGMwMDE4NDU0.d3oQzFzUXuWWxR6hTNZWLSPiv5rt2w2z3Vod1ZwnLBA"
             if (testToken != null && testAlias.isNotEmpty()) {
                 val remoteUser = mockRemoteUsers[userIndex % mockRemoteUsers.size]
                 userIndex++ // Tăng index lên cho lần bấm sau
@@ -419,8 +421,8 @@ class MainActivity : ComponentActivity() {
                             "remoteName" to remoteName,
                             "remoteAvatar" to remoteAvatar,
                             "videoOnStarted" to true,
-                            "theme" to "light"
-
+                            "theme" to "light",
+                            "support2K" to true
                         )
                     )
                 }
@@ -441,11 +443,12 @@ class MainActivity : ComponentActivity() {
         val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
 //        val testAlias = "088zv";
 //        val testName = "KinhChen";
-        val conferenceDomain = "https://realtime-staging.api.datagram.network";
+        val conferenceDomain = "https://signal.quickom.com";
         val storageDomain = "https://storage.beowulfchain.com";
         val locale = "vi";
 
-        val testAlias = alias;
+//        val testAlias = alias;
+        val testAlias = "U9Qb1";
         val testName = name;
 
         if (testAlias.isNotEmpty()) {
@@ -465,7 +468,8 @@ class MainActivity : ComponentActivity() {
                         "remoteName" to "Kim Yến",
                         "remoteAvatar" to "https://i.pravatar.cc/400?img=36",
                         "videoOnStarted" to true,
-                        "theme" to "light"
+                        "theme" to "light",
+                        "support2K" to true,
                     )
                 )
             }

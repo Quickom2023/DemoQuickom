@@ -253,17 +253,18 @@ struct TVDemoScreen: View {
     
     // MARK: - Host Action
     private func onHostButtonClicked(alias: String, name: String, token: String) {
-        let conferenceDomain = "https://realtime-staging.api.datagram.network"
+        let conferenceDomain = "https://signal.quickom.com"
         let storageDomain = "https://storage.beowulfchain.com"
         let locale = "vi"
         
-        let testAlias = alias
+//        let testAlias = alias
+        let testAlias = "U9Qb1"
         let testName = name
         
         Task {
-            let testToken = await tokenService.fetchToken(shortCode: token)
-            
-            if let testToken = testToken, !testAlias.isEmpty {
+//            let testToken = await tokenService.fetchToken(shortCode: token)
+            let testToken = "SFMyNTY.NTEyMmE5ZTMtMzFhZC00MTZkLWE3OTgtN2U2OGMwMDE4NDU0.d3oQzFzUXuWWxR6hTNZWLSPiv5rt2w2z3Vod1ZwnLBA"
+            if !testAlias.isEmpty {
                 let remoteUser = mockRemoteUsers[userIndex % mockRemoteUsers.count]
                 userIndex += 1
                 let remoteName = remoteUser["name"] ?? ""
@@ -286,7 +287,8 @@ struct TVDemoScreen: View {
                     "remoteName": remoteName,
                     "remoteAvatar": remoteAvatar,
                     "videoOnStarted": true,
-                    "theme": "light"
+                    "theme": "light",
+                    "support2K": true,
                 ]
                 
                 FlutterManager.shared.channel?.invokeMethod("openConference", arguments: arguments)
@@ -301,11 +303,12 @@ struct TVDemoScreen: View {
     
     // MARK: - Join Action
     private func onJoinButtonClicked(alias: String, name: String) {
-        let conferenceDomain = "https://realtime-staging.api.datagram.network"
+        let conferenceDomain = "https://signal.quickom.com"
         let storageDomain = "https://storage.beowulfchain.com"
         let locale = "vi"
         
-        let testAlias = alias
+//        let testAlias = alias
+        let testAlias = "U9Qb1"
         let testName = name
         
         if !testAlias.isEmpty {
@@ -321,7 +324,8 @@ struct TVDemoScreen: View {
                 "remoteName": "Kim Yến",
                 "remoteAvatar": "https://i.pravatar.cc/400?img=36",
                 "videoOnStarted": true,
-                "theme": "light"
+                "theme": "light",
+                "support2K": true,
             ]
             
             FlutterManager.shared.channel?.invokeMethod("openConference", arguments: arguments)

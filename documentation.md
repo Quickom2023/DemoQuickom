@@ -172,6 +172,7 @@ Used when a user wants to start and manage a room. This requires a `token` for a
 * `avatar`: URL to user avatar image.
 * `remoteName`: Name of participant to call.
 * `remoteAvatar`: URL to participant's avatar.
+* `support2K`: set true to support 2K video
 
 ### B. Join Conference
 
@@ -187,6 +188,7 @@ Used for participants entering an existing room. No token is required.
 * `avatar`: URL to user avatar image.
 * `remoteName`: Name of participant to call.
 * `remoteAvatar`: URL to participant's avatar.
+* `support2K`: set true to support 2K video
 
 ---
 
@@ -273,7 +275,8 @@ fun onHostButtonClicked(alias: String, name: String, token: String, avatar: Stri
                 "avatar" to "https://i.pravatar.cc/400?img=36",
                 "remoteName" to "Hoàng Hà",
                 "remoteAvatar" to "https://i.pravatar.cc/400?img=14",
-                "videoOnStarted" to true
+                "videoOnStarted" to true,
+                "support2K" to true
             )
         )
     }
@@ -311,7 +314,8 @@ fun startConferenceInBackground(alias: String, name: String, token: String, avat
                 "avatar" to avatar,
                 "remoteName" to remoteName,
                 "remoteAvatar" to remoteAvatar,
-                "videoOnStarted" to true
+                "videoOnStarted" to true,
+                "support2K" to true
             )
         )
     }

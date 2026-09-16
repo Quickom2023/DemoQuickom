@@ -7,5 +7,4 @@ framework module OrderedSet {
 
 module OrderedSet.Swift {
   header "OrderedSet-Swift.h"
-  requires objc
 }
