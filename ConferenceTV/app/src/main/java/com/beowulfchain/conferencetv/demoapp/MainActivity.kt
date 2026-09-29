@@ -78,6 +78,14 @@ class MainActivity : ComponentActivity() {
         mapOf("name" to "Thu Thảo", "avatar" to "https://i.pravatar.cc/400?img=5")
     )
 
+    // Giả lập danh sách contact
+    // tạm thời support 2 field là contactName và contactAvatar
+    private val mockupContactList = listOf(
+        mapOf("contactName" to "cName Jenny", "contactAvatar" to "https://i.pravatar.cc/400?img=65", "contactId" to "C001"),
+        mapOf("contactName" to "cName Võ Nam", "contactAvatar" to "https://i.pravatar.cc/400?img=47", "contactId" to "C002"),
+        mapOf("contactName" to "cName Ngọc Lan", "contactAvatar" to "https://i.pravatar.cc/400?img=34", "contactId" to "C003")
+    )
+
     @OptIn(ExperimentalTvMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -155,6 +163,22 @@ class MainActivity : ComponentActivity() {
                             MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
                                 "onResponseFriendList",
                                 friendList
+                            )
+                        }
+                    }
+                    "onRequestContactInfo" -> {
+                        val contactId = call.argument<String>("contactId") ?: ""
+                        Log.d("DemoApp", "onRequstContactInfo with contactId = $contactId")
+                        result.success(null)
+
+                        // Tìm contact có contactId trùng khớp
+                        val contact = mockupContactList.firstOrNull { it["contactId"] == contactId }
+
+                        val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+                        engine?.let {
+                            MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+                                "onResponseContactInfo",
+                                contact  // Nếu tìm thấy sẽ gửi Map, nếu không thấy sẽ gửi null
                             )
                         }
                     }
@@ -377,7 +401,8 @@ class MainActivity : ComponentActivity() {
 //        val testName = "KinhHost";
 //        val testToken = "SFMyNTY.ZDRhNGJmNDMtNDZlOS00ZDU4LTgzMmUtNDA1ZjdjMzI3NWU1.Lk4Cm0d87gwD6hsSZ14Ycsv4EwrS1CdzxqzcHsmx7K0";
         val conferenceDomain = "https://signal.quickom.com";
-        val storageDomain = "https://storage.beowulfchain.com";
+        val storageDomain = "https://signal.quickom.com";
+//        val storageDomain = "https://storage.beowulfchain.com";
 //        val conferenceDomain = "https://signal-mytv.quickom.com";
 //        val storageDomain = "https://storage.beowulfchain.com";
 
@@ -418,6 +443,8 @@ class MainActivity : ComponentActivity() {
                             "storageDomain" to storageDomain,
                             "locale" to locale,
                             "avatar" to localAvatar,
+                            "contactId" to "C001",
+                            "contactList" to mockupContactList,
                             "remoteName" to remoteName,
                             "remoteAvatar" to remoteAvatar,
                             "videoOnStarted" to true,
@@ -444,7 +471,8 @@ class MainActivity : ComponentActivity() {
 //        val testAlias = "088zv";
 //        val testName = "KinhChen";
         val conferenceDomain = "https://signal.quickom.com";
-        val storageDomain = "https://storage.beowulfchain.com";
+        val storageDomain = "https://signal.quickom.com";
+//        val storageDomain = "https://storage.beowulfchain.com";
         val locale = "vi";
 
 //        val testAlias = alias;
@@ -465,6 +493,8 @@ class MainActivity : ComponentActivity() {
                         "storageDomain" to storageDomain,
                         "locale" to locale,
                         "avatar" to "https://i.pravatar.cc/400?img=14",
+                        "contactId" to "C002",
+                        "contactList" to mockupContactList,
                         "remoteName" to "Kim Yến",
                         "remoteAvatar" to "https://i.pravatar.cc/400?img=36",
                         "videoOnStarted" to true,

@@ -21,12 +21,20 @@ struct AppTheme {
     static let pink40 = Color(red: 0.49, green: 0.322, blue: 0.376)
 }
 
+// 2. Giả lập danh sách contact
+private let mockupContactList: [[String: String]] = [
+    ["contactName": "iName Jenny", "contactAvatar": "https://i.pravatar.cc/400?img=65", "contactId": "C001"],
+    ["contactName": "iName Võ Nam", "contactAvatar": "https://i.pravatar.cc/400?img=47", "contactId": "C002"],
+    ["contactName": "iName Ngọc Lan", "contactAvatar": "https://i.pravatar.cc/400?img=34", "contactId": "C003"]
+]
+
 // MARK: - Flutter Engine Manager
 class FlutterManager {
     static let shared = FlutterManager()
     
     var flutterEngine: FlutterEngine?
     var channel: FlutterMethodChannel?
+
     
     private init() {}
     
@@ -82,6 +90,19 @@ class FlutterManager {
                 ]
                 
                 self?.channel?.invokeMethod("onResponseFriendList", arguments: friendList)
+            case "onRequestContactInfo":
+                // 1. Lấy contactId từ arguments (Flutter MethodCall)
+                let args = call.arguments as? [String: Any]
+                let contactId = args?["contactId"] as? String ?? ""
+                print("DemoApp: onRequestContactInfo with contactId = \(contactId)")
+                
+                // Báo cho Flutter biết native đã nhận request thành công
+                result(nil)
+
+                // 2. Tìm contact trùng khớp
+                let contact = mockupContactList.first(where: { $0["contactId"] == contactId })
+
+                self?.channel?.invokeMethod("onResponseContactInfo", arguments: contact)
             case "onAddParticipant":
                 let friendId = (call.arguments as? [String: Any])?["friend"] as? String
                 print("[DemoApp] onAddParticipant friendId = \(friendId ?? "")")
@@ -254,7 +275,8 @@ struct TVDemoScreen: View {
     // MARK: - Host Action
     private func onHostButtonClicked(alias: String, name: String, token: String) {
         let conferenceDomain = "https://signal.quickom.com"
-        let storageDomain = "https://storage.beowulfchain.com"
+//        let storageDomain = "https://storage.beowulfchain.com"
+        let storageDomain = "https://signal.quickom.com"
         let locale = "vi"
         
 //        let testAlias = alias
@@ -284,6 +306,8 @@ struct TVDemoScreen: View {
                     "storageDomain": storageDomain,
                     "locale": locale,
                     "avatar": localAvatar,
+                    "contactId": "C003",
+                    "contactList": mockupContactList,
                     "remoteName": remoteName,
                     "remoteAvatar": remoteAvatar,
                     "videoOnStarted": true,
@@ -304,7 +328,8 @@ struct TVDemoScreen: View {
     // MARK: - Join Action
     private func onJoinButtonClicked(alias: String, name: String) {
         let conferenceDomain = "https://signal.quickom.com"
-        let storageDomain = "https://storage.beowulfchain.com"
+//        let storageDomain = "https://storage.beowulfchain.com"
+        let storageDomain = "https://signal.quickom.com"
         let locale = "vi"
         
 //        let testAlias = alias
@@ -321,6 +346,8 @@ struct TVDemoScreen: View {
                 "storageDomain": storageDomain,
                 "locale": locale,
                 "avatar": "https://i.pravatar.cc/400?img=14",
+                "contactId": "C002",
+                "contactList": mockupContactList,
                 "remoteName": "Kim Yến",
                 "remoteAvatar": "https://i.pravatar.cc/400?img=36",
                 "videoOnStarted": true,

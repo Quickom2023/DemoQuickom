@@ -173,6 +173,8 @@ Used when a user wants to start and manage a room. This requires a `token` for a
 * `remoteName`: Name of participant to call.
 * `remoteAvatar`: URL to participant's avatar.
 * `support2K`: set true to support 2K video
+* `contactId`: set contactId in your system
+* `contactList`: input contactList in your system, this is optional
 
 ### B. Join Conference
 
@@ -189,6 +191,8 @@ Used for participants entering an existing room. No token is required.
 * `remoteName`: Name of participant to call.
 * `remoteAvatar`: URL to participant's avatar.
 * `support2K`: set true to support 2K video
+* `contactId`: set contactId in your system, this is optional
+* `contactList`: input contactList in your system, this is optional
 
 ---
 
@@ -273,6 +277,8 @@ fun onHostButtonClicked(alias: String, name: String, token: String, avatar: Stri
                 "storageDomain" to storageDomain,
                 "locale" to locale,
                 "avatar" to "https://i.pravatar.cc/400?img=36",
+                "contactId" to "C001",
+                "contactList" to mockupContactList,
                 "remoteName" to "Hoàng Hà",
                 "remoteAvatar" to "https://i.pravatar.cc/400?img=14",
                 "videoOnStarted" to true,
@@ -312,6 +318,8 @@ fun startConferenceInBackground(alias: String, name: String, token: String, avat
                 "storageDomain" to storageDomain,
                 "locale" to locale,
                 "avatar" to avatar,
+                "contactId" to "C001",
+                "contactList" to mockupContactList,
                 "remoteName" to remoteName,
                 "remoteAvatar" to remoteAvatar,
                 "videoOnStarted" to true,
@@ -414,6 +422,29 @@ engine?.let {
 
 ```
 
+#### 10. onRequestContactInfo
+
+Send contact info (contactName, contactAvatar) to the conference to be display within the UI instead of name, avatar that your friend set when they join conference.
+
+```kotlin
+"onRequestContactInfo" -> {
+    val contactId = call.argument<String>("contactId") ?: ""
+    Log.d("DemoApp", "onRequstContactInfo with contactId = $contactId")
+    result.success(null)
+
+    // Tìm contact có contactId trùng khớp
+    val contact = mockupContactList.firstOrNull { it["contactId"] == contactId }
+
+    val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+    engine?.let {
+        MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+            "onResponseContactInfo",
+            contact  // Nếu tìm thấy sẽ gửi Map, nếu không thấy sẽ gửi null
+        )
+    }
+}
+```
+
 ---
 
 ### Events (Flutter to Native Listener)
@@ -483,6 +514,23 @@ methodChannel.setMethodCallHandler { call, result ->
                 MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
                     "onResponseFriendList",
                     friendList
+                )
+            }
+        }
+
+        "onRequestContactInfo" -> {
+            val contactId = call.argument<String>("contactId") ?: ""
+            Log.d("DemoApp", "onRequstContactInfo with contactId = $contactId")
+            result.success(null)
+
+            // Tìm contact có contactId trùng khớp
+            val contact = mockupContactList.firstOrNull { it["contactId"] == contactId }
+
+            val engine = FlutterEngineCache.getInstance().get("quickom_engine_id")
+            engine?.let {
+                MethodChannel(it.dartExecutor.binaryMessenger, "quickom/conference").invokeMethod(
+                    "onResponseContactInfo",
+                    contact  // Nếu tìm thấy sẽ gửi Map, nếu không thấy sẽ gửi null
                 )
             }
         }

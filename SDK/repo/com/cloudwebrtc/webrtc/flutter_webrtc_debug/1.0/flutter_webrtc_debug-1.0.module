@@ -132,11 +132,11 @@
         {
           "name": "flutter_webrtc_debug-1.0-javadoc.jar",
           "url": "flutter_webrtc_debug-1.0-javadoc.jar",
-          "size": 509609,
-          "sha512": "32e06c0185e5c0ab98e9ae9eb6ce50f6af44452abfc3a264af833d0be74597d7d225f3675d826481d2b5d63a9aedf9f4c474cbef3a99ed7a7fb45af833102e4a",
-          "sha256": "76483903c4d89477cfd5006ac8a24dfd2fe61b9e3c899947bd7d23e163a73162",
-          "sha1": "32087da4aabc290098514760f331e4e7d439fac7",
-          "md5": "3d721953de341013d7d306758d373a92"
+          "size": 509663,
+          "sha512": "9b342e7524671ab070cfdd753773568ff68c91cd033e5ba00368537e3e6b382ebdbc2795b8f74ab832aec42ba489001b945869307a04c844b92c8aa4ae060cf8",
+          "sha256": "9ed99bf9b935ea3e686a9087bcc5c1dd33931279a7ee6e21ed31be12c9388c22",
+          "sha1": "85afb1a019a4807037c65d20b70ee277382c5db5",
+          "md5": "631c56f954304c0cfdd9ed185916a266"
         }
       ]
     }
