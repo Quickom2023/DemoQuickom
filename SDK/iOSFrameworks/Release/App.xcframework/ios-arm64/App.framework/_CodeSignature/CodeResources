@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		l4YeXLFiXzKtwudAS5m9c9iCB9g=
+		Yu5TaOHANp4pvuDjMc3T6Jnb+xk=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
-		pZVNCar2dLcvy6WlIexDc4aXnJ8=
+		tScpRiwW8BrRp4ZU3fOSsxh51Vg=
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
-		5c+0QwSXlJKaNoh01fgEw3hW6bM=
+		f40qLM7iI4Z62fvdw5OQg6l9ogw=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -51,6 +51,74 @@
 		<key>flutter_assets/packages/fluttertoast/assets/toastify.js</key>
 		<data>
 		v5LMft1C/Ps/+tw6D+zco3p3Urk=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Black.ttf</key>
+		<data>
+		lbjpWHDcKNSNpiIwh+OsT96hppM=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-BlackItalic.ttf</key>
+		<data>
+		lLSse2+F82iNmafwqzC+fifUjQw=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Bold.ttf</key>
+		<data>
+		xaSeKEFox1hXoTijzBJ8MTjxaO4=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-BoldItalic.ttf</key>
+		<data>
+		iC4WrLQj1u282ZifasUFol/PxGM=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf</key>
+		<data>
+		UBdBIqS0B8hFu1VoCGAomrAqpuw=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraBoldItalic.ttf</key>
+		<data>
+		wMleDuKjXz0b+ksxtfJ3zFlyua8=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraLight.ttf</key>
+		<data>
+		HHI3Wf0cg/3gPpC/NjHapn5K6HM=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraLightItalic.ttf</key>
+		<data>
+		/GXwuPncj+kpjhiWXrb5yhBto10=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Italic.ttf</key>
+		<data>
+		JPQBTVtzLQ4gdAO9nDu+3gBr7gc=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Light.ttf</key>
+		<data>
+		jOIK5gSQ9mRgOYt440292Hw7lVs=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Medium.ttf</key>
+		<data>
+		MU7s1hp8x7wyy28zJDtwUbUdzq0=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-MediumItalic.ttf</key>
+		<data>
+		qM3lugTMLlQ21+2eIhAZk13mYl8=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf</key>
+		<data>
+		u+dzmfkmQF6pXGubUfSReeOdyiA=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-SemiBold.ttf</key>
+		<data>
+		+8P3SsvrulBNk74wBr2z/lUrXkw=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-SemiBoldItalic.ttf</key>
+		<data>
+		/RzhY59bVz67pSsy5TzxayzAHnc=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Thin.ttf</key>
+		<data>
+		cTYz5T5g60IS128L5rY0l/pxw7Y=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ThinItalic.ttf</key>
+		<data>
+		QmrJ4+NhNuteH1DyijCqzlcV1C0=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/GoogleSans/GoogleSans-Bold.ttf</key>
 		<data>
@@ -678,83 +746,107 @@
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_camera_off.png</key>
 		<data>
-		URMwUJEpJQM7kt7iZv1Z05iAzcU=
+		XIhQWrbDrX5xvqFVU+9F4XoeVAk=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_camera_on.png</key>
 		<data>
-		LyIMmtM2IHTY3Hl9rEc/40A7KU4=
+		3UBFan8ChLSK/gZFJuXaf2k3UO4=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_chat.png</key>
+		<data>
+		cylNO0EudnA+4wpGP09U47qM/Vk=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_end.png</key>
 		<data>
-		m2aAUbD3Gb5laC25/vEh01EqxHY=
+		2Sq+FqGE/kGtbxIsttAMuCeermA=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_micro_off.png</key>
 		<data>
-		KGKOwsxpRKNG0ceDVhPMA5miSiQ=
+		d9XHj7sLq/py9ccdzNuegOo6VyI=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_micro_on.png</key>
 		<data>
-		UW7P8OBm0IuvFVHH6IokGtfiCL4=
+		BQ732gQJZkLlzOx4imNv0rNr1Jc=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_more.png</key>
 		<data>
-		lCjF+pekWwHLvDVDZX3lEEEu/mM=
+		W61hs4dNStgDcP8iTQ1SeyHHV0o=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_speaker_off.png</key>
 		<data>
-		SFG0kuDf67vRmSg2TAi3U1b/yoQ=
+		eTlubv+Au8sQKesjPAN5X0m4gZs=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_speaker_on.png</key>
 		<data>
-		OkX6eZRjWuA+KH5FLOc8xtQn/jU=
+		UlPq8ocbN4lM5If3/WQs65a0XZo=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_camera_off.png</key>
 		<data>
-		XlY8lgtFSebgZrENp2zuHcBaTiQ=
+		c8vJIelYDaFzG896otDPlLJBm5U=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_camera_on.png</key>
 		<data>
-		L1vm/aDSogxnUG+dKWQxJkgyW8o=
+		Jl6HQu7L3R1tQbn6ywUOCOm0K+A=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_chat.png</key>
+		<data>
+		pPEmWboAZ4ie/V/94bfzfJfhk+o=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_end.png</key>
 		<data>
-		IoSQxj00+lpvu1C+xptrZ1VngFk=
+		kp2ePKI77ZRnnQoaBclAHifRjko=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_micro_off.png</key>
 		<data>
-		wsQHj9Ee0tKYpl0y98pknX9zHL4=
+		20I4D86/01RKXU+hN4HEGlhEFMk=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_micro_on.png</key>
 		<data>
-		I26C9NpFc5PFpGeznnS896DbQcE=
+		UuudyUxvWYMNqBhwDtURuEN7WhE=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_more.png</key>
 		<data>
-		SIDqwl1wSnz2c8DbsRMG3Ku3uoQ=
+		vhwfTfE4Aub3Pj+5GeYKpRlt5t0=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_speaker_off.png</key>
 		<data>
-		p33nmGm4YJsB3SYGeQybTXCZeEw=
+		iJcfipqMKn0In2KYGklCzXVc/oQ=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_speaker_on.png</key>
 		<data>
-		ejCVCnBKETb4LVGdqnYGVYb3tKM=
+		wufQbwWFBFje2VszKCe98a6tXsg=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_add_member.png</key>
 		<data>
 		ec5nrrRDfOhZrb+wGAeln07MfUs=
 		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_attachment_dark.png</key>
+		<data>
+		Ja9+JDXbl6/H7GR9vq/dHEbGDsQ=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_attachment_light.png</key>
+		<data>
+		x+1Ux6qnsXc0F648xvzUWAYrUFo=
+		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_back.png</key>
 		<data>
 		dxUJsKJJSs3+1mk1M9gzEK0UTrE=
 		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_call_dark.png</key>
+		<data>
+		1ksVKBFdHBWyEEdAfbcRnRI12xU=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_call_light.png</key>
+		<data>
+		qDJVeqGjprGWOzdYm7VvEggRt6o=
+		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_camera_off.png</key>
 		<data>
-		zExm8Bzo7wxOp8ltc4KDWLG4fjo=
+		7547/eYmAQE3t6WlImWvPgE0o+8=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_camera_on.png</key>
 		<data>
-		ueffcB6NxJo/REYkdMdDVDj+dNc=
+		5QZYx1SW32LHdA882WTGpglLSrQ=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_chat_active.png</key>
 		<data>
@@ -766,11 +858,27 @@
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_chat_light.png</key>
 		<data>
-		UrzjLVrxu37WPwexhu4E/cqaOMM=
+		Efnx1JDXI3Tjm6E+nG8E3L9QCBk=
 		</data>
-		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close.png</key>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close_dark.png</key>
 		<data>
-		7iQmkTQ6OYBwzpe/cwUmUkedk6g=
+		Ad+NQDyoXlfovQ48Qww0fXYkSzM=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close_fullscreen.png</key>
+		<data>
+		JzHwbKppGlmVmI4PXgP5Ri6ipIQ=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close_light.png</key>
+		<data>
+		4NypjZpuuaA60W1e006jl3qZUwM=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_dialog_camera_dark.png</key>
+		<data>
+		UTXkbc6oQI/ozQvN1ofn83AvuoA=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_dialog_camera_light.png</key>
+		<data>
+		u+OqVEctLb7wurJSL5sypWU0NLU=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_kickout.png</key>
 		<data>
@@ -782,15 +890,19 @@
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_micro_off.png</key>
 		<data>
-		AkkynqflMjBous7TxAgSINE4TT4=
+		Fva0Yt7KhhnFPmDqPsBYwmc2180=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_micro_on.png</key>
 		<data>
-		seg2a4I77lYsaLKegtoQK3DgGf8=
+		G1g9im54gZpn2opVe0RCDVsQb2k=
 		</data>
-		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_more.png</key>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_more_dark.png</key>
 		<data>
-		CLl0/My/WJDPyo1DbUH7TQGmhKI=
+		/pfn0WoMiNBQoomzPIn8RoTNr9I=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_more_light.png</key>
+		<data>
+		bl2XOxqRhhQbyru4ft/FLeAMxbQ=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_phone.png</key>
 		<data>
@@ -799,6 +911,10 @@
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_search.png</key>
 		<data>
 		SnE3iPcJUEHkVRfBIlSh9DxN98Q=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_send.png</key>
+		<data>
+		CfYYhAVCndFZFfNhv3cW8l/2s+Y=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_setting_camera.png</key>
 		<data>
@@ -815,6 +931,10 @@
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_share_screen.png</key>
 		<data>
 		XVQ01eANMBloUcIfz8uySGwc9ws=
+		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_show_fullscreen.png</key>
+		<data>
+		ak6ynzglF82qLiQnU9TdGg6wnBE=
 		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_speaker_bt.png</key>
 		<data>
@@ -855,14 +975,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3feIFwl5f3Wdsxb227KkgB3d6ekM6AYEIlEChtfUBP4=
+			v3dBdKr25uNiueQ7jhPoXSg4/8gg5z4n7+OOCPupKTw=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w8z9BLznV3IUBbO2gktekHuatt9cfqgA4fc5gJ/PGmw=
+			Lui2PGP0hC8a8yNUG6zkkvIpiIh7iboa7LbwJCnWhPA=
 			</data>
 		</dict>
 		<key>flutter_assets/NOTICES.Z</key>
@@ -883,7 +1003,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UCCU16YtgViwi9jIwjV/8vwszkPcOnU9h+mP3FGgF5k=
+			uOx2LAY5L1S0mvBMzo6Y9xLlcIDETyVCeAU12P3GdbM=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -926,6 +1046,125 @@
 			<key>hash2</key>
 			<data>
 			CRyacJlKIATuArBPER1Aq+QMB7BmhWOZ9YxYcELsKZA=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Black.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fny2Y/0wwpnoWCzSeJsUpI/7Eko1HwBp4pz1MWfoR6U=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-BlackItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/8JdcUQolN7C4ByATxIdHD04nRbqytYQmfrcwjvgMfU=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Bold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			L+bD+du2X2FVTVMMFrLrTsMspDfcj5mZpuwPZAOzC/4=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-BoldItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9Xsdi/t/VcjJmWOdGW71a4go+XZUN/r8TIH30vCS7eE=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			EPy0K5zujjCRiENBZnauBZ6Pd/5DnQw6Q1Bhfvn3enU=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraBoldItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9l88rSZxkwYv1nxJaKS3ERN7yba1HvZul4nTLGp7zL4=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraLight.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			jVjB97axlqbQ322Zs9Pa7t6U/j/1HP3G3byEUmLw2CY=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ExtraLightItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4nMJ/YbRe9nhU5rdHEnTP1F8cuE1noMzbQjwXQ4Pd4g=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Italic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vAJpr1LzYoxhkfQn/Cj8iQmf3mqy3lDmkd4weMoxL0k=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Light.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AwrkAc+RstquY0RWmoadlRVqXnTy/LbgNVqy84gyMIQ=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Medium.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9JMUTLU8eMbwgZvJtz3idEhmGKxgm8krO3nU78dvlcY=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-MediumItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			P9fn384R6HdT81zZQMNstTO6+gYBotKcfLbMS3HIwLQ=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y29T1v1WMWNWxVsGdHTZYhwntxgrEkBjuPbqtqzvY70=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-SemiBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			BNtj0qgt1Ls1uiXgDasdEv680OkXhWsXS3GiTW8Mmvo=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-SemiBoldItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			0hpNLW2iEqTQU7nOOyL47KKfej57SMTM4/1b+/+sj1k=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-Thin.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			qqdAFzRzxlpFQwVXnMVijBnmBZuVqQaYmPtsXKbVDC4=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/Be_Vietnam_Pro/BeVietnamPro-ThinItalic.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Ahe8grMkp3oBeMhJ9dAyZPb2XdIbNjyz7rlfeibKje8=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/font/GoogleSans/GoogleSans-Bold.ttf</key>
@@ -1989,112 +2228,126 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vRLimjx2LAIXu9lpEBwZsN10FiQDyVQqjBWajvTKyN8=
+			I/WCHQwWW4A0qZ4/H8TTkU5BN+McnTK+qjVOjLFmH88=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_camera_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sR/JRiFC/bpZq/9WKib/opCfc53Ouxo1uE9tkM/5FGE=
+			Wzrl5rRAbXqLdRoB6xUc5LakTX0Sj88zJLt8v3fGY7o=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_chat.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			H/Aa7fA2muQvpocuohXN35cbQPSRyKRqQj7dz9Xz/L4=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_end.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rSvUXj6tH7y/rxvFLc8YuJhp/pmT00BK45yFVJOeEvA=
+			xIZRIpzGIPT9bLYh6kyq7eX6p/nVhqdDxYzOpLAtkNk=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_micro_off.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZGJdecW0sDPAhonXXTmx4qB0t7SIUJlnJSTEjWmUnWc=
+			PyvCo24/QCaXGwqiJN0CGjyXhkjD0XvVyN+9Qg0TUgw=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_micro_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X4QUqHIvjzr8pMCRA1ajBZ8sM2c+qIaq/ezoA+sNuOE=
+			v/f0xxjB6fTzP2KFX7gqpm2Ia/gXhcu0EgX9lxYpLF4=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_more.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bDgNuwLE3VlDC8LoMKRQF7iIf2tWwdL6Kc4RPJqthfk=
+			kdHJZmQSVhbuYJV6ujCgk6aLRQmo+uQC/1fIeOT9/Ok=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_speaker_off.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WtWHWAr9ksT2ViM+YQC0pvov44hYB1vJf2POIjSAus0=
+			JgllqizmA1/XVXVvnBOSGBklTH2h363wGMLS0frSjL0=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/dark/button_speaker_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1bkOu3U0LBMObG/pLjgTMfoNID1RMzIyv8IKDXNG3ac=
+			HxR5xoQW+w5NeDFXBlY7UuQTcio6DTuOZH56rQe3hJ4=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_camera_off.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rAmGraGyEgHrBFx4Bf+lrK0/66hf4qUOSf6kNQPjst8=
+			fYLUu/w7XcTPAklKj8uYne/Tq9HjpOkApJaXhzCEfoc=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_camera_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			htceUFBA4rt1sT7unz4d4csPQt/AI4yqu1sKeeVG0cM=
+			WeQ47H9lGnxO1suooKKmoLdKCc6XEzs+XRNVm8x6Lew=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_chat.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tRJjsGY0hLpJWsFhx/4CKDTizdst+xnUEo77oBhiAF0=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_end.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YBhBGdjOYolotvKDmId9KJFT5/Iy+qLmirQEDiD3a60=
+			t+Mjtw3Pdo3d5+19fI3BT0WKCT6JC07X3p/YHwQFbb8=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_micro_off.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aNyIO+aYuc1F29p4rsbFuvxozMv0LzJ/nlwEA8jc7rU=
+			fmryi/Pxpn4pjfLlQa+Q7s9K5fH2f6iNMNFQv90BlUA=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_micro_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YckJ/nK7QKRPFuDnUhxSRBPpH5jtD8Uh2g/FCBPeb6I=
+			LY71q+5A3+RfMSU3+f4xMGOCtOzCsRPvYLMlVoCVIK0=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_more.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T9h9yi6vdFO91FxIjP1SVhc5Ikyv6GnXFUbuhyYoxKc=
+			63mat05opoURZthO7UCEoqn+0IDMhJkZOP4jbuXin+w=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_speaker_off.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GMs1RBhSoWSdfTh1lca1fLerqoN3x80U4leMWWZc8w0=
+			t2qvqNE2f8c0Pi6R/M+yI8ju7mFUQrWY+TSfaH6R5zM=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/button/light/button_speaker_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6ZqR24woEywKsGFazJE2RHwDpj26oH1oFBrKJA3xrj8=
+			CCOG+9Ko+wLKqDLzIaxOy9UnGNXwc9Nr36cjq3AyASc=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_add_member.png</key>
@@ -2104,6 +2357,20 @@
 			TrxhiOtQmlJnehe13a9/I3RMNQCjZrTInKWA5RkUUP4=
 			</data>
 		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_attachment_dark.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			q4BzPp+EQS4kFfR2vFzrnLmoYl1rd8iz9povUtfhbHU=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_attachment_light.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hYGNL5YMDF2zYZDuIYHS6coBf9TcJqlDCWMTa+MigOc=
+			</data>
+		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_back.png</key>
 		<dict>
 			<key>hash2</key>
@@ -2111,18 +2378,32 @@
 			f6YVOmlj3jjSOAgq0VpbboBHijIS/GLwByMqtjkicGI=
 			</data>
 		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_call_dark.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3un6YNP/Z5AgCNvs6aGe3BNISU9RFx4pIz7w5387FMo=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_call_light.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HCf+Xm1l4Wa5/G608SbEw/wNYnpbZaApKKMNC9UQM4g=
+			</data>
+		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_camera_off.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6g4pMSHICwd2sDgQExnGJmCYz4+P8rkKIxvyFUNa7SQ=
+			5ThBv+cGATg09BdKgcch+W+rf0Hp1tURkRm3iBQ/7pg=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_camera_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w7d098K68G2jZapqn1KAAHNjyNXpDgm0vcAq6q76VfU=
+			aARqnsWIgpQFkoosJrjNM8U7sUjnBUB5fyN+KsLMKIE=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_chat_active.png</key>
@@ -2143,14 +2424,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qy1mNyAYcW5dCQtUx9XyjkjH6pqX1f5U3We3/tIMDoU=
+			S/I+SIky8NZxgtp6Lif4Mo8o8eprESbbuvpIZaKK9S4=
 			</data>
 		</dict>
-		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close.png</key>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close_dark.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KGW2NsjDaErfO0WBkOXB4QDXpfm/hhZ7/k4YIfi2dCY=
+			Cu+MtUIKhEGETpoD9mKeFLFndYDEeN9tJehLOqDh3ew=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close_fullscreen.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			39fHP7VE2E2SKRrKd88h2/pCpL6jhT0m+g70GNhNpOw=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_close_light.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lsktX1anJ8Z3HcjOMKzmTO4X28gha2xphwWwTr+fCCE=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_dialog_camera_dark.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			p0JJyy4pwHHvUnb4DfJq6R/ZPjTTiK6Gv9TMxbRcgio=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_dialog_camera_light.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZE06bdryVM8HUZtTqy/L3u7Z4zFU7KB6f+AJqfiePOs=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_kickout.png</key>
@@ -2171,21 +2480,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G4SfUYQXsgyiwFuIsLZBSC7gRG96JjEenpctfJDDLsI=
+			Quov3GBSC7kEBfH+9cUTUiXktNl/SbIY1YEiqTf3fsU=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_micro_on.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dgnnARliYNd4qtyy2pFIB+LlwlfUbRYDtLA70IQU5dY=
+			zHDaJW6oHbmLsjuD2ImRXJJ5gZNwfK5Wn9PVvSYgn+A=
 			</data>
 		</dict>
-		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_more.png</key>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_more_dark.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			q79rpSqYeYvOTKyYnDJbDcAXNIUekI6EXlvMVtR2w1o=
+			y8yP1MHEogbWmIPMx7jTsoGWbtv5OMtQ7KB4cilsOcY=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_more_light.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			h+stWUFjMR62e2RBOkQB3AxUOetkPlrvQajZPORyi3s=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_phone.png</key>
@@ -2200,6 +2516,13 @@
 			<key>hash2</key>
 			<data>
 			LoIqNpei4kGavp+2fxNRbtUKcfnQzB2jo9Mz98/iCK8=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_send.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/VEej+pYgSmP+EoJDP64NJWZk08+gbAyT/Jzwnsin3E=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_setting_camera.png</key>
@@ -2228,6 +2551,13 @@
 			<key>hash2</key>
 			<data>
 			3PuitTxiKvQKyOnXM6R4atDz0dGmvKjYqLg559TdA+E=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_show_fullscreen.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+HiRGHLCc7UBSGXwruiu8W1brMCNWOc+zRnU2NCyqw0=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_speaker_bt.png</key>
