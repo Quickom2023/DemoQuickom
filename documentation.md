@@ -172,9 +172,13 @@ Used when a user wants to start and manage a room. This requires a `token` for a
 * `avatar`: URL to user avatar image.
 * `remoteName`: Name of participant to call.
 * `remoteAvatar`: URL to participant's avatar.
+* `groupName`: Name of group to call.
+* `groupMember`: List of member (with name and avatar) to call.
 * `support2K`: set true to support 2K video
 * `contactId`: set contactId in your system
 * `contactList`: input contactList in your system, this is optional
+
+'groupName' and 'groupMember' is preferred, if not provided, remoteName and remoteAvatar will be used normally
 
 ### B. Join Conference
 
@@ -190,9 +194,13 @@ Used for participants entering an existing room. No token is required.
 * `avatar`: URL to user avatar image.
 * `remoteName`: Name of participant to call.
 * `remoteAvatar`: URL to participant's avatar.
+* `groupName`: Name of group to call.
+* `groupMember`: List of member (with name and avatar) to call.
 * `support2K`: set true to support 2K video
 * `contactId`: set contactId in your system, this is optional
 * `contactList`: input contactList in your system, this is optional
+
+'groupName' and 'groupMember' is preferred, if not provided, remoteName and remoteAvatar will be used normally
 
 ---
 
