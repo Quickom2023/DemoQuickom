@@ -35,11 +35,11 @@
         {
           "name": "permission_handler_android_debug-1.0.aar",
           "url": "permission_handler_android_debug-1.0.aar",
-          "size": 27815,
-          "sha512": "8173ea39585c5c716abca1ff53f065678a258218e906a20134a54d49fe3c299d4bffbd0b9a71c1a6eaf0d4ec2424937cd9ad2cd75942d59453aea84dfe857ece",
-          "sha256": "b9ee27785e302a594f3bd4172ad2b306e3b63b11e359b5a9cfa5cf577f663ff0",
-          "sha1": "16346e9bbf3ef8cbbd686038b70c2611858aa962",
-          "md5": "eae26fd20762f7102c8cc640d91c3be6"
+          "size": 27816,
+          "sha512": "741accc2346346788c5135cbfabcd85614846e577f0bcf43ffb0414da3eefbd53c332dd328e6d98ba5be5a8c92d1dd910c964eee89a275b7c60f50980079dc08",
+          "sha256": "dffb7975bfce9b73717f2287ff5226611f6b2c57a95caf9dbc1dd21f06ab128d",
+          "sha1": "fbde865e86ef7aae184261ad36fe4cda32f8c36b",
+          "md5": "70ee870dd798684688d6ec24fc4986f6"
         }
       ]
     },
@@ -64,11 +64,11 @@
         {
           "name": "permission_handler_android_debug-1.0.aar",
           "url": "permission_handler_android_debug-1.0.aar",
-          "size": 27815,
-          "sha512": "8173ea39585c5c716abca1ff53f065678a258218e906a20134a54d49fe3c299d4bffbd0b9a71c1a6eaf0d4ec2424937cd9ad2cd75942d59453aea84dfe857ece",
-          "sha256": "b9ee27785e302a594f3bd4172ad2b306e3b63b11e359b5a9cfa5cf577f663ff0",
-          "sha1": "16346e9bbf3ef8cbbd686038b70c2611858aa962",
-          "md5": "eae26fd20762f7102c8cc640d91c3be6"
+          "size": 27816,
+          "sha512": "741accc2346346788c5135cbfabcd85614846e577f0bcf43ffb0414da3eefbd53c332dd328e6d98ba5be5a8c92d1dd910c964eee89a275b7c60f50980079dc08",
+          "sha256": "dffb7975bfce9b73717f2287ff5226611f6b2c57a95caf9dbc1dd21f06ab128d",
+          "sha1": "fbde865e86ef7aae184261ad36fe4cda32f8c36b",
+          "md5": "70ee870dd798684688d6ec24fc4986f6"
         }
       ]
     },

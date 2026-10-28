@@ -42,11 +42,11 @@
         {
           "name": "shared_preferences_android_debug-1.0.aar",
           "url": "shared_preferences_android_debug-1.0.aar",
-          "size": 117747,
-          "sha512": "a8df007ec7e4ef74485fbeea568f7571dfd39454a03c24af2fe81c0a1171135ac04ce853c599257ab299e7d11bfbd85601acb1390a81395d6b52575e6c48bfab",
-          "sha256": "93660724da79ceb062c5a4c932ba68ad6fe1dc231dc5cc850a6ced2bbd5dbf10",
-          "sha1": "9aa4999fde09925fa829410927585fe1c4bb30db",
-          "md5": "f551fab5ac6ab60a248aaca55ae9baa7"
+          "size": 117742,
+          "sha512": "c2fbc8da2f106b9e6b7d56d90def102320bfba9d9666cc50958a64d24e0c6babc2fb8ac6a7d20176a84690e6357bc8658ad8c847e374b846674fa430e092eaa8",
+          "sha256": "61a64aa01f131e178937c886aaea75e0e902a6d24f2538ecc4be89b55186f7f1",
+          "sha1": "e2ae58fe4e99a0867c54af5bc16dd23672d814c0",
+          "md5": "e176ab71df8e10798315f056feabbcfb"
         }
       ]
     },
@@ -99,11 +99,11 @@
         {
           "name": "shared_preferences_android_debug-1.0.aar",
           "url": "shared_preferences_android_debug-1.0.aar",
-          "size": 117747,
-          "sha512": "a8df007ec7e4ef74485fbeea568f7571dfd39454a03c24af2fe81c0a1171135ac04ce853c599257ab299e7d11bfbd85601acb1390a81395d6b52575e6c48bfab",
-          "sha256": "93660724da79ceb062c5a4c932ba68ad6fe1dc231dc5cc850a6ced2bbd5dbf10",
-          "sha1": "9aa4999fde09925fa829410927585fe1c4bb30db",
-          "md5": "f551fab5ac6ab60a248aaca55ae9baa7"
+          "size": 117742,
+          "sha512": "c2fbc8da2f106b9e6b7d56d90def102320bfba9d9666cc50958a64d24e0c6babc2fb8ac6a7d20176a84690e6357bc8658ad8c847e374b846674fa430e092eaa8",
+          "sha256": "61a64aa01f131e178937c886aaea75e0e902a6d24f2538ecc4be89b55186f7f1",
+          "sha1": "e2ae58fe4e99a0867c54af5bc16dd23672d814c0",
+          "md5": "e176ab71df8e10798315f056feabbcfb"
         }
       ]
     },

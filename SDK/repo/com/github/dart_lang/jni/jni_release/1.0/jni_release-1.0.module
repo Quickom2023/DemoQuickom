@@ -35,11 +35,11 @@
         {
           "name": "jni_release-1.0.aar",
           "url": "jni_release-1.0.aar",
-          "size": 104419,
-          "sha512": "86900a3dca8b02d0692a5154ea82601087e34edf6c6f641019a6c94085bd6a11c40c3e81e35b283fbf11a20a7fb6f79e5a5d537f8f01cbc191180c133b795d46",
-          "sha256": "f943ea9a70f6404dd1c8250e57549e6d6de14d86220943bc3d02a1b7f7588469",
-          "sha1": "3c6d1dfc0bca71cfd278f5c5cb7914b2ca204d18",
-          "md5": "5625cf23e0c3eb1b4f626321788c4e31"
+          "size": 104386,
+          "sha512": "ad7f600037b795b58fdbb111a147e0cc4477ed77d41995274f537257b4d58c0958383a9ff3ef87daf05a9b820ab83f32d67f4a74e55bfa2d20182bd10f856850",
+          "sha256": "d48245adbd5c77da69bcf7319bf7d26793a7a62e3e89f6342bf1b51f4f70f2a5",
+          "sha1": "b9da46c77f5aad0654fdb57c8dc3dc07dbdec4c6",
+          "md5": "fa8b62c94d7034eff7632c33514706ea"
         }
       ]
     },
@@ -64,11 +64,11 @@
         {
           "name": "jni_release-1.0.aar",
           "url": "jni_release-1.0.aar",
-          "size": 104419,
-          "sha512": "86900a3dca8b02d0692a5154ea82601087e34edf6c6f641019a6c94085bd6a11c40c3e81e35b283fbf11a20a7fb6f79e5a5d537f8f01cbc191180c133b795d46",
-          "sha256": "f943ea9a70f6404dd1c8250e57549e6d6de14d86220943bc3d02a1b7f7588469",
-          "sha1": "3c6d1dfc0bca71cfd278f5c5cb7914b2ca204d18",
-          "md5": "5625cf23e0c3eb1b4f626321788c4e31"
+          "size": 104386,
+          "sha512": "ad7f600037b795b58fdbb111a147e0cc4477ed77d41995274f537257b4d58c0958383a9ff3ef87daf05a9b820ab83f32d67f4a74e55bfa2d20182bd10f856850",
+          "sha256": "d48245adbd5c77da69bcf7319bf7d26793a7a62e3e89f6342bf1b51f4f70f2a5",
+          "sha1": "b9da46c77f5aad0654fdb57c8dc3dc07dbdec4c6",
+          "md5": "fa8b62c94d7034eff7632c33514706ea"
         }
       ]
     },

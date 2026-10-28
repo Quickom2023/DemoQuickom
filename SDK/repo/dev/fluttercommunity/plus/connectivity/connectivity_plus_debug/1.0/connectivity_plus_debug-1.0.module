@@ -35,11 +35,11 @@
         {
           "name": "connectivity_plus_debug-1.0.aar",
           "url": "connectivity_plus_debug-1.0.aar",
-          "size": 8152,
-          "sha512": "b09db8b1215eccd7dfb434098ca1af41bd34bc13df0cf2970f05596d678eb4b0d2fb59ac9c49dacd70f39aa536db4ba6e34b43e5c403ea0f0b2083d9c6f7e7f4",
-          "sha256": "498d8a06f28cd710a0f199d2ae1fe29629c015996aba59921381142a98b65e61",
-          "sha1": "32293a7b974544a08a89f1ab47a6e5031b18dd63",
-          "md5": "064c5d19738490dcaaa2f5b38812f23a"
+          "size": 8121,
+          "sha512": "f21d8731f663c71ffdc6a9ad20f000965c1901a2a58c7aca9ef0a920e7bfe57e83dfc110788bb7678e2269215408eacee4cbcab19cc3796e4820e0593906c474",
+          "sha256": "937bf5bb9ea9cd75ce67dc83840db115b4bcef073b937dc494c3bbd2c4ef2d15",
+          "sha1": "37bb0915e6b84e1c1fd6f766e74baf58e20f7085",
+          "md5": "191578bf0e5ea2e5c99345a8f0b183a5"
         }
       ]
     },
@@ -71,11 +71,11 @@
         {
           "name": "connectivity_plus_debug-1.0.aar",
           "url": "connectivity_plus_debug-1.0.aar",
-          "size": 8152,
-          "sha512": "b09db8b1215eccd7dfb434098ca1af41bd34bc13df0cf2970f05596d678eb4b0d2fb59ac9c49dacd70f39aa536db4ba6e34b43e5c403ea0f0b2083d9c6f7e7f4",
-          "sha256": "498d8a06f28cd710a0f199d2ae1fe29629c015996aba59921381142a98b65e61",
-          "sha1": "32293a7b974544a08a89f1ab47a6e5031b18dd63",
-          "md5": "064c5d19738490dcaaa2f5b38812f23a"
+          "size": 8121,
+          "sha512": "f21d8731f663c71ffdc6a9ad20f000965c1901a2a58c7aca9ef0a920e7bfe57e83dfc110788bb7678e2269215408eacee4cbcab19cc3796e4820e0593906c474",
+          "sha256": "937bf5bb9ea9cd75ce67dc83840db115b4bcef073b937dc494c3bbd2c4ef2d15",
+          "sha1": "37bb0915e6b84e1c1fd6f766e74baf58e20f7085",
+          "md5": "191578bf0e5ea2e5c99345a8f0b183a5"
         }
       ]
     },

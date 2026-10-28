@@ -449,7 +449,7 @@ class MainActivity : ComponentActivity() {
                             "remoteAvatar" to remoteAvatar,
                             "groupName" to "Family Group",
                             "groupMember" to mockRemoteUsers.subList(0, 3),
-                            "videoOnStarted" to true,
+                            "videoOnStarted" to false,
                             "theme" to "light",
                             "support2K" to true
                         )
@@ -501,7 +501,7 @@ class MainActivity : ComponentActivity() {
                         "remoteAvatar" to "https://i.pravatar.cc/400?img=36",
                         "groupName" to "Family Group",
                         "groupMember" to mockRemoteUsers.subList(0, 3),
-                        "videoOnStarted" to true,
+                        "videoOnStarted" to false,
                         "theme" to "light",
                         "support2K" to true,
                     )

@@ -42,11 +42,11 @@
         {
           "name": "video_player_android_release-1.0.aar",
           "url": "video_player_android_release-1.0.aar",
-          "size": 98452,
-          "sha512": "841fd758868a950c0d6e44c4922424ee9ffc4ce49aae4f3ac962c091fb41896ef95f8859a5b3deca727ef65a803c58c65d4964c2145721ea01bc74b0e719e1e9",
-          "sha256": "0e9b811b058fdfe32712226d36e58763adea5b8010527bb9be0353221b5a7b12",
-          "sha1": "619196a44f346a4ebbdafb63410f8b6a0672b1b9",
-          "md5": "889474764dd2ea6e8fffa1e8651209f8"
+          "size": 98362,
+          "sha512": "773fa8d4df4dbb8b76d9ba0b85e9074e36f5a86c34536c4156569e1a7bd11e1ed701253f5f4f6e80468a7738004e1b8ade36c15dfeae5aedb1bd6f7d4533d67c",
+          "sha256": "be7034bb2413e0e84f0bd243dbedca8c76c42aa59f6b191e87b92bca0d1603e3",
+          "sha1": "0f3b3a4289095d2ca063c6ca08c8103eb5962d45",
+          "md5": "88b89e1006fefc86e2cdbbed984a51a3"
         }
       ]
     },
@@ -113,11 +113,11 @@
         {
           "name": "video_player_android_release-1.0.aar",
           "url": "video_player_android_release-1.0.aar",
-          "size": 98452,
-          "sha512": "841fd758868a950c0d6e44c4922424ee9ffc4ce49aae4f3ac962c091fb41896ef95f8859a5b3deca727ef65a803c58c65d4964c2145721ea01bc74b0e719e1e9",
-          "sha256": "0e9b811b058fdfe32712226d36e58763adea5b8010527bb9be0353221b5a7b12",
-          "sha1": "619196a44f346a4ebbdafb63410f8b6a0672b1b9",
-          "md5": "889474764dd2ea6e8fffa1e8651209f8"
+          "size": 98362,
+          "sha512": "773fa8d4df4dbb8b76d9ba0b85e9074e36f5a86c34536c4156569e1a7bd11e1ed701253f5f4f6e80468a7738004e1b8ade36c15dfeae5aedb1bd6f7d4533d67c",
+          "sha256": "be7034bb2413e0e84f0bd243dbedca8c76c42aa59f6b191e87b92bca0d1603e3",
+          "sha1": "0f3b3a4289095d2ca063c6ca08c8103eb5962d45",
+          "md5": "88b89e1006fefc86e2cdbbed984a51a3"
         }
       ]
     },
