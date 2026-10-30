@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		Yu5TaOHANp4pvuDjMc3T6Jnb+xk=
+		eGBjWRRBgy7Koy2T3YfE9l9zDP0=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -948,6 +948,10 @@
 		<data>
 		QoQ10P6hWPPMRwDKi6aJN2NiwR8=
 		</data>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_video_call.png</key>
+		<data>
+		bM19ZZPXMCkyhl9zO66LyS2mxNQ=
+		</data>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/img_background_dark.png</key>
 		<data>
 		c3ziJCDJVdYC4sl/mbHwpJniLg4=
@@ -975,7 +979,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			v3dBdKr25uNiueQ7jhPoXSg4/8gg5z4n7+OOCPupKTw=
+			pBNXI32nBPDAsTyr3sHidKb17Qeo6ZAJR6IFJ6VaRLg=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -2579,6 +2583,13 @@
 			<key>hash2</key>
 			<data>
 			7fMXBcBfgMEpGyJIunFEJ9lq9BwGKCy6DVFJuNz50PY=
+			</data>
+		</dict>
+		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/icon_video_call.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Trt1/r9cB7cP+zwQxLMZjIJIoKzni+RnKZ0mxGppi/I=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/quickom_live_kit_sdk/assets/mytv/img_background_dark.png</key>
