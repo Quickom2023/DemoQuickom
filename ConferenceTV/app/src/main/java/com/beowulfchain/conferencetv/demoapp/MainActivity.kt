@@ -449,7 +449,7 @@ class MainActivity : ComponentActivity() {
                             "remoteAvatar" to remoteAvatar,
                             "groupName" to "Family Group",
                             "groupMember" to mockRemoteUsers.subList(0, 3),
-                            "videoOnStarted" to false,
+                            "videoOnStarted" to true,
                             "theme" to "light",
                             "support2K" to true
                         )
